@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsBudgeting" targetNamespace="http://tempuri.org/dsBudgeting.xsd" xmlns:mstns="http://tempuri.org/dsBudgeting.xsd" xmlns="http://tempuri.org/dsBudgeting.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsBudgeting" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBudgeting" msprop:Generator_UserDSName="dsBudgeting">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtProjectSummary" msprop:Generator_TableClassName="dtProjectSummaryDataTable" msprop:Generator_TableVarName="tabledtProjectSummary" msprop:Generator_RowChangedName="dtProjectSummaryRowChanged" msprop:Generator_TablePropName="dtProjectSummary" msprop:Generator_RowDeletingName="dtProjectSummaryRowDeleting" msprop:Generator_RowChangingName="dtProjectSummaryRowChanging" msprop:Generator_RowEvHandlerName="dtProjectSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="dtProjectSummaryRowDeleted" msprop:Generator_RowClassName="dtProjectSummaryRow" msprop:Generator_UserTableName="dtProjectSummary" msprop:Generator_RowEvArgName="dtProjectSummaryRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="budgetId" msprop:Generator_ColumnVarNameInTable="columnbudgetId" msprop:Generator_ColumnPropNameInRow="budgetId" msprop:Generator_ColumnPropNameInTable="budgetIdColumn" msprop:Generator_UserColumnName="budgetId" type="xs:string" minOccurs="0" />
+              <xs:element name="taskid" msprop:Generator_ColumnVarNameInTable="columntaskid" msprop:Generator_ColumnPropNameInRow="taskid" msprop:Generator_ColumnPropNameInTable="taskidColumn" msprop:Generator_UserColumnName="taskid" type="xs:string" minOccurs="0" />
+              <xs:element name="budHrs" msprop:Generator_ColumnVarNameInTable="columnbudHrs" msprop:Generator_ColumnPropNameInRow="budHrs" msprop:Generator_ColumnPropNameInTable="budHrsColumn" msprop:Generator_UserColumnName="budHrs" type="xs:string" minOccurs="0" />
+              <xs:element name="billRate" msprop:Generator_ColumnVarNameInTable="columnbillRate" msprop:Generator_ColumnPropNameInRow="billRate" msprop:Generator_ColumnPropNameInTable="billRateColumn" msprop:Generator_UserColumnName="billRate" type="xs:string" minOccurs="0" />
+              <xs:element name="payRate" msprop:Generator_ColumnVarNameInTable="columnpayRate" msprop:Generator_ColumnPropNameInRow="payRate" msprop:Generator_ColumnPropNameInTable="payRateColumn" msprop:Generator_UserColumnName="payRate" type="xs:string" minOccurs="0" />
+              <xs:element name="budgetTitle" msprop:Generator_ColumnVarNameInTable="columnbudgetTitle" msprop:Generator_ColumnPropNameInRow="budgetTitle" msprop:Generator_ColumnPropNameInTable="budgetTitleColumn" msprop:Generator_UserColumnName="budgetTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="taskCode" msprop:Generator_ColumnVarNameInTable="columntaskCode" msprop:Generator_ColumnPropNameInRow="taskCode" msprop:Generator_ColumnPropNameInTable="taskCodeColumn" msprop:Generator_UserColumnName="taskCode" type="xs:string" minOccurs="0" />
+              <xs:element name="taskname" msprop:Generator_ColumnVarNameInTable="columntaskname" msprop:Generator_ColumnPropNameInRow="taskname" msprop:Generator_ColumnPropNameInTable="tasknameColumn" msprop:Generator_UserColumnName="taskname" type="xs:string" minOccurs="0" />
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description" type="xs:string" minOccurs="0" />
+              <xs:element name="ahours" msprop:Generator_ColumnVarNameInTable="columnahours" msprop:Generator_ColumnPropNameInRow="ahours" msprop:Generator_ColumnPropNameInTable="ahoursColumn" msprop:Generator_UserColumnName="ahours" type="xs:string" minOccurs="0" />
+              <xs:element name="projectcode" msprop:Generator_ColumnVarNameInTable="columnprojectcode" msprop:Generator_ColumnPropNameInRow="projectcode" msprop:Generator_ColumnPropNameInTable="projectcodeColumn" msprop:Generator_UserColumnName="projectcode" type="xs:string" minOccurs="0" />
+              <xs:element name="projectname" msprop:Generator_ColumnVarNameInTable="columnprojectname" msprop:Generator_ColumnPropNameInRow="projectname" msprop:Generator_ColumnPropNameInTable="projectnameColumn" msprop:Generator_UserColumnName="projectname" type="xs:string" minOccurs="0" />
+              <xs:element name="projectid" msprop:Generator_ColumnVarNameInTable="columnprojectid" msprop:Generator_ColumnPropNameInRow="projectid" msprop:Generator_ColumnPropNameInTable="projectidColumn" msprop:Generator_UserColumnName="projectid" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtBudgetDetail" msprop:Generator_TableClassName="dtBudgetDetailDataTable" msprop:Generator_TableVarName="tabledtBudgetDetail" msprop:Generator_TablePropName="dtBudgetDetail" msprop:Generator_RowDeletingName="dtBudgetDetailRowDeleting" msprop:Generator_RowChangingName="dtBudgetDetailRowChanging" msprop:Generator_RowEvHandlerName="dtBudgetDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="dtBudgetDetailRowDeleted" msprop:Generator_UserTableName="dtBudgetDetail" msprop:Generator_RowChangedName="dtBudgetDetailRowChanged" msprop:Generator_RowEvArgName="dtBudgetDetailRowChangeEvent" msprop:Generator_RowClassName="dtBudgetDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="taskid" msprop:Generator_ColumnVarNameInTable="columntaskid" msprop:Generator_ColumnPropNameInRow="taskid" msprop:Generator_ColumnPropNameInTable="taskidColumn" msprop:Generator_UserColumnName="taskid" type="xs:string" minOccurs="0" />
+              <xs:element name="taskcode" msprop:Generator_ColumnVarNameInTable="columntaskcode" msprop:Generator_ColumnPropNameInRow="taskcode" msprop:Generator_ColumnPropNameInTable="taskcodeColumn" msprop:Generator_UserColumnName="taskcode" type="xs:string" minOccurs="0" />
+              <xs:element name="taskname" msprop:Generator_ColumnVarNameInTable="columntaskname" msprop:Generator_ColumnPropNameInRow="taskname" msprop:Generator_ColumnPropNameInTable="tasknameColumn" msprop:Generator_UserColumnName="taskname" type="xs:string" minOccurs="0" />
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description" type="xs:string" minOccurs="0" />
+              <xs:element name="projectid" msprop:Generator_ColumnVarNameInTable="columnprojectid" msprop:Generator_ColumnPropNameInRow="projectid" msprop:Generator_ColumnPropNameInTable="projectidColumn" msprop:Generator_UserColumnName="projectid" type="xs:string" minOccurs="0" />
+              <xs:element name="budgetid" msprop:Generator_ColumnVarNameInTable="columnbudgetid" msprop:Generator_ColumnPropNameInRow="budgetid" msprop:Generator_ColumnPropNameInTable="budgetidColumn" msprop:Generator_UserColumnName="budgetid" type="xs:string" minOccurs="0" />
+              <xs:element name="projectcode" msprop:Generator_ColumnVarNameInTable="columnprojectcode" msprop:Generator_ColumnPropNameInRow="projectcode" msprop:Generator_ColumnPropNameInTable="projectcodeColumn" msprop:Generator_UserColumnName="projectcode" type="xs:string" minOccurs="0" />
+              <xs:element name="projectname" msprop:Generator_ColumnVarNameInTable="columnprojectname" msprop:Generator_ColumnPropNameInRow="projectname" msprop:Generator_ColumnPropNameInTable="projectnameColumn" msprop:Generator_UserColumnName="projectname" type="xs:string" minOccurs="0" />
+              <xs:element name="fname" msprop:Generator_ColumnVarNameInTable="columnfname" msprop:Generator_ColumnPropNameInRow="fname" msprop:Generator_ColumnPropNameInTable="fnameColumn" msprop:Generator_UserColumnName="fname" type="xs:string" minOccurs="0" />
+              <xs:element name="lname" msprop:Generator_ColumnVarNameInTable="columnlname" msprop:Generator_ColumnPropNameInRow="lname" msprop:Generator_ColumnPropNameInTable="lnameColumn" msprop:Generator_UserColumnName="lname" type="xs:string" minOccurs="0" />
+              <xs:element name="empid" msprop:Generator_ColumnVarNameInTable="columnempid" msprop:Generator_ColumnPropNameInRow="empid" msprop:Generator_ColumnPropNameInTable="empidColumn" msprop:Generator_UserColumnName="empid" type="xs:string" minOccurs="0" />
+              <xs:element name="ahours" msprop:Generator_ColumnVarNameInTable="columnahours" msprop:Generator_ColumnPropNameInRow="ahours" msprop:Generator_ColumnPropNameInTable="ahoursColumn" msprop:Generator_UserColumnName="ahours" type="xs:string" minOccurs="0" />
+              <xs:element name="budHrs" msprop:Generator_ColumnVarNameInTable="columnbudHrs" msprop:Generator_ColumnPropNameInRow="budHrs" msprop:Generator_ColumnPropNameInTable="budHrsColumn" msprop:Generator_UserColumnName="budHrs" type="xs:string" minOccurs="0" />
+              <xs:element name="billRate" msprop:Generator_ColumnVarNameInTable="columnbillRate" msprop:Generator_ColumnPropNameInRow="billRate" msprop:Generator_ColumnPropNameInTable="billRateColumn" msprop:Generator_UserColumnName="billRate" type="xs:string" minOccurs="0" />
+              <xs:element name="payRate" msprop:Generator_ColumnVarNameInTable="columnpayRate" msprop:Generator_ColumnPropNameInRow="payRate" msprop:Generator_ColumnPropNameInTable="payRateColumn" msprop:Generator_UserColumnName="payRate" type="xs:string" minOccurs="0" />
+              <xs:element name="budgetTitle" msprop:Generator_ColumnVarNameInTable="columnbudgetTitle" msprop:Generator_ColumnPropNameInRow="budgetTitle" msprop:Generator_ColumnPropNameInTable="budgetTitleColumn" msprop:Generator_UserColumnName="budgetTitle" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

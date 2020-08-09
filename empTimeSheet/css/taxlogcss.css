@@ -1,0 +1,109 @@
+﻿
+
+.radeo{display: inline-block; margin-bottom: 10px;vertical-align: top; margin-right:5px;}
+.radeo-hding{display:  inline-block; font-family:"open_sans_semibold",Arial,Helvetica,sans-serif}
+.taxlogfieldbox{background: #fafafa none repeat scroll 0 0; border: 1px solid #ddd; display: none; clear: both; margin: auto; padding: 15px; margin-left:0px;}
+.fieldbox2{margin:0px 0px 10px 0px;}
+.tabone {margin-top: 10px;}
+.divlogplus{
+    width:18px;
+    height:18px;
+    cursor:pointer;
+    background-image:url(../images/plus-icon.png);
+    margin:0px auto;
+
+}
+.divlogplus_expend{
+  
+    background-image:url(../images/minus-icon.png);
+
+}
+.plusfield-box{margin-top: 20px;}
+.plus-img{width: 2%; display: inline-block; cursor: pointer;}
+
+.content-heading{width: 50%; display: inline-block; font-weight: bold;}
+.actionname{ font-family:"open_sans_semibold",Arial,Helvetica,sans-serif;cursor:pointer;}
+.tbllog{
+    width:100%;
+    border:none;
+    font-size:14px;
+    margin-top:10px;
+}
+.tbllog th{
+   
+    border:none;
+    background:#1caf9a;
+    padding:10px 4px;   
+    text-align:left;
+    color:#ffffff;
+    font-size:14px;
+    font-family:"open_sans_semibold",Arial,Helvetica,sans-serif;
+}
+.tbllog td{
+   
+    border:none;
+     padding:6px 10px;
+  
+}
+.fieldboxtr{
+    display:none;
+}
+.fieldboxtr td,th{
+    padding:0px 10px;
+
+}
+.fieldboxtr table{
+    width:100%;
+     border-left:solid 1px #dadada;
+}
+.fieldboxtr table th{
+    background:#ebebeb;
+    color:#3c475f;
+    border:solid 1px #dadada;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    padding-top: 5px;
+    border-left:none;
+}
+.fieldboxtr table td{
+    border:solid 1px #dadada;
+    border-left:none;
+    border-top:none;
+     padding-bottom: 5px;
+    padding-left: 3px;
+    padding-top: 5px;
+     font-size:13px;
+
+}
+.log_firstrow td{
+    padding-top:20px;
+}
+
+.tblmaster{
+    width:1800px;
+    border-left:solid 1px #e0e0e0;
+  
+}
+.tblmaster td,th{
+   padding:5px;
+}
+.tblmaster th{
+   border:solid 1px #e0e0e0;
+   border-left:0px;
+   border-top:0px;
+   font-family:"open_sans_semibold",Arial,Helvetica,sans-serif;
+}
+.tblmaster td{
+   border:solid 1px #e0e0e0;
+  
+}
+.toprow{
+    background:#1caf9a ;
+    color:#ffffff;
+}
+.headerrow{
+     background:#d0d0d0 ;
+    color:#000000;
+}
+    .headerrow th { border-top:solid 1px #e0e0e0;
+    }

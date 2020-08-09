@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AppointmentMaster.master.cs" Inherits="empTimeSheet.Appointment.AppointmentMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Harshwal & Company LLP</title>
+
+    <link href="css/stylesheet2.0.css" rel="stylesheet" type="text/css" />
+      <link href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/validate2.3.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+        </ajaxToolkit:ToolkitScriptManager>
+        <div class="container">
+            <div class="logo">
+                <a href="Default.aspx">
+                    <img visible="false" src="images/logonew.png" alt="" id="imglogo" runat="server" style="max-width:400px;" />
+                    <img src="../images/HCLLP-PALLP-Logo.png" alt=""    style="max-width:400px;" />
+
+                </a>
+            </div>
+
+
+
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            <footer>Copyright © 2017   <asp:Literal ID="litcompanyname3" Visible="false" runat="server" Text="Harshwal & Company LLP"></asp:Literal> . All Rights Reserved</footer>
+        </div>
+    </form>
+</body>
+</html>

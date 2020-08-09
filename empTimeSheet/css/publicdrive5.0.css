@@ -1,0 +1,372 @@
+﻿
+.statusActive{
+    color:#000000;
+}
+.statusReleased,statusReleased{
+    color:red;
+}
+.txtrename
+{
+    border: solid 1px #7b7b7b;
+    color: #515151;
+    padding: 2px;
+}
+
+.rootselected a
+{
+    padding: 5px;
+    color: #ffffff;
+    background: #707070;
+}
+
+.ajax__fileupload_selectFileButton
+{
+    background: #2a3542 !important;
+}
+
+.tblReport
+{
+    border-left: solid 1px #e0e0e0;
+}
+
+.tblReport th
+{
+    text-align: left;
+    padding: 3px;
+    color: #000000;
+    font-weight: bold;
+    border: solid 1px #e0e0e0;
+    border-left: none;
+    font-size: 12px;
+}
+
+.tblReport td
+{
+    text-align: left;
+    padding: 3px;
+    border: solid 1px #e0e0e0;
+    border-left: none;
+    border-top: none;
+    color: #333333;
+}
+
+.filepath
+{
+    float: left;
+    padding-left: 25px;
+    color: #808080;
+    font-size: 12px;
+}
+.divcheck
+{
+    float: left;
+}
+.divcontrol
+{
+    float: left;
+    padding-left: 5px;
+    margin-top: 8px;
+}
+.divcontrol a
+{
+    float: left;
+    padding-left: 5px;
+}
+.rightcontrol
+{
+    float: left;
+    margin-right: 10px;
+}
+.rightcontrol a
+{
+    float: left;
+    margin-right: 5px;
+}
+
+.listFolder span
+{
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.tblfile-main{
+     text-align: left;
+     margin-left:5px;
+}
+.tblfile-main th{
+    font-family: 'open_sans_semibold', Arial, Helvetica, sans-serif;
+     padding: 5px 10px 10px 0px;
+     
+}
+.tblfile-main td{
+  border-bottom:1px dotted #a3a3a3;
+   padding: 5px 10px 5px 0px;
+     
+}
+.tblfile-main tr:last-child td{
+    border-bottom:none;
+}
+.tblfile-main td:last-child
+{
+   padding-right:0px;
+}
+.tblfile-main td:first-child
+{
+ font-family: 'open_sans_semibold', Arial, Helvetica, sans-serif;
+}
+.tblfile
+{
+    width: 100%;
+    border: solid 1px #e0e0e0;
+    border-right: none;
+    text-align: left;
+}
+
+.tblfile th
+{
+    text-align: left;
+    font-weight: normal;
+    border-right: solid 1px #e0e0e0;
+    border-bottom: solid 1px #e0e0e0;
+    padding: 5px 2px 5px 10px;
+}
+.tblfile td
+{
+    border-right: solid 1px #e0e0e0;
+    text-align: left;
+    font-weight: normal;
+    padding: 2px 2px 2px 10px;
+    vertical-align: top;
+}
+
+
+
+.divfile_inner
+{
+    float: left;
+}
+.divfile_inner .img
+{
+    padding-top: 5px;
+    margin-bottom: 2px;
+    float: left;
+    margin-left: 2px;
+}
+.divfile_inner .txtrename
+{
+    float: left;
+    font-size: 11px;
+    width: 80px;
+    height: 12px;
+}
+.divfile_inner a
+{
+    float: left;
+    color: #000000;
+    text-decoration: none;
+}
+.divfile_inner a span
+{
+    float: left;
+    text-align: center;
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-left: 26px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+.divfile_inner a.active
+{
+    /*  background: #9ca5ad for non-css3 browsers */
+    color: #ffffff;
+    text-decoration: none; /*font-weight: bold;*/
+}
+.divfile_inner a:hover
+{
+    color: #000000;
+    text-decoration: none; /*font-weight: bold;*/
+}
+
+
+
+
+.divsitemap
+{
+    float: left;
+    padding-left: 5px;
+    padding-top: 20px;
+}
+.divsitemap a
+{
+    float: left;
+    padding-left: 18px;
+    background-image: url(../Libraryimg/folder_16.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    font-size: 12px;
+    text-decoration: underline;
+    color: #000000;
+    font-weight: bold;
+}
+.divfile
+{
+    border: solid 1px #e0e0e0;
+    width: 149px;
+    height: 100px;
+    margin: 0px auto;
+}
+.divfile .img
+{
+    padding-top: 5px;
+    margin-bottom: 2px;
+    float: left;
+    margin-left: 2px;
+}
+.divfile .txtrename
+{
+    float: left;
+    font-size: 11px;
+    width: 80px;
+    height: 12px;
+}
+.divfile a
+{
+    float: left;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    padding-bottom: 4px;
+    font-size: 12px;
+    border-radius: 2px;
+    width: 100%;
+    height: 100%;
+}
+.divfile a span
+{
+    float: left;
+    text-align: center;
+    padding-top: 84px;
+    background-position: center 5px;
+    background-repeat: no-repeat;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    overflow: hidden;
+}
+.divfile a.active
+{
+    background: #9ca5ad; /* for non-css3 browsers */
+    color: #ffffff;
+    text-decoration: none; /*font-weight: bold;*/
+}
+.divfile a:hover
+{
+    background: #9ca5ad; /* for non-css3 browsers */
+    color: #ffffff;
+    text-decoration: none; /*font-weight: bold;*/
+}
+.divselect
+{
+    width: 206px;
+    height: 152px;
+    background-color: #303b48;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    padding: 0px;
+}
+.divselectinner
+{
+    width: 99%;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.divselectinner ul
+{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    width: 100%;
+}
+.divselectinner ul li
+{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    width: 100%;
+    border-bottom: solid 1px #cccccc;
+}
+.divselectinner ul li a
+{
+    float: left;
+    color: #dadada;
+    margin-left: 5px;
+    text-align: left;
+    background-position: left top;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 0px;
+    padding-left: 34px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.file-span-select
+{
+    background-image: url(../images/smallicons/select.png);
+}
+.file-span-share
+{
+    background-image: url(../images/smallicons/share.png);
+}
+.file-span-open
+{
+    background-image: url(../images/smallicons/open.png);
+}
+.file-span-detail
+{
+    background-image: url(../images/smallicons/view_32.png);
+}
+.file-span-rename
+{
+    background-image: url(../images/smallicons/rename.png);
+}
+
+
+
+.divfile1
+{
+    float: left;
+}
+.divfile1 a
+{
+    float: left;
+    color: #333333;
+    text-decoration: none;
+    text-align: center;
+    background-color: #cccccc;
+}
+.divfile1 a span
+{
+    float: left;
+    text-align: center;
+    padding-top: 50px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.dataitem
+{
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+}

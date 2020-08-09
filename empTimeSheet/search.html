@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Language" content="en-gb">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <script type="text/javascript">
+
+       function fill(){
+           var params = location.search.substring(location.search.indexOf('=') + 1);
+
+           document.getElementById("name").value = params;
+        }
+
+    </script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="fill();">
+    <form name="form1" id="form1" method="get" action="search.html">
+    <div class="searchdiv">
+        <table border="0" cellpadding="0">
+            <tr>
+                <td>
+                    <input type="text" id="name" name="q" maxlength="255" value="" class="searchbox" />
+                    <input type="submit" value="Search" class="searchboxbtn" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+    <div>
+        <script type="text/javascript">
+            (function () {
+                var cx = '010173349404742240958:wf9grfelclq';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+            })();
+        </script>
+        <gcse:searchresults-only></gcse:searchresults-only>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+@font-face
+{
+    font-family: 'texgyreadventorregular';
+    src: url('texgyreadventor-regular.eot');
+    src: url('texgyreadventor-regular.eot?#iefix') format('embedded-opentype'), url('texgyreadventor-regular.woff2') format('woff2'), url('texgyreadventor-regular.woff') format('woff'), url('texgyreadventor-regular.ttf') format('truetype'), url('texgyreadventor-regular.svg#texgyreadventorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'EuphemiaRegular';
+    src: url('euphemia.eot');
+    src: url('euphemia.eot') format('embedded-opentype'),
+         url('euphemia.woff2') format('woff2'),
+         url('euphemia.woff') format('woff'),
+         url('euphemia.ttf') format('truetype'),
+         url('euphemia.svg#EuphemiaRegular') format('svg');
+}
+
+
+@font-face {
+    font-family: 'open_sans_condensedbold';
+    src: url('OpenSans-CondBold-webfont.eot');
+    src: url('OpenSans-CondBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-CondBold-webfont.woff') format('woff'),
+         url('OpenSans-CondBold-webfont.ttf') format('truetype'),
+         url('OpenSans-CondBold-webfont.svg#open_sans_condensedbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('opensans-regular.eot');
+    src: url('opensans-regular.eot?#iefix') format('embedded-opentype'),
+         url('opensans-regular.woff') format('woff'),
+         url('opensans-regular.ttf') format('truetype'),
+         url('opensans-regular.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+} 
+ 
+ul li {
+    list-style: none outside none;
+}
+blockquote, q {
+    quotes: none;
+}
+table, table td {
+    border: medium none;
+    border-collapse: collapse;
+    padding: 0;
+}
+img {
+    vertical-align: top;
+}
+embed {
+    vertical-align: top;
+}
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {
+    display: block;
+}
+mark, rp, rt, ruby, summary, time {
+    display: inline;
+}
+
+a{ text-decoration:none;}
+a:hover{transition: all 0.5s ease 0s;}
+a, p ,body, input, ul, li , div, header, nav, button, textarea, border, img, h1, h2, h3, h4, h5, h6  { padding:0; margin:0; border:none; background:none; }
+
+.clear{ clear:both;}
+
+.tl{ text-align:left;}
+.tr{ text-align:right;}
+.tj{ text-align:justify;}
+.f_left{ float:left;}
+.f_right{ float:right;}
+
+img { border:none; margin:0px; padding:0; vertical-align:middle;}
+
+button { border:none; margin:0px; padding:0; vertical-align:top;}
+
+.clear {
+    clear: both;
+    float: none !important;
+}
+
+h1, h2, h3, h4, h5, h6{ font-weight:lighter;}

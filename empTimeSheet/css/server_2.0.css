@@ -1,0 +1,105 @@
+﻿.heading {
+    border-bottom: 1px solid #dadada;
+    float: left;
+    margin-bottom: 40px;
+    width: 100%;
+    font-size:30px;
+    color:#333333;
+}
+
+.heading_2  {
+    color: #395ba4;
+    float: left;
+    
+    font-size: 16px;
+    letter-spacing: 1px;
+ padding-bottom:8px;
+  
+}
+.server_box{ border:solid 1px #bababa; width:100%; border-bottom:solid 4px #e0e0e0; }
+.server_inner{ padding:15px;}
+.width_server{ width:48%; float:left;}
+ 
+.rowserver{ border-bottom:solid 1px #bababa;  padding: 10px; }
+
+.rowserver label{ color:#111111; font-size:15px; width:120px; float:left;} 
+
+.row1{ border-bottom:solid 1px #bababa;  padding: 11px;}
+
+.row1 label{ color:#111111; font-size:15px; width:170px; float:left;} 
+.row1 .width_server{width:98%; !important;}
+.rowserver span{ color:#3a5099; font-size:14px; line-height:34px;} 
+.row1 span{ color:#5e5e5e;  line-height:34px;}
+.mar20{ margin-bottom:20px; }
+.date_heding{ background:#eeeeee; border-bottom:solid 1px #bababa;}
+.date_heding label{ color:#111111; font-size:15px;   float:left; padding-left:20px;} 
+.date_heding span{ color:#3a5099; font-size:14px;} 
+.attach_link{ color:#444444; font-weight:bold;}
+
+.marright
+{
+    margin-right:55px;
+}
+
+
+.tblform
+{
+    width: 100%;
+    text-align: left;
+    border-left: solid 1px #e0e0e0;
+    border-top: solid 1px #e0e0e0;
+}
+
+
+.tblform td
+{
+    padding: 4px;
+    border: solid 1px #e0e0e0;
+    border-left: none;
+    border-top: none;
+}
+.tblform input
+{
+    border: solid 1px #dadada;
+    width: 98%;
+    padding: 4px;
+}
+
+.tblcol
+{
+    width: 20%;
+}
+.tblserver
+{
+       margin-bottom: 40px;
+    padding: 10px;
+    width: 100%;
+    
+    }
+    
+.tblserver td
+{
+    margin-bottom: 20px;
+    padding: 3px;
+    width: 30%;    
+}
+
+.tblserver span
+{
+    width: 120px;
+    float:left;    
+}
+
+
+.red{ color:#f00f00;}
+.green{ color:#093093;}
+.yellow{ color:#C90C90;}
+
+
+.line3 {
+    border-bottom: 1px solid #dadada;    
+}
+.row_color_yellow{ background:#fcf7e7;}
+.row_color_blue{ background:#eff6fa; }
+
+

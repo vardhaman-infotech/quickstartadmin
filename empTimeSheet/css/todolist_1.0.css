@@ -1,0 +1,361 @@
+﻿#divtotoTaskList{
+    height:100%;
+}
+.notodaytask{
+    text-align:center;
+}
+.todo_loader{
+    float:right;
+    border:solid 1px #e0e0e0;
+    padding:5px 10px;
+    margin-top:5px;
+    color:#504f4f;
+     box-shadow: 0 0 8px #bdbdbd;
+     display:none;
+}
+.todo_loader_list{
+   width:99%;
+   position:absolute;
+   height:100%;
+   z-index:2;
+  background-color: rgba(0, 15, 255, 0);
+  text-align:center;
+}
+.todo_loader_list img{
+  
+   margin-top:20%;
+}
+.todo-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index:4;
+    cursor:pointer;
+   
+  width:58px;
+  height:58px;
+  background-image:url(../images/todo-icon2.png);
+  background-repeat:no-repeat;  
+ 
+  padding-top:12px;
+  padding-left:16px;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -o-transition:  all 0.5s ease-in-out 0s;
+  transition:  all 0.5s ease-in-out 0s;
+  
+}
+.todo-icon img {
+   
+    -webkit-transition: all 0.5s ease-in-out 0s;
+  -o-transition:  all 0.5s ease-in-out 0s;
+  transition:  all 0.5s ease-in-out 0s;
+  
+}
+.todo-icon:hover {
+       -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.todoup {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+               /* IE6–IE9 */
+               filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9914448613738104, M12=-0.13052619222005157,M21=0.13052619222005157, M22=0.9914448613738104, sizingMethod='auto expand');
+                 zoom: 1;
+    }
+
+.todo-box {
+    border-radius: 5px;
+    box-shadow: 5px 8px 13px 0px #808080;
+    position: fixed;
+    z-index: 1;
+    right: 50px;
+    bottom: 80px;
+    background: #fff;
+    border: solid 1px #e8e8e8;
+    width: 500px;
+    max-height:99%;
+   height:520px;
+   display:none;
+ 
+   
+}
+
+.todo-header {
+    background: #0071b2;
+    border-radius: 5px 5px 0 0;
+    padding: 15px;
+    color: #fff;
+    font-family: 'open_sans_semibold';
+    font-size: 19px;
+}
+
+.todo-heding {
+    float: left;
+    vertical-align: top;
+}
+.todo-close {
+    float:right;
+}
+.todo-close a {
+    display:inline-block;
+}
+
+.todobox-iner {
+    padding: 15px;
+  
+}
+.todotasklist{
+    max-height:60%;
+    overflow:auto;
+  
+   padding:0px 15px 15px 15px;
+    
+   
+   
+}
+.todoinput input {
+    color: #808080;
+    font-size: 15px;
+    border: solid 1px #e9e9e9;
+   
+    width: 100%;
+    box-sizing: border-box;
+    height: 45px;
+    padding-right: 65px;
+    resize: none;
+    overflow: auto;
+    box-shadow: 0 0px 4px #bdbdbd;
+    padding-left:10px;
+     font-family: 'open_sans_semibold';
+}
+.txt-todo-text{
+      font-family: 'open_sans_semibold';border-bottom: solid 2px #000;
+      padding-bottom:5px;
+      width:100%;
+       height: 45px;-webkit-transition: all ease-in-out .15s;
+  -o-transition: all ease-in-out .15s;
+  transition: all ease-in-out .15s;
+ 
+}
+.todoinput input:focus {
+      box-shadow: 0 0px 8px #0071b2;
+}
+
+    .todoinput input::-webkit-input-placeholder {
+        color: #bbb1b1;
+        font-size: 18px;
+        font-family: 'open_sans_bold';
+        font-style: italic;
+    }
+
+    .todoinput input:-moz-placeholder {
+        color: #bbb1b1;
+        font-size: 29px;
+        font-family: 'open_sans_bold';
+        font-style: italic;
+    }
+
+    .todoinput input::-moz-placeholder {
+        color: #bbb1b1;
+        font-size: 29px;
+        font-family: 'open_sans_bold';
+        font-style: italic;
+    }
+
+    .todoinput input:-ms-input-placeholder {
+        color: #bbb1b1;
+        font-size: 29px;
+        font-family: 'open_sans_bold';
+        font-style: italic;
+    }
+    .todoimgdate{
+        cursor:pointer;
+    }
+.todoinput ul {
+    position: absolute;
+    display:block;
+   right:15px;
+    margin-top:-35px;
+  z-index:2;
+}
+
+    .todoinput ul li {
+        float: left;
+        margin-right: 8px;
+    }
+    .todatebox{
+        cursor:pointer;
+    }
+    .divtodo-ctrl{
+        float:right;
+    }
+    .divtodo-ctrl ul{
+      
+        
+       
+
+    }
+    .divtodo-ctrl ul li{
+       display:inline-block;
+       margin-left:5px;
+
+    }
+    .todolist-box img{
+         vertical-align:top;
+    }
+.status-box {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin-top:5px;
+}
+
+.todo-Default {
+    background: #000000;
+}
+
+.todo-Complete {
+    background: #16a317;
+}
+
+.todo-Pending {
+    background: #fabd19;
+}
+.todo-Cancelled {
+    background: #ff0000;
+}
+
+.todo-text{
+    font-size: 15px;  
+  
+  float:left;
+  width:88%;  color: #000000;
+   font-family: 'open_sans_semibold';
+}
+.todo-text p{cursor:pointer;
+}
+.todo-text-Default {
+  
+}
+
+.todo-text-Complete {
+    
+}
+
+.todo-text-Pending {
+    
+}
+.todo-text-Cancled {
+  
+}
+.sv-btn {
+    background: #0071b2;
+    border-radius: 3px;
+    color: #fff;
+    float: right;
+    font-family: "open_sans_bold";
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.task-hding {
+    font-size: 15px;
+    color: #000;
+    font-family: 'open_sans_bold';
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.todolist-box {
+    border: 1px solid #e9e9e9;
+    box-shadow: 0 0 2px #bdbdbd;
+    box-sizing: border-box;
+    color: #333333;
+    font-size: 15px;
+    height: auto;
+   
+    padding:10px;
+    resize: none;
+    text-overflow: ellipsis;
+    width: 100%;
+       margin-top:10px;
+       float:left;
+}
+.todo-upcoming .todolist-box{
+     box-shadow: none;
+}
+.todolist-box .f_right{
+    float:right !important;
+}
+
+.todolist-box legend{padding-left: 31px; font-family: 'open_sans_bold'; color: #504f4f; font-size: 14px; margin:0px;border:none;
+                     width:auto;
+}
+.date-round{position: absolute;border-radius: 100px; text-align: center; overflow: hidden; color: #fff; width: 25px; height: 25px;margin-top: -33px; font-size:12px; padding-top:4px;  font-family: 'open_sans_semibold';}
+.date-round-Complete{background: #16a317;}
+.date-round-Default{background: #000000;}
+.date-round-Pending{background: #fabd19;}
+.date-round-Cancled{background: #ff0000;}
+
+.todo_statusDrop{
+    position:absolute;
+    background:#fff;
+    padding:5px;
+    border:solid 1px #e0e0e0;
+    display:none;
+    margin-left:-135px;
+    width:150px;
+    z-index:1;
+    margin-top:2px;
+    box-shadow: 5px 0 5px #bdbdbd;
+}
+.todo_statusDrop ul{
+    display:block;
+    margin:0px;
+    position:static;
+    width:100%;
+}
+.todo_statusDrop ul li{
+    display:block;
+    clear:both;
+      width:100%;
+      margin:6px 3px;
+      float:none;
+}
+ .todo_statusDrop ul li a{
+     color:#000000;
+       font-family: 'open_sans_semibold';
+ }
+    .todo_statusDrop ul li .status-box{
+        float:left;
+        margin:0px;
+        margin-right:5px;
+        margin-top:4px;
+    }
+@media (min-width: 319px) and (max-width: 767px) {
+    .todo-box {
+  
+    right: 0px;
+    bottom: 80px;
+    max-width:99%;
+   z-index:9999;
+ 
+   
+}
+    .divtodo-ctrl{
+        float:none;
+        clear:both;
+    }
+    .todo-text{
+       width:100%;
+    }
+}

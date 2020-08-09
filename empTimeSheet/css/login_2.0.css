@@ -1,0 +1,143 @@
+﻿.top_bg
+{
+    background: #1d2939;
+    border-bottom: solid 1px #174c87;
+}
+body
+{
+    background-color: #ffffff;
+}
+.iconlogin
+{
+    display: inline-block;
+    width: 40px;
+    background-color: #1d2939;
+    padding: 0px;
+    float: left;
+    font-size: 16px;
+    padding: 1px 0px 0px 0px;
+    margin: 0px;
+    -webkit-border-radius: 4px 0px 0px 4px;
+    -moz-border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0px 0px 4px;
+    color: white;
+    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+    border: solid 0px #cbc9c9;
+    height: 31.5px;
+    text-align: center;
+}
+.iconlogin i
+{
+    color: #ffffff;
+    padding-top: 5px;
+}
+
+.login_btn
+{
+    font-size: 14px;
+    font-weight: 600;
+    color: #f2f2f2;
+    padding: 8px 0;
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+    text-decoration: none;
+    width: 90px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #1d2939;
+    -webkit-box-shadow: 0 3px rgba(29,41,57,.75);
+    -moz-box-shadow: 0 3px rgba(29,41,57,.75);
+    box-shadow: 0 3px rgba(29,41,57,.75);
+    transition: all 0.1s linear 0s;
+    top: 0px;
+    position: relative;
+}
+.progressdiv
+{
+    background: none repeat scroll 0 0 #ffffff;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.testbox
+{
+    border: 1px solid #cbc9c9;
+    border-radius: 8px / 7px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.31);
+    height: auto;
+    margin: 40px auto 20px;
+    width: 30%;
+}
+
+.testbox h1
+{
+    font-size: 22px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.form
+{
+    margin: 0 30px;
+}
+
+.pad2
+{
+    padding-top: 25px;
+}
+.inner_body
+{
+    background: url("../images/body_color.png") repeat-x scroll 0 0 #ffffff;
+    float: left;
+    padding-bottom: 30px;
+    padding-top: 130px;
+    width: 100%;
+}
+
+
+
+.login_box
+{
+    background-color: #fff;
+    border: 1px solid #cbc9c9;
+    border-radius: 0 4px 4px 0 / 5px 5px 4px 4px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
+    float: left;
+    height: 30px;
+    margin-top: 0;
+    padding: 0 10px 0 5px;
+    width: 76%;
+}
+
+@media (min-width: 319px) and (max-width: 480px)
+{
+    .testbox
+    {
+        border: 1px solid #cbc9c9;
+        border-radius: 8px / 7px;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.31);
+        height: auto;
+        margin: 40px auto 20px;
+        width: 95%;
+    }
+}
+@media (min-width: 481px) and (max-width: 980px)
+{
+     .testbox
+    {
+        border: 1px solid #cbc9c9;
+        border-radius: 8px / 7px;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.31);
+        height: auto;
+        margin: 40px auto 20px;
+        width: 50%;
+    }
+}

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p style="font-size: 13px;font-family: Verdana;">
+        Hello,</p>
+    <p style="line-height: 25px; font-size: 12px;font-family: Verdana;">
+        Leave Issued to ##empname##
+        
+        <br />
+        Leave Details:<br />
+        </p>
+        <table  cellpadding="5" cellspacing="0" style="font-family: Verdana; font-size: 12px;border: 1px solid #cccccc; text-align: left;">
+            <tr>
+                <td style="border-bottom: 1px solid #cccccc;border-right:1px solid #cccccc;">
+                    Employee ID
+                </td>
+                <td style="border-bottom: 1px solid #cccccc;">
+                    ##empid##
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid #cccccc;border-right:1px solid #cccccc;">
+                    Empolyee Name
+                </td>
+                <td style="border-bottom: 1px solid #cccccc;">
+                    ##empname##
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid #cccccc;border-right:1px solid #cccccc;">
+                    Request ID
+                </td>
+                <td style="border-bottom: 1px solid #cccccc;">
+                    ##requestid##
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid #cccccc;border-right:1px solid #cccccc;">
+                    Leave Details
+                </td>
+                <td style="border-bottom: 1px solid #cccccc;">
+                  ##numofdays##  ##leavetype## (##date##)
+                </td>
+            </tr>
+            <tr>
+                <td style="border-right:1px solid #cccccc;">
+                    Description
+                </td>
+                <td style="">
+                    ##description##
+                </td>
+            </tr>
+        </table>
+   
+    <br />
+    <p><a href="##site##/LeaveRequest.aspx?RequestId=##requestid##">Click here to approve/reject leave</a></p>
+    <p>
+        Thanks & Regards<br />
+        </p>
+    <img src="##site##/images/logo.png" alt="" />
+</body>
+</html>

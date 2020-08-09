@@ -1,0 +1,271 @@
+﻿.divgroupTitle {
+    margin: 10px 0px 15px 0px;
+    clear: both;
+}
+
+    .divgroupTitle table {
+        width: 95%;
+        margin: 0px auto;
+    }
+
+.divgroupTitleLeft {
+      border-top: 1px solid #7e7e7e;
+    height: 1px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.divgroupTitleMid {
+    color: #000;
+   
+    font-size: 17px;
+    text-align: center;
+    width: 100%;
+}
+
+.divgroupTitleRight {
+    border-top: 1px solid #7e7e7e;
+    float: left;
+    height: 1px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.schedulebox {
+    margin: 20px 0px;
+    clear: both;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(198, 196, 201, 1);
+    border: none 0px !important;
+    padding: 10px 0px;
+}
+
+.datebox {
+    background-color: #fff !important;
+    border-radius: 5px;
+    float: left;
+    box-shadow: 0 0 5px rgba(0, 122, 199, 0.6);
+    width: 70px;
+    margin-right: 10px;
+    cursor:pointer;
+     transition: all .2s ease 0s;
+}
+.datebox:hover {
+     box-shadow: 0 0 5px rgba(24, 58, 86, 1);
+   
+}
+.pop_datebox {
+    float: left;
+    display: table-cell;
+}
+
+.pop_datebox_inner {
+    background-color: #ffffff !important;
+    border-radius: 5px;
+    float: left;
+    box-shadow: 0 0 5px rgba(0, 122, 199, 0.6);
+    width: 70px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.datebox_year {
+    clear: both;
+    color: #000000;
+    font-family: "open_sans_semibold",Arial,Helvetica,sans-serif;
+    text-align: center;
+}
+
+.datedetail {
+    text-align: center;
+    font-size: 12px;
+    padding: 2px;
+    text-transform:uppercase;
+}
+
+    .datedetail span {
+        display: block;
+        clear: both;
+        font-family: "open_sans_semibold",Arial,Helvetica,sans-serif;
+        font-size: 18px;
+    }
+
+.pop_datebox .datedetail span {
+    font-size: 13px;
+    font-weight: normal;
+    text-transform:uppercase;
+}
+
+.monthdetail {
+    background: #11A18C;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    font-family: "open_sans_semibold",Arial,Helvetica,sans-serif;
+    padding: 2px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.schedulebox h1 {
+    color: #11A18C;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    padding-top:3px;
+}
+
+.schedulebox p {
+    color: #000;
+}
+
+.schpop h1 {
+    color: #11A18C;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.schpop p {
+    color: #000;
+}
+
+.schpop .detail {
+    display: table-cell;
+}
+
+.schedulebox .detail {
+    display: table-cell;
+}
+
+.schstatus {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 15px;
+    float: right;
+    font-family: "open_sans_semibold",Arial,Helvetica,sans-serif;
+    cursor:pointer;
+}
+
+.schstatus-green {
+    background-image: url(../images/Active.png);
+    color: #56d04c;
+}
+
+.schstatus-red {
+    background-image: url(../images/busy.png);
+    color: #ff0000;
+}
+
+.schstatus-away {
+    background-image: url(../images/away.png);
+    color: #FF9600;
+}
+
+.schedulebox .linkbox {
+    float: right;
+    margin-top: 10px;
+}
+
+    .schedulebox .linkbox a {
+        background: #e6e6e6; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#ffffff, #e6e6e6); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient( #ffffff, #e6e6e6); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient( #ffffff, #e6e6e6); /* For Firefox 3.6 to 15 */
+        background: linear-gradient( #ffffff, #e6e6e6); /* Standard syntax */
+        border: 1px solid #ddd;
+        color: #919193;
+        display: inline-block;
+        font-size: 13px;
+        margin-right: 3px;
+        padding: 4px 10px;
+        text-decoration: none;
+    }
+
+.worktype div {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 20px;
+    font-family: "open_sans_semibold",Arial,Helvetica,sans-serif;
+    line-height: 22px;
+}
+
+    .worktype div.field {
+        background-image: url(../images/field-work.png);
+        color: #1111A1;
+    }
+
+    .worktype div.office {
+        background-image: url(../images/office-work.png);
+        color: #3BA18F;
+    }
+
+
+.divdrop {
+    position: absolute;
+    width:91%;
+}
+.ui-autocomplete-input{
+     background-image: url("../images/drop-arrow.png") !important;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+.divdrop .dropctrl {
+    border: 1px solid #dadada;
+    border-radius: 0;
+    height: 28px;
+    padding: 3px;
+    background-color: #fff;
+    border: 1px solid #cdcdcd;
+    border-radius: 0px;
+    color: #555;
+    display: block;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: all ease-in-out .15s;
+    -o-transition: all ease-in-out .15s;
+    transition: all ease-in-out .15s;
+    background-image: url("../images/drop-arrow.png") !important;
+    background-position: right center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.divdrop .droplist {
+    clear: both;
+    max-height: 200px;
+    overflow: auto;
+    background: #fff;
+    border: outset 1px #000;
+    display: none;
+    padding: 5px 2px;
+    position: relative;
+    z-index: 1;
+}
+
+    .divdrop .droplist ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+        .divdrop .droplist ul li {
+            clear: both;
+            padding: 3px 5px;
+            cursor: pointer;
+        }
+
+            .divdrop .droplist ul li a {
+                text-decoration: none;
+                color: #333333;
+                float: left;
+                width: 85%;
+            }

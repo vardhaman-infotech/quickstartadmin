@@ -1,0 +1,133 @@
+﻿
+optgroup {
+margin-top:5px;
+margin-left:3px;
+display:block;
+color:#428bca;
+}
+optgroup option{
+color:#000000;
+}
+
+.help_menu{ float:left; }
+.help_menu li{  float:left; width:100%; }
+.help_menu li a{ background: none repeat scroll 0 0 #F8F9FA; border-radius: 10px; color: #222222; display:block; font-size: 15px; margin: 3px 0; padding:10px 5px 10px 5px; 
+  letter-spacing:1px; }
+.help_menu li a:hover{ background:#d2d4d5;}
+.help_menu li a.visit_menu{ background:#d2d4d5;}
+
+
+  .pad6 {
+            padding-bottom: 8px;
+        }
+
+        .font_size {
+            font-size: 15px;
+        }
+
+        .font_size2 {
+            font-size: 20px;
+        }
+
+        .mar4 {
+            margin-top: 30px;
+        }
+
+        
+
+
+    .background_image {
+           
+            padding: 12px;
+            float: left;
+        }
+
+            .background_image img {
+              
+                width: 150px;
+            }
+
+        .link_div {
+            border-bottom: dashed 1px #999999;
+            padding-bottom: 4px;
+            width: 100%;
+            clear: both;
+            margin-bottom: 6px;
+        }
+
+            .link_div p {
+                padding: 8px 0 0 0;
+                margin: 0px;
+            }
+
+        .aFontSize {
+            font-size: 12px;
+            padding-top: 14px;
+        }
+
+        .pFontSize {
+            font-size: 13px;
+        }
+
+        .sett_textbox {
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #cdcdcd;
+            border-radius: 4px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+            color: #555;
+            display: block;
+            font-size: 13px;
+            padding: 6px 12px;
+            transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+            width: 200px;
+        }
+
+        .sett_btn {
+            background-color: #428bca;
+            border-color: #357ebd;
+            color: #fff;
+            padding: 3px 10px;
+            font-size: 12px;
+        }
+
+        .marright {
+            margin-right: 5px;
+        }
+
+        .martop {
+            margin: 8px 0 0;
+        }
+        .right_help_box{ float:left; width:100%;}
+.right_help_box h1{ color:#434343; font-size:24px; padding-bottom:14px; float:left; font-family: 'open_sans_condensedbold';}
+.right_help_box h1 span{ width:36px; height:36px; background-color:#cccccc; border-radius:20px; display:block; float:left; margin-right:8px; text-align:center; background-repeat:no-repeat; background-position:center center; }
+            .right_help_box h1 label{
+                font-size:inherit;
+            }
+
+        .span-profile
+     {
+         background-image:url(../images/announce-pic.png);
+         }
+         .span-changepass
+     {
+         background-image:url(../images/Repair.png);
+         }
+         .span-quicklink
+     {
+         background-image:url(../images/quick_link.png);
+         }
+.line_help{ border:dotted #999999 1px; width:100%; letter-spacing:2px; clear:both; }
+.white_base{border-radius:10px; background:#f8f9fa; font-family:Arial, Helvetica, sans-serif; font-size:14px; margin:10px 0; padding:10px; }
+.white_base p{ padding:2px; line-height:20px;}
+.addressdetail p {
+
+padding:0px;
+margin:0px;
+}
+
+.RadListBox1 option {
+    padding: 5px;
+    font-size:13px;
+
+}

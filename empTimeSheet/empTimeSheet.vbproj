@@ -1,0 +1,2053 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{2424AE04-7607-467E-BB44-0EFE2F055CA4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>quickstart</RootNamespace>
+    <AssemblyName>quickstart</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>quickstart.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>quickstart.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ajax, Version=5.7.22.2, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Ajax.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin, Version=4.97.4951.28478, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMaps.LocationServices, Version=0.1.5219.29552, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GoogleMaps.LocationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlToPdfOrImage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\HtmlToPdfOrImage.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Exchange.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Practices.ObjectBuilder.dll.3.1.0\lib\2.0\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=4.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="quickstart, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\quickstart.dll</HintPath>
+    </Reference>
+    <Reference Include="Recaptcha, Version=1.0.5.0, Culture=neutral, PublicKeyToken=9afc4d65b28c38c2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Recaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="SautinSoft.PdfVision, Version=4.9.5.6, Culture=neutral, PublicKeyToken=9c847e093dd15dbf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SautinSoft.PdfVision.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TimePicker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d25e9f59e49c4d2f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\TimePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="uploadimage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\uploadimage.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminDashboard.aspx" />
+    <Content Include="AdminDashboard.aspx.cs" />
+    <Content Include="AdminDashboard.aspx.designer.cs" />
+    <Content Include="admin\css\960.css" />
+    <Content Include="admin\css\blue.css" />
+    <Content Include="admin\css\login.css" />
+    <Content Include="admin\css\newstyle.css" />
+    <Content Include="admin\css\reset.css" />
+    <Content Include="admin\css\style.css" />
+    <Content Include="admin\css\StyleSheet.css" />
+    <Content Include="admin\css\text.css" />
+    <Content Include="admin\Default.aspx" />
+    <Content Include="admin\Default.aspx.cs" />
+    <Content Include="admin\Default.aspx.designer.cs" />
+    <Content Include="admin\defaultMaster.Master.cs" />
+    <Content Include="admin\defaultMaster.Master.designer.cs" />
+    <Content Include="admin\images\addd.png" />
+    <Content Include="admin\images\clients.png" />
+    <Content Include="admin\images\closepop.gif" />
+    <Content Include="admin\images\communication.png" />
+    <Content Include="admin\images\company.png" />
+    <Content Include="admin\images\company16.png" />
+    <Content Include="admin\images\Delete32.png" />
+    <Content Include="admin\images\Department.png" />
+    <Content Include="admin\images\edit32.png" />
+    <Content Include="admin\images\emplogin.png" />
+    <Content Include="admin\images\employee.png" />
+    <Content Include="admin\images\indicator.gif" />
+    <Content Include="admin\images\message.png" />
+    <Content Include="admin\images\next24.png" />
+    <Content Include="admin\images\previous24.png" />
+    <Content Include="admin\images\projects.png" />
+    <Content Include="admin\images\projects16.png" />
+    <Content Include="admin\images\projects32.png" />
+    <Content Include="admin\images\reports.png" />
+    <Content Include="admin\images\tasksrpt.png" />
+    <Content Include="admin\img\arrow_mini_down.gif" />
+    <Content Include="admin\img\bg.gif" />
+    <Content Include="admin\img\bg_content.gif" />
+    <Content Include="admin\img\bg_content_bottom.gif" />
+    <Content Include="admin\img\bg_header_blue.gif" />
+    <Content Include="admin\img\bg_header_green.gif" />
+    <Content Include="admin\img\bg_header_red.gif" />
+    <Content Include="admin\img\bg_login.gif" />
+    <Content Include="admin\img\bg_usertools_left.gif" />
+    <Content Include="admin\img\bg_usertools_right.gif" />
+    <Content Include="admin\img\bullet_blue.gif" />
+    <Content Include="admin\img\bullet_green.gif" />
+    <Content Include="admin\img\bullet_red.gif" />
+    <Content Include="admin\img\but_left_blue.gif" />
+    <Content Include="admin\img\but_left_green.gif" />
+    <Content Include="admin\img\but_left_grey.gif" />
+    <Content Include="admin\img\but_left_red.gif" />
+    <Content Include="admin\img\but_login_left.gif" />
+    <Content Include="admin\img\but_login_span.gif" />
+    <Content Include="admin\img\but_right_blue.gif" />
+    <Content Include="admin\img\but_right_green.gif" />
+    <Content Include="admin\img\but_right_grey.gif" />
+    <Content Include="admin\img\but_right_red.gif" />
+    <Content Include="admin\img\but_round_del_blue.gif" />
+    <Content Include="admin\img\but_round_del_green.gif" />
+    <Content Include="admin\img\but_round_del_red.gif" />
+    <Content Include="admin\img\but_round_left_grey.gif" />
+    <Content Include="admin\img\but_round_ok_blue.gif" />
+    <Content Include="admin\img\but_round_ok_green.gif" />
+    <Content Include="admin\img\but_round_ok_red.gif" />
+    <Content Include="admin\img\but_round_span_blue.gif" />
+    <Content Include="admin\img\but_round_span_green.gif" />
+    <Content Include="admin\img\but_round_span_grey.gif" />
+    <Content Include="admin\img\but_round_span_red.gif" />
+    <Content Include="admin\img\company32.png" />
+    <Content Include="admin\img\forgot_bg_left.gif" />
+    <Content Include="admin\img\forgot_bg_span.gif" />
+    <Content Include="admin\img\icons\action_check.gif" />
+    <Content Include="admin\img\icons\action_delete.gif" />
+    <Content Include="admin\img\icons\action_remove.gif" />
+    <Content Include="admin\img\icons\calendar.gif" />
+    <Content Include="admin\img\icons\chart_bar.gif" />
+    <Content Include="admin\img\icons\comments.gif" />
+    <Content Include="admin\img\icons\edit.gif" />
+    <Content Include="admin\img\icons\exclamation.gif" />
+    <Content Include="admin\img\icons\feed.gif" />
+    <Content Include="admin\img\icons\lightbulb.gif" />
+    <Content Include="admin\img\icons\lightbulb_off.gif" />
+    <Content Include="admin\img\icons\user.gif" />
+    <Content Include="admin\img\icon_clock.png" />
+    <Content Include="admin\img\icon_content_small.gif" />
+    <Content Include="admin\img\icon_dashboard.png" />
+    <Content Include="admin\img\icon_dashboard_small.gif" />
+    <Content Include="admin\img\icon_edit.png" />
+    <Content Include="admin\img\icon_error.gif" />
+    <Content Include="admin\img\icon_info.gif" />
+    <Content Include="admin\img\icon_mail_small.gif" />
+    <Content Include="admin\img\icon_media.png" />
+    <Content Include="admin\img\icon_news.png" />
+    <Content Include="admin\img\icon_reports.png" />
+    <Content Include="admin\img\icon_settings.png" />
+    <Content Include="admin\img\icon_success.gif" />
+    <Content Include="admin\img\icon_users.png" />
+    <Content Include="admin\img\icon_warning.gif" />
+    <Content Include="admin\img\informationbar_right.gif" />
+    <Content Include="admin\img\navigation_background_blue.gif" />
+    <Content Include="admin\img\navigation_background_green.gif" />
+    <Content Include="admin\img\navigation_background_red.gif" />
+    <Content Include="admin\img\navigation_first_blue.gif" />
+    <Content Include="admin\img\navigation_first_green.gif" />
+    <Content Include="admin\img\navigation_first_red.gif" />
+    <Content Include="admin\img\navigation_last_blue.gif" />
+    <Content Include="admin\img\navigation_last_green.gif" />
+    <Content Include="admin\img\navigation_last_red.gif" />
+    <Content Include="admin\img\tabs_left.gif" />
+    <Content Include="admin\img\tabs_left_green.gif" />
+    <Content Include="admin\img\tabs_left_red.gif" />
+    <Content Include="admin\img\tabs_right.gif" />
+    <Content Include="admin\img\tabs_right_green.gif" />
+    <Content Include="admin\img\tabs_right_red.gif" />
+    <Content Include="admin\js\jquery-1.7.2.min.js" />
+    <Content Include="admin\js\jquery.min.js" />
+    <Content Include="admin\logout.aspx" />
+    <Content Include="admin\logout.aspx.cs" />
+    <Content Include="admin\logout.aspx.designer.cs" />
+    <Content Include="admin\ManageCity.aspx" />
+    <Content Include="admin\ManageCity.aspx.cs" />
+    <Content Include="admin\ManageCity.aspx.designer.cs" />
+    <Content Include="admin\ManageCompany.aspx" />
+    <Content Include="admin\ManageCompany.aspx.cs" />
+    <Content Include="admin\ManageCompany.aspx.designer.cs" />
+    <Content Include="admin\ManageCountry.aspx" />
+    <Content Include="admin\ManageCountry.aspx.cs" />
+    <Content Include="admin\ManageCountry.aspx.designer.cs" />
+    <Content Include="admin\ManageCurrency.aspx" />
+    <Content Include="admin\ManageCurrency.aspx.cs" />
+    <Content Include="admin\ManageCurrency.aspx.designer.cs" />
+    <Content Include="admin\ManageState.aspx" />
+    <Content Include="admin\ManageState.aspx.cs" />
+    <Content Include="admin\ManageState.aspx.designer.cs" />
+    <Content Include="admin\progressbar.ascx" />
+    <Content Include="admin\progressbar.ascx.cs" />
+    <Content Include="admin\progressbar.ascx.designer.cs" />
+    <Content Include="agingReportSummary.aspx" />
+    <Content Include="agingReportSummary.aspx.cs" />
+    <Content Include="agingReportSummary.aspx.designer.cs" />
+    <Content Include="Annoncements.aspx" />
+    <Content Include="Annoncements.aspx.cs" />
+    <Content Include="Annoncements.aspx.designer.cs" />
+    <Content Include="API\QuickStartAPI.asmx" />
+    <Content Include="API\QuickStartAPI.asmx.cs" />
+    <Content Include="Appointment\AppointmentMaster.Master.cs" />
+    <Content Include="Appointment\AppointmentMaster.Master.designer.cs" />
+    <Content Include="Appointment\css\flickity.css" />
+    <Content Include="Appointment\css\jquery-ui.css" />
+    <Content Include="Appointment\css\jquery.bxslider.css" />
+    <Content Include="Appointment\css\mobStyleSheet.css" />
+    <Content Include="Appointment\css\owl.carousel.min.css" />
+    <Content Include="Appointment\css\stylesheet2.0.css" />
+    <Content Include="Appointment\css\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Appointment\Default.aspx" />
+    <Content Include="Appointment\Default.aspx.cs" />
+    <Content Include="Appointment\Default.aspx.designer.cs" />
+    <Content Include="Appointment\error.html" />
+    <Content Include="Appointment\images\bg.jpg" />
+    <Content Include="Appointment\images\bg2.jpg" />
+    <Content Include="Appointment\images\bg3.jpg" />
+    <Content Include="Appointment\images\calendar.png" />
+    <Content Include="Appointment\images\left-arow.png" />
+    <Content Include="Appointment\images\loading.gif" />
+    <Content Include="Appointment\images\logonew.png" />
+    <Content Include="Appointment\images\right-arow.png" />
+    <Content Include="Appointment\images\ui-icons_222222_256x240.png" />
+    <Content Include="Appointment\js\flickity.pkgd.min.js" />
+    <Content Include="Appointment\js\jquery-1.10.2.js" />
+    <Content Include="Appointment\js\jquery-ui.js" />
+    <Content Include="Appointment\js\jquery.bxslider.min.js" />
+    <Content Include="Appointment\js\jquery.diyslider.min.js" />
+    <Content Include="Appointment\js\jquery.min.js" />
+    <Content Include="Appointment\js\jquery.timepicker.css" />
+    <Content Include="Appointment\js\jquery.timepicker.js" />
+    <Content Include="Appointment\js\owl.carousel.js" />
+    <Content Include="Appointment\js\validate2.3.js" />
+    <Content Include="Appointment\MobDefault.aspx" />
+    <Content Include="Appointment\MobDefault.aspx.cs" />
+    <Content Include="Appointment\MobDefault.aspx.designer.cs" />
+    <Content Include="Appointment\MobileMaster.Master.cs" />
+    <Content Include="Appointment\MobileMaster.Master.designer.cs" />
+    <Content Include="Appointment\progressbar.ascx" />
+    <Content Include="Appointment\progressbar.ascx.cs" />
+    <Content Include="Appointment\progressbar.ascx.designer.cs" />
+    <Content Include="Appoint_Availability.aspx" />
+    <Content Include="Appoint_Availability.aspx.cs" />
+    <Content Include="Appoint_Availability.aspx.designer.cs" />
+    <Content Include="Appoint_ViewAppointments.aspx" />
+    <Content Include="Appoint_ViewAppointments.aspx.cs" />
+    <Content Include="Appoint_ViewAppointments.aspx.designer.cs" />
+    <Content Include="ARAgingReport.aspx" />
+    <Content Include="ARAgingReport.aspx.cs" />
+    <Content Include="ARAgingReport.aspx.designer.cs" />
+    <Content Include="assetTransferMaster.aspx" />
+    <Content Include="assetTransferMaster.aspx.cs" />
+    <Content Include="assetTransferMaster.aspx.designer.cs" />
+    <Content Include="asset_AssetMaster.aspx" />
+    <Content Include="asset_AssetMaster.aspx.cs" />
+    <Content Include="asset_AssetMaster.aspx.designer.cs" />
+    <Content Include="Asset_ItemCategory.aspx" />
+    <Content Include="Asset_ItemCategory.aspx.cs" />
+    <Content Include="Asset_ItemCategory.aspx.designer.cs" />
+    <Content Include="asset_Transfer_Master.aspx" />
+    <Content Include="asset_Transfer_Master.aspx.cs" />
+    <Content Include="asset_Transfer_Master.aspx.designer.cs" />
+    <Content Include="asset_VendorMaster.aspx" />
+    <Content Include="asset_VendorMaster.aspx.cs" />
+    <Content Include="asset_VendorMaster.aspx.designer.cs" />
+    <Content Include="AssignedTasks.aspx" />
+    <Content Include="AssignedTasks.aspx.cs" />
+    <Content Include="AssignedTasks.aspx.designer.cs" />
+    <Content Include="AssignedTasksReport.aspx" />
+    <Content Include="AssignedTasksReport.aspx.cs" />
+    <Content Include="assset_MyAssets.aspx" />
+    <Content Include="assset_MyAssets.aspx.designer.cs" />
+    <Content Include="AttendenceReader.aspx" />
+    <Content Include="AttendenceReader.aspx.cs" />
+    <Content Include="AttendenceReader.aspx.designer.cs" />
+    <Content Include="bin\Ajax.dll" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\AjaxMin.dll" />
+    <Content Include="bin\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\cs\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\de\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\de\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\de\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\de\System.Spatial.resources.dll" />
+    <Content Include="bin\empTimeSheet.dll" />
+    <Content Include="bin\empTimeSheet.pdb" />
+    <Content Include="bin\es\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\es\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\es\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\GoogleMaps.LocationServices.dll" />
+    <Content Include="bin\hi\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\HtmlAgilityPack.dll" />
+    <Content Include="bin\HtmlToPdfOrImage.dll" />
+    <Content Include="bin\itextsharp.xmlworker.dll" />
+    <Content Include="bin\it\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\it\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\it\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\it\System.Spatial.resources.dll" />
+    <Content Include="bin\ja\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ko\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ko\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ko\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ko\System.Spatial.resources.dll" />
+    <Content Include="bin\Microsoft.AspNet.SignalR.Core.dll" />
+    <Content Include="bin\Microsoft.AspNet.SignalR.Owin.dll" />
+    <Content Include="bin\Microsoft.AspNet.SignalR.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.AspNet.SignalR.SystemWeb.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.Data.Edm.dll" />
+    <Content Include="bin\Microsoft.Data.Edm.xml" />
+    <Content Include="bin\Microsoft.Data.OData.dll" />
+    <Content Include="bin\Microsoft.Data.Services.Client.dll" />
+    <Content Include="bin\Microsoft.Exchange.WebServices.dll" />
+    <Content Include="bin\Microsoft.Exchange.WebServices.xml" />
+    <Content Include="bin\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="bin\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.DataVisualization.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.WebForms.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.WebForms.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Microsoft.WindowsAzure.Configuration.dll" />
+    <Content Include="bin\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="bin\Microsoft.WindowsAzure.Storage.xml" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\nl\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="bin\pl\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\pt\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Recaptcha.dll" />
+    <Content Include="bin\ru\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ru\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ru\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ru\System.Spatial.resources.dll" />
+    <Content Include="bin\SautinSoft.PdfVision.dll" />
+    <Content Include="bin\System.Spatial.dll" />
+    <Content Include="bin\System.Spatial.xml" />
+    <Content Include="bin\TimePicker.dll" />
+    <Content Include="bin\tr-TR\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\uploadimage.dll" />
+    <Content Include="bin\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\zh-Hant\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\zh-Hant\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\zh-Hant\System.Spatial.resources.dll" />
+    <Content Include="BranchMaster.aspx.cs" />
+    <Content Include="BranchMaster.aspx.designer.cs" />
+    <Content Include="BudgetedReport.aspx" />
+    <Content Include="BudgetedReport.aspx.cs" />
+    <Content Include="BudgetedReport.aspx.designer.cs" />
+    <Content Include="ChatHub.cs" />
+    <Content Include="chatmessage.aspx" />
+    <Content Include="chatmessage.aspx.cs" />
+    <Content Include="chatmessage.aspx.designer.cs" />
+    <Content Include="client.aspx.cs" />
+    <Content Include="client.aspx.designer.cs" />
+    <Content Include="ClientGroup.aspx" />
+    <Content Include="ClientGroup.aspx.cs" />
+    <Content Include="ClientGroup.aspx.designer.cs" />
+    <Content Include="clientmap.aspx" />
+    <Content Include="clientmap.aspx.cs" />
+    <Content Include="clientmap.aspx.designer.cs" />
+    <Content Include="ClientSchedule.aspx" />
+    <Content Include="ClientSchedule.aspx.cs" />
+    <Content Include="Client\ClientMaster.Master.cs" />
+    <Content Include="Client\ClientMaster.Master.designer.cs" />
+    <Content Include="Client\css\clientnav_1.0.css" />
+    <Content Include="Client\css\clientreset_1.0.css" />
+    <Content Include="Client\css\clientstyle_1.0.css" />
+    <Content Include="Client\css\clienttabs_1.0.css" />
+    <Content Include="Client\css\exo2.0-regular.svg" />
+    <Content Include="Client\EmpTimeSheet.aspx" />
+    <Content Include="Client\EmpTimeSheet.aspx.cs" />
+    <Content Include="Client\EmpTimeSheet.aspx.designer.cs" />
+    <Content Include="Client\Home.aspx.cs" />
+    <Content Include="Client\Home.aspx.designer.cs" />
+    <Content Include="Client\images\add.png" />
+    <Content Include="Client\images\arrow.png" />
+    <Content Include="Client\images\arrow_1.png" />
+    <Content Include="Client\images\arrow_left.png" />
+    <Content Include="Client\images\arrow_right.png" />
+    <Content Include="Client\images\assessment.png" />
+    <Content Include="Client\images\black_folder.png" />
+    <Content Include="Client\images\business.png" />
+    <Content Include="Client\images\cricle.png" />
+    <Content Include="Client\images\cross.png" />
+    <Content Include="Client\images\delete.png" />
+    <Content Include="Client\images\drop_arow.png" />
+    <Content Include="Client\images\edit.png" />
+    <Content Include="Client\images\graph.png" />
+    <Content Include="Client\images\header_bg.jpg" />
+    <Content Include="Client\images\icon2.png" />
+    <Content Include="Client\images\icon22.png" />
+    <Content Include="Client\images\icon3.png" />
+    <Content Include="Client\images\icon4.png" />
+    <Content Include="Client\images\icon6.png" />
+    <Content Include="Client\images\icon7.png" />
+    <Content Include="Client\images\loading.gif" />
+    <Content Include="Client\images\logo.png" />
+    <Content Include="Client\images\model.png" />
+    <Content Include="Client\images\norecord.png" />
+    <Content Include="Client\images\print.png" />
+    <Content Include="Client\images\quickstart_logo.png" />
+    <Content Include="Client\images\report.png" />
+    <Content Include="Client\images\risk_area.png" />
+    <Content Include="Client\images\rootnode.png" />
+    <Content Include="Client\images\setting.png" />
+    <Content Include="Client\images\squar.png" />
+    <Content Include="Client\images\view.png" />
+    <Content Include="Client\index.aspx" />
+    <Content Include="Client\index.aspx.cs" />
+    <Content Include="Client\index.aspx.designer.cs" />
+    <Content Include="Client\js\jquery-1.7.1.min.js" />
+    <Content Include="Client\js\jquery.canvasjs.min.js" />
+    <Content Include="Client\js\jquery.easing.min.js" />
+    <Content Include="Client\js\jquery.min.js" />
+    <Content Include="Client\js\supersized.3.2.7.js" />
+    <Content Include="Client\js\supersized.3.2.7.min.js" />
+    <Content Include="Client\js\validate.js" />
+    <Content Include="Client\logout.aspx" />
+    <Content Include="Client\logout.aspx.cs" />
+    <Content Include="Client\logout.aspx.designer.cs" />
+    <Content Include="Client\ProjectStatusReport.aspx" />
+    <Content Include="Client\ProjectStatusReport.aspx.cs" />
+    <Content Include="Client\ProjectStatusReport.aspx.designer.cs" />
+    <Content Include="Common\MessageDetail.cs" />
+    <Content Include="Common\UserDetail.cs" />
+    <Content Include="Common\UserList.cs" />
+    <Content Include="CompanySettings.aspx" />
+    <Content Include="CompanySettings.aspx.cs" />
+    <Content Include="CompanySettings.aspx.designer.cs" />
+    <Content Include="CompanySettings_Old.aspx" />
+    <Content Include="CompanySettings_Old.aspx.cs" />
+    <Content Include="CompanySettings_Old.aspx.designer.cs" />
+    <Content Include="comp_AttandanceReaderSettings.aspx" />
+    <Content Include="comp_AttandanceReaderSettings.aspx.cs" />
+    <Content Include="comp_AttandanceReaderSettings.aspx.designer.cs" />
+    <Content Include="comp_BillSettings.aspx" />
+    <Content Include="comp_BillSettings.aspx.cs" />
+    <Content Include="comp_BillSettings.aspx.designer.cs" />
+    <Content Include="comp_email.aspx" />
+    <Content Include="comp_email.aspx.cs" />
+    <Content Include="comp_email.aspx.designer.cs" />
+    <Content Include="comp_GeneralInformation.aspx" />
+    <Content Include="comp_GeneralInformation.aspx.cs" />
+    <Content Include="comp_GeneralInformation.aspx.designer.cs" />
+    <Content Include="comp_InvEmailTemplate.aspx" />
+    <Content Include="comp_InvEmailTemplate.aspx.cs" />
+    <Content Include="comp_InvEmailTemplate.aspx.designer.cs" />
+    <Content Include="comp_InvTemplate.aspx" />
+    <Content Include="comp_InvTemplate.aspx.cs" />
+    <Content Include="comp_InvTemplate.aspx.designer.cs" />
+    <Content Include="comp_LeaveEmail.aspx" />
+    <Content Include="comp_LeaveEmail.aspx.cs" />
+    <Content Include="comp_LeaveEmail.aspx.designer.cs" />
+    <Content Include="comp_PaymentTerm.aspx" />
+    <Content Include="comp_PaymentTerm.aspx.cs" />
+    <Content Include="comp_PaymentTerm.aspx.designer.cs" />
+    <Content Include="comp_ScheduleEmail.aspx" />
+    <Content Include="comp_ScheduleEmail.aspx.cs" />
+    <Content Include="comp_ScheduleEmail.aspx.designer.cs" />
+    <Content Include="com_Logo.aspx" />
+    <Content Include="ConfigurationReport.aspx" />
+    <Content Include="ConfigurationReport.aspx.cs" />
+    <Content Include="ConfigurationReport.aspx.designer.cs" />
+    <Content Include="css\announcement_2.0.css" />
+    <Content Include="css\asset.css" />
+    <Content Include="css\bootstrap_5.0.min.css" />
+    <Content Include="css\chatMessage.css" />
+    <Content Include="css\chat_4.0.css" />
+    <Content Include="css\company-setting5.0.css" />
+    <Content Include="css\companySettingMain5.0.css" />
+    <Content Include="css\dashboard1.0.css" />
+    <Content Include="css\DashboardChart.css" />
+    <Content Include="css\dashboardcss.css" />
+    <Content Include="css\defaultTheme.css" />
+    <Content Include="css\email_fileShare.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\jquery-ui.1.0.css" />
+    <Content Include="css\jquery.bxslider.css" />
+    <Content Include="css\jquery.dataTables.min.css" />
+    <Content Include="css\lato.css" />
+    <Content Include="css\logincss.css" />
+    <Content Include="css\login_2.0.css" />
+    <Content Include="css\manualInvoice_2.5.css" />
+    <Content Include="css\myAccount.css" />
+    <Content Include="css\nav_2.0.css" />
+    <Content Include="css\opensans-regular-demo.html" />
+    <Content Include="css\opensans-regular.svg" />
+    <Content Include="css\oswald-regular.svg" />
+    <Content Include="css\print.css" />
+    <Content Include="css\projectForecasting.css" />
+    <Content Include="css\publicdrive5.0.css" />
+    <Content Include="css\reset_2.0.css" />
+    <Content Include="css\schedulecss.css" />
+    <Content Include="css\server_2.0.css" />
+    <Content Include="css\simplepage.css" />
+    <Content Include="css\style_5.1.css" />
+    <Content Include="css\tab_2.0.css" />
+    <Content Include="css\taxlogcss.css" />
+    <Content Include="css\todolist_1.0.css" />
+    <Content Include="css\userstyle_5.0.css" />
+    <Content Include="CumulativeReport.aspx" />
+    <Content Include="CumulativeReport.aspx.cs" />
+    <Content Include="CumulativeReport.aspx.designer.cs" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="Dashboard.aspx.cs" />
+    <Content Include="Dashboard.aspx.designer.cs" />
+    <Content Include="DashboardCalendar.aspx" />
+    <Content Include="DashboardCalendar.aspx.cs" />
+    <Content Include="DashboardCalendar.aspx.designer.cs" />
+    <Content Include="dashboardChart.aspx" />
+    <Content Include="dashboardChart.aspx.cs" />
+    <Content Include="dashboardChart.aspx.designer.cs" />
+    <Content Include="DataClasses\BAL\ClsScheduleBAL.cs" />
+    <Content Include="DataClasses\BAL\ClsToDoListBAL.cs" />
+    <Content Include="DataClasses\BAL\ReCaptchaClass.cs" />
+    <Content Include="DataClasses\ClsEmailNoti.cs" />
+    <Content Include="DataClasses\DAL\ClsAdmin.cs" />
+    <Content Include="DataClasses\DAL\ClsAppointment.cs" />
+    <Content Include="DataClasses\DAL\clsDAL.cs" />
+    <Content Include="DataClasses\DAL\ClsFile.cs" />
+    <Content Include="DataClasses\DAL\clsLogin.cs" />
+    <Content Include="DataClasses\DAL\clsServer.cs" />
+    <Content Include="DataClasses\DAL\clsTax.cs" />
+    <Content Include="DataClasses\DAL\ClsTimeSheet.cs" />
+    <Content Include="DataClasses\DAL\ClsUser.cs" />
+    <Content Include="DataClasses\DAL\Cls_Asset.cs" />
+    <Content Include="DataClasses\DAL\DaraAccess.cs" />
+    <Content Include="DataClasses\DAL\excelexport.cs" />
+    <Content Include="DataClasses\dsAging90Days.Designer.cs" />
+    <Content Include="DataClasses\EventData.cs" />
+    <Content Include="DataClasses\GeneralMethod.cs" />
+    <Content Include="DataClasses\GeneratePDF.cs" />
+    <Content Include="DataClasses\ImportExcel.cs" />
+    <Content Include="DataClasses\ProgramAddresses.cs" />
+    <Content Include="DataClasses\reportClasses\ReportDefinition.cs" />
+    <Content Include="DataClasses\reportClasses\TableRdlGenerator.cs" />
+    <Content Include="default.aspx" />
+    <Content Include="Default.aspx.cs" />
+    <Content Include="Department.aspx" />
+    <Content Include="Department.aspx.cs" />
+    <Content Include="Department.aspx.designer.cs" />
+    <Content Include="Designation.aspx" />
+    <Content Include="Designation.aspx.cs" />
+    <Content Include="Designation.aspx.designer.cs" />
+    <Content Include="downloadEmailFiles.aspx" />
+    <Content Include="downloadEmailFiles.aspx.cs" />
+    <Content Include="downloadEmailFiles.aspx.designer.cs" />
+    <Content Include="downloadFile.aspx" />
+    <Content Include="downloadFile.aspx.cs" />
+    <Content Include="downloadFile.aspx.designer.cs" />
+    <Content Include="DownloadPDF.aspx" />
+    <Content Include="DownloadPDF.aspx.cs" />
+    <Content Include="DownloadPDF.aspx.designer.cs" />
+    <Content Include="emailFileSend.aspx.cs" />
+    <Content Include="emailFileSend.aspx.designer.cs" />
+    <Content Include="emailFileShare.aspx" />
+    <Content Include="emailFileShare.aspx.cs" />
+    <Content Include="emailFileShare.aspx.designer.cs" />
+    <Content Include="EmailTemplates\aapoitmentemail.htm" />
+    <Content Include="EmailTemplates\appointmentReqForAdmin.htm" />
+    <Content Include="EmailTemplates\clientschedule.htm" />
+    <Content Include="EmailTemplates\emailshare.htm" />
+    <Content Include="EmailTemplates\images\bg.jpg" />
+    <Content Include="EmailTemplates\images\fb.png" />
+    <Content Include="EmailTemplates\images\gplus.png" />
+    <Content Include="EmailTemplates\images\H&amp;C_logo.png" />
+    <Content Include="EmailTemplates\images\linkdin.png" />
+    <Content Include="EmailTemplates\images\logo.png" />
+    <Content Include="EmailTemplates\images\twitter.png" />
+    <Content Include="EmailTemplates\invEmail.html" />
+    <Content Include="EmailTemplates\issueleave.html" />
+    <Content Include="EmailTemplates\LeaveRequest.html" />
+    <Content Include="EmailTemplates\LeaveStatus.html" />
+    <Content Include="EmailTemplates\SchedulerEmail.htm" />
+    <Content Include="EmailTemplates\Statuschange.htm" />
+    <Content Include="EmailTemplates\timesheetemail.html" />
+    <Content Include="employee.aspx" />
+    <Content Include="employee.aspx.cs" />
+    <Content Include="employee.aspx.designer.cs" />
+    <Content Include="EmployeeGroup.aspx" />
+    <Content Include="EmployeeGroup.aspx.cs" />
+    <Content Include="EmployeeGroup.aspx.designer.cs" />
+    <Content Include="error.html" />
+    <Content Include="ExpenseDetailByEmployee.aspx" />
+    <Content Include="ExpenseDetailByEmployee.aspx.cs" />
+    <Content Include="ExpenseDetailByEmployee.aspx.designer.cs" />
+    <Content Include="ExpenseGroup.aspx" />
+    <Content Include="ExpenseGroup.aspx.cs" />
+    <Content Include="ExpenseGroup.aspx.designer.cs" />
+    <Content Include="ExpenseLog.aspx.cs" />
+    <Content Include="ExpenseLog.aspx.designer.cs" />
+    <Content Include="ExpenseMaster.aspx" />
+    <Content Include="ExpenseMaster.aspx.cs" />
+    <Content Include="expenseslog.aspx" />
+    <Content Include="expenseslog.aspx.cs" />
+    <Content Include="expenseslog.aspx.designer.cs" />
+    <Content Include="FileCategoryMaster.aspx" />
+    <Content Include="FileCategoryMaster.aspx.cs" />
+    <Content Include="FileCategoryMaster.aspx.designer.cs" />
+    <Content Include="FileManager.aspx" />
+    <Content Include="FileManager.aspx.cs" />
+    <Content Include="fileshare.aspx" />
+    <Content Include="fileshare.aspx.designer.cs" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont862f.svg" />
+    <Content Include="fonts\generator_config.txt" />
+    <Content Include="fonts\Georgia.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\lato\Lato-Bla-webfont.svg" />
+    <Content Include="fonts\lato\Lato-BlaIta-webfont.svg" />
+    <Content Include="fonts\lato\Lato-Bol-webfont.svg" />
+    <Content Include="fonts\lato\Lato-BolIta-webfont.svg" />
+    <Content Include="fonts\lato\Lato-Hai-webfont.svg" />
+    <Content Include="fonts\lato\Lato-HaiIta-webfont.svg" />
+    <Content Include="fonts\lato\Lato-Lig-webfont.svg" />
+    <Content Include="fonts\lato\Lato-LigIta-webfont.svg" />
+    <Content Include="fonts\lato\Lato-Reg-webfont.svg" />
+    <Content Include="fonts\lato\Lato-RegIta-webfont.svg" />
+    <Content Include="fonts\opensans-regular_1-webfont.svg" />
+    <Content Include="fonts\opensans-semibold_1-demo.html" />
+    <Content Include="fonts\opensans-semibold_1-webfont.svg" />
+    <Content Include="fonts\opensans\OpenSans-Bold.svg" />
+    <Content Include="fonts\preview.html" />
+    <Content Include="fonts\raleway-bold-demo.html" />
+    <Content Include="fonts\raleway-bold-webfont.svg" />
+    <Content Include="fonts\raleway-regular-demo.html" />
+    <Content Include="fonts\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="fonts\specimen_files\specimen_stylesheet.css" />
+    <Content Include="fonts\styles.css" />
+    <Content Include="fonts\weathericons-regular-webfont.svg" />
+    <Content Include="GenSalary.aspx" />
+    <Content Include="GenSalary.aspx.cs" />
+    <Content Include="GenSalary.aspx.designer.cs" />
+    <Content Include="Global.asax" />
+    <Content Include="Global.asax.cs" />
+    <Content Include="HCLLPScheduler.csproj.user" />
+    <Content Include="HCLLPScheduler.sln" />
+    <Content Include="Help.aspx" />
+    <Content Include="Help.aspx.cs" />
+    <Content Include="Help.aspx.designer.cs" />
+    <Content Include="helpimg\add-announ.png" />
+    <Content Include="helpimg\addholiday.png" />
+    <Content Include="helpimg\announcement.png" />
+    <Content Include="helpimg\AssignedTasksReport_aspx.png" />
+    <Content Include="helpimg\assignNewtask.png" />
+    <Content Include="helpimg\AssignTask.png" />
+    <Content Include="helpimg\client-contact.png" />
+    <Content Include="helpimg\ClientGroups.png" />
+    <Content Include="helpimg\clients.png" />
+    <Content Include="helpimg\ConfigurationReport_aspx.png" />
+    <Content Include="helpimg\CumulativeReport_aspx.png" />
+    <Content Include="helpimg\dashboard.png" />
+    <Content Include="helpimg\dept.png" />
+    <Content Include="helpimg\dept1.png" />
+    <Content Include="helpimg\desig.png" />
+    <Content Include="helpimg\emp.png" />
+    <Content Include="helpimg\EmpDashboard.png" />
+    <Content Include="helpimg\EmpGroup.png" />
+    <Content Include="helpimg\Holidays.png" />
+    <Content Include="helpimg\issueleave.png" />
+    <Content Include="helpimg\LeaveReport_aspx.png" />
+    <Content Include="helpimg\LeaveRequest.png" />
+    <Content Include="helpimg\login.png" />
+    <Content Include="helpimg\newLeaverequest.png" />
+    <Content Include="helpimg\NewSchedule.png" />
+    <Content Include="helpimg\nonschedule.png" />
+    <Content Include="helpimg\PerformanceReport_aspx.png" />
+    <Content Include="helpimg\Project-billing.png" />
+    <Content Include="helpimg\ProjectAllocationReport_aspx.png" />
+    <Content Include="helpimg\projects.png" />
+    <Content Include="helpimg\Schedule.png" />
+    <Content Include="helpimg\ScheduleReport_aspx.png" />
+    <Content Include="helpimg\ScheduleReport_Summary_aspx.png" />
+    <Content Include="helpimg\ServerLogReport_aspx - Copy.png" />
+    <Content Include="helpimg\ServerLogReport_aspx.png" />
+    <Content Include="helpimg\ServerLogReport_Detail.png" />
+    <Content Include="helpimg\serverLog_aspx.png" />
+    <Content Include="helpimg\servers.png" />
+    <Content Include="helpimg\settings_aspx.png" />
+    <Content Include="helpimg\Settings_aspxEmail.png" />
+    <Content Include="helpimg\settings_aspxPass.png" />
+    <Content Include="helpimg\tasks.png" />
+    <Content Include="helpimg\UpdatesReport_aspx.png" />
+    <Content Include="Holiday.aspx" />
+    <Content Include="Holiday.aspx.cs" />
+    <Content Include="images\1.png" />
+    <Content Include="images\accrued-L.png" />
+    <Content Include="images\Active.png" />
+    <Content Include="images\addEvent.png" />
+    <Content Include="images\alert.mp3" />
+    <Content Include="images\announce-icon.png" />
+    <Content Include="images\announce-pic.png" />
+    <Content Include="images\Announcement\settings.png" />
+    <Content Include="images\Announcement\skateboard.png" />
+    <Content Include="images\Announcement\slr.png" />
+    <Content Include="images\Announcement\smartphone.png" />
+    <Content Include="images\Announcement\spaceshuttle.png" />
+    <Content Include="images\Announcement\stack.png" />
+    <Content Include="images\Announcement\star.png" />
+    <Content Include="images\Announcement\steeringwheel.png" />
+    <Content Include="images\Announcement\stop.png" />
+    <Content Include="images\Announcement\sub.png" />
+    <Content Include="images\Announcement\submarine.png" />
+    <Content Include="images\Announcement\support.png" />
+    <Content Include="images\Announcement\swatches.png" />
+    <Content Include="images\Announcement\tablet.png" />
+    <Content Include="images\Announcement\takeoff.png" />
+    <Content Include="images\Announcement\target.png" />
+    <Content Include="images\Announcement\taxi.png" />
+    <Content Include="images\Announcement\toolbox.png" />
+    <Content Include="images\Announcement\tools.png" />
+    <Content Include="images\Announcement\tractor.png" />
+    <Content Include="images\Announcement\traffic.png" />
+    <Content Include="images\Announcement\train.png" />
+    <Content Include="images\Announcement\travelerbag.png" />
+    <Content Include="images\Announcement\trends.png" />
+    <Content Include="images\Announcement\tripod.png" />
+    <Content Include="images\Announcement\trophy.png" />
+    <Content Include="images\Announcement\truck.png" />
+    <Content Include="images\Announcement\tv.png" />
+    <Content Include="images\Announcement\typography.png" />
+    <Content Include="images\Announcement\ufo.png" />
+    <Content Include="images\Announcement\unicycle.png" />
+    <Content Include="images\Announcement\unlocked.png" />
+    <Content Include="images\Announcement\upload.png" />
+    <Content Include="images\Announcement\video.png" />
+    <Content Include="images\Announcement\videocameracompact.png" />
+    <Content Include="images\Announcement\volume.png" />
+    <Content Include="images\Announcement\water.png" />
+    <Content Include="images\Announcement\weather.png" />
+    <Content Include="images\Announcement\windsock.png" />
+    <Content Include="images\Announcement\windy.png" />
+    <Content Include="images\Announcement\x.png" />
+    <Content Include="images\Announcement\zoomin.png" />
+    <Content Include="images\Announcement\zoomout.png" />
+    <Content Include="images\apply_icon.png" />
+    <Content Include="images\approved.png" />
+    <Content Include="images\arrows.png" />
+    <Content Include="images\arrowsDown.png" />
+    <Content Include="images\arrowsleft.png" />
+    <Content Include="images\arrowsright.png" />
+    <Content Include="images\arrow_down.png" />
+    <Content Include="images\arrow_left.png" />
+    <Content Include="images\arrow_right.png" />
+    <Content Include="images\arrow_top.png" />
+    <Content Include="images\arrow_up.png" />
+    <Content Include="images\asc.png" />
+    <Content Include="images\assignedTask.png" />
+    <Content Include="images\away.png" />
+    <Content Include="images\balance-PL.png" />
+    <Content Include="images\black_folder.png" />
+    <Content Include="images\blankmap.png" />
+    <Content Include="images\blue.jpg" />
+    <Content Include="images\blue.png" />
+    <Content Include="images\blueCircle.png" />
+    <Content Include="images\blue_arrow.png" />
+    <Content Include="images\busy.png" />
+    <Content Include="images\calendar.png" />
+    <Content Include="images\cancel.png" />
+    <Content Include="images\cel-left-arrow.png" />
+    <Content Include="images\cel-right-arrow.png" />
+    <Content Include="images\chart.jpg" />
+    <Content Include="images\chat-icon.png" />
+    <Content Include="images\chatAlert.mp3" />
+    <Content Include="images\chat_arrow_down.png" />
+    <Content Include="images\clock.png" />
+    <Content Include="images\companylogo.png" />
+    <Content Include="images\completed-icon.png" />
+    <Content Include="images\cross.png" />
+    <Content Include="images\delete-icon.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\desc.png" />
+    <Content Include="images\drop-arrow.png" />
+    <Content Include="images\drop_arow.png" />
+    <Content Include="images\edit-icon.png" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\edit_chat.png" />
+    <Content Include="images\email-icon.png" />
+    <Content Include="images\emp-hrs.png" />
+    <Content Include="images\Emp.png" />
+    <Content Include="images\extra.png" />
+    <Content Include="images\favorite_task.png" />
+    <Content Include="images\field-work.png" />
+    <Content Include="images\folder_green.png" />
+    <Content Include="images\folder_icon16.png" />
+    <Content Include="images\folder_white.png" />
+    <Content Include="images\graph.png" />
+    <Content Include="images\graydot.png" />
+    <Content Include="images\gray_arrow.png" />
+    <Content Include="images\gray_arrow_down.png" />
+    <Content Include="images\gray_arrow_up.png" />
+    <Content Include="images\green.jpg" />
+    <Content Include="images\green.png" />
+    <Content Include="images\greendot.png" />
+    <Content Include="images\green_arrow.png" />
+    <Content Include="images\grip.png" />
+    <Content Include="images\HCLLP-PALLP-Logo.png" />
+    <Content Include="images\help-icon.png" />
+    <Content Include="images\History.png" />
+    <Content Include="images\icon-search.png" />
+    <Content Include="images\icon-search_chat.png" />
+    <Content Include="images\icon1.png" />
+    <Content Include="images\icon2.png" />
+    <Content Include="images\icon3.png" />
+    <Content Include="images\icon4.png" />
+    <Content Include="images\imp-shrtct-icon.png" />
+    <Content Include="images\in-process-icon.png" />
+    <Content Include="images\Individualss.png" />
+    <Content Include="images\InUses.png" />
+    <Content Include="images\leave-icon.png" />
+    <Content Include="images\link_icon16.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\loggeduser.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo2.png" />
+    <Content Include="images\logo3.png" />
+    <Content Include="images\min.png" />
+    <Content Include="images\minus-icon.png" />
+    <Content Include="images\minus.png" />
+    <Content Include="images\nonbillable.png" />
+    <Content Include="images\norecord.png" />
+    <Content Include="images\notification.png" />
+    <Content Include="images\no_image.png" />
+    <Content Include="images\office-work.png" />
+    <Content Include="images\phone-call.png" />
+    <Content Include="images\pleasewait.gif" />
+    <Content Include="images\plus-icon.png" />
+    <Content Include="images\plus-white.png" />
+    <Content Include="images\plus.png" />
+    <Content Include="images\Preloader_4.gif" />
+    <Content Include="images\q_logo.png" />
+    <Content Include="images\red.jpg" />
+    <Content Include="images\red.png" />
+    <Content Include="images\red_arrow.png" />
+    <Content Include="images\refresh_icon.png" />
+    <Content Include="images\reject.png" />
+    <Content Include="images\Repair.png" />
+    <Content Include="images\Repairs.png" />
+    <Content Include="images\right.png" />
+    <Content Include="images\rightloader.gif" />
+    <Content Include="images\right_triangle.png" />
+    <Content Include="images\rootnode.png" />
+    <Content Include="images\sara_sign.png" />
+    <Content Include="images\setstatus.png" />
+    <Content Include="images\share-file.png" />
+    <Content Include="images\Stock.png" />
+    <Content Include="images\Stocks.png" />
+    <Content Include="images\Store.png" />
+    <Content Include="images\Stores.png" />
+    <Content Include="images\submitted.png" />
+    <Content Include="images\taken-PL.png" />
+    <Content Include="images\taken-UPL.png" />
+    <Content Include="images\task-summary-icon.png" />
+    <Content Include="images\time-icon.png" />
+    <Content Include="images\time_icon16.png" />
+    <Content Include="images\todo-calendar-gray.png" />
+    <Content Include="images\todo-calendar.png" />
+    <Content Include="images\todo-close.png" />
+    <Content Include="images\todo-icon1.png" />
+    <Content Include="images\todo-icon2.png" />
+    <Content Include="images\todo-resize.png" />
+    <Content Include="images\total-icon.png" />
+    <Content Include="images\ui-icons_222222_256x240.png" />
+    <Content Include="images\ui-icons_454545_256x240.png" />
+    <Content Include="images\ui-icons_888888_256x240.png" />
+    <Content Include="images\updown.png" />
+    <Content Include="images\use.png" />
+    <Content Include="images\user_away.png" />
+    <Content Include="images\user_busy.png" />
+    <Content Include="images\user_offline.png" />
+    <Content Include="images\user_online.png" />
+    <Content Include="images\view.png" />
+    <Content Include="images\viewstatus.png" />
+    <Content Include="images\waitimg.gif" />
+    <Content Include="images\warning.png" />
+    <Content Include="images\yellow.jpg" />
+    <Content Include="images\yellow.png" />
+    <Content Include="informationType.aspx" />
+    <Content Include="informationType.aspx.cs" />
+    <Content Include="informationType.aspx.designer.cs" />
+    <Content Include="invoice.aspx" />
+    <Content Include="invoice.aspx.designer.cs" />
+    <Content Include="InvoicePayment.aspx.cs" />
+    <Content Include="InvoicePreview.aspx.cs" />
+    <Content Include="InvoicePreview.aspx.designer.cs" />
+    <Content Include="InvoiceReview.aspx" />
+    <Content Include="InvoiceReview.aspx.cs" />
+    <Content Include="InvoiceReview.aspx.designer.cs" />
+    <Content Include="InvoiceTemplate.aspx" />
+    <Content Include="InvoiceTemplate.aspx.cs" />
+    <Content Include="InvoiceTemplate.aspx.designer.cs" />
+    <Content Include="InvoiceTemplates\Default.png" />
+    <Content Include="InvoiceTemplates\SQLTemplate.html" />
+    <Content Include="InvoiceTemplates\template1.html" />
+    <Content Include="InvoiceTemplates\Template1.png" />
+    <Content Include="InvoiceTemplates\Template2.png" />
+    <Content Include="InvoiceTemplates\templte2.htm" />
+    <Content Include="IssueLeave.aspx" />
+    <Content Include="IssueLeave.aspx.cs" />
+    <Content Include="IssueLeave.aspx.designer.cs" />
+    <Content Include="js\assetTransfer.js" />
+    <Content Include="js\assigntask.js" />
+    <Content Include="js\assigntask2.6.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\calendar_view5.0.js" />
+    <Content Include="js\calendar_view_main5.0.js" />
+    <Content Include="js\chart\jquery-1.11.1.min.js" />
+    <Content Include="js\chart\jqxchart.core.js" />
+    <Content Include="js\chart\jqxcore.js" />
+    <Content Include="js\chart\jqxdata.js" />
+    <Content Include="js\chart\jqxdraw.js" />
+    <Content Include="js\chatjs.js" />
+    <Content Include="js\chatjs2.0.js" />
+    <Content Include="js\chatjs4.0.js" />
+    <Content Include="js\colResizable-1.6.js" />
+    <Content Include="js\companySettings.js" />
+    <Content Include="js\displayHistoryWithImages.js" />
+    <Content Include="js\employee.js" />
+    <Content Include="js\expenses2.4.js" />
+    <Content Include="js\expenses2.6.js" />
+    <Content Include="js\FavTasks.js" />
+    <Content Include="js\FavTasks1.0.js" />
+    <Content Include="js\fusioncharts.js" />
+    <Content Include="js\fusioncharts.theme.fint.js" />
+    <Content Include="js\gallery.js" />
+    <Content Include="js\ifChat.js" />
+    <Content Include="js\IFChat_main_4.0.js" />
+    <Content Include="js\jquery-1.11.1.min.js" />
+    <Content Include="js\jquery-1.11.3.js" />
+    <Content Include="js\jquery-1.js" />
+    <Content Include="js\jquery-migrate-1.2.1.min.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.dataTables.min.js" />
+    <Content Include="js\jquery.fixedheadertable.js" />
+    <Content Include="js\jquery.inputmask.bundle.min.js" />
+    <Content Include="js\jquery.maskedinput.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.table2excel.js" />
+    <Content Include="js\jquery.timepicker.css" />
+    <Content Include="js\jquery.timepicker.js" />
+    <Content Include="js\jquery.timepicker.min.js" />
+    <Content Include="js\jssor.slider.mini.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\main1.0.js" />
+    <Content Include="js\main2.0.js" />
+    <Content Include="js\main5.1.js" />
+    <Content Include="js\manualInvoice.js" />
+    <Content Include="js\modernizr.min.js" />
+    <Content Include="js\owl.carousel.js" />
+    <Content Include="js\PageJs\dashboardAllJs.js" />
+    <Content Include="js\PageJs\dashboardJs.js" />
+    <Content Include="js\PageJs\dashboardUser.js" />
+    <Content Include="js\PageJs\employeejs.js" />
+    <Content Include="js\PageJs\projectBudgetjs.js" />
+    <Content Include="js\PageJs\schedulejs_5.0.js" />
+    <Content Include="js\PageJs\taxClientLogjs.js" />
+    <Content Include="js\PageJs\todolist.js" />
+    <Content Include="js\PageJs\todolist_1.0.js" />
+    <Content Include="js\schedulejs.js" />
+    <Content Include="js\ScrollableTablePlugin_1.0_min.js" />
+    <Content Include="js\scw.js" />
+    <Content Include="js\scw1.js" />
+    <Content Include="js\sheetview.js" />
+    <Content Include="js\sheetview2.12.js" />
+    <Content Include="js\tableHeadFixer.js" />
+    <Content Include="js\taxClientjs.js" />
+    <Content Include="js\timesheetcss.css" />
+    <Content Include="js\timesheetcss_2.0.css" />
+    <Content Include="js\timesheetcss_2.1.css" />
+    <Content Include="js\timesheetcss_5.1.css" />
+    <Content Include="js\timesheetjs2.1.js" />
+    <Content Include="js\timesheetjs2.2.js" />
+    <Content Include="js\timesheetjs2.3.js" />
+    <Content Include="js\timesheetjs2.4.js" />
+    <Content Include="js\timesheetjs5.1.js" />
+    <Content Include="js\validate.js" />
+    <Content Include="js\validate2.2.js" />
+    <Content Include="js\validate2.3.js" />
+    <Content Include="LeaveDetails.aspx" />
+    <Content Include="LeaveDetails.aspx.cs" />
+    <Content Include="LeaveDetails.aspx.designer.cs" />
+    <Content Include="LeaveReport.aspx" />
+    <Content Include="LeaveReport.aspx.cs" />
+    <Content Include="LeaveReport.aspx.designer.cs" />
+    <Content Include="LeaveRequest.aspx" />
+    <Content Include="LeaveRequest.aspx.cs" />
+    <Content Include="LeaveRequest.aspx.designer.cs" />
+    <Content Include="Libraryimg\audio.png" />
+    <Content Include="Libraryimg\bmp.png" />
+    <Content Include="Libraryimg\excel.png" />
+    <Content Include="Libraryimg\folder.png" />
+    <Content Include="Libraryimg\folder128.png" />
+    <Content Include="Libraryimg\folder72.png" />
+    <Content Include="Libraryimg\folder_16.png" />
+    <Content Include="Libraryimg\folder_20.png" />
+    <Content Include="Libraryimg\icons\copy.png" />
+    <Content Include="Libraryimg\icons\create_new.png" />
+    <Content Include="Libraryimg\icons\delete.png" />
+    <Content Include="Libraryimg\icons\delete_32.png" />
+    <Content Include="Libraryimg\icons\leave_meeting.png" />
+    <Content Include="Libraryimg\icons\move.png" />
+    <Content Include="Libraryimg\icons\upload.png" />
+    <Content Include="Libraryimg\icons\upload_file.png" />
+    <Content Include="Libraryimg\image.png" />
+    <Content Include="Libraryimg\notpad.png" />
+    <Content Include="Libraryimg\pdf.png" />
+    <Content Include="Libraryimg\ppt.png" />
+    <Content Include="Libraryimg\rar.png" />
+    <Content Include="Libraryimg\text.png" />
+    <Content Include="Libraryimg\unknown.png" />
+    <Content Include="Libraryimg\video.png" />
+    <Content Include="Libraryimg\word.png" />
+    <Content Include="Libraryimg\zip.png" />
+    <Content Include="linkexpired.html" />
+    <Content Include="loginimg\alert_img.png" />
+    <Content Include="loginimg\bg.jpg" />
+    <Content Include="loginimg\logo.jpg" />
+    <Content Include="loginimg\logo.png" />
+    <Content Include="loginimg\submit_icon.png" />
+    <Content Include="logout.aspx" />
+    <Content Include="logout.aspx.cs" />
+    <Content Include="logout.aspx.designer.cs" />
+    <Content Include="ManageEmployee.aspx" />
+    <Content Include="ManageEmployee.aspx.cs" />
+    <Content Include="ManageEmployee.aspx.designer.cs" />
+    <Content Include="ManageHelp.aspx" />
+    <Content Include="ManageHelp.aspx.cs" />
+    <Content Include="ManageHelp.aspx.designer.cs" />
+    <Content Include="ManageSchedule.aspx" />
+    <Content Include="ManageSchedule.aspx.cs" />
+    <Content Include="ManageSchedule.aspx.designer.cs" />
+    <Content Include="ManualInvoice.aspx" />
+    <Content Include="ManualInvoice.aspx.cs" />
+    <Content Include="ManualInvoice.aspx.designer.cs" />
+    <Content Include="masksoftware.aspx" />
+    <Content Include="masksoftware.aspx.cs" />
+    <Content Include="masksoftware.aspx.designer.cs" />
+    <Content Include="MyAccount.aspx" />
+    <Content Include="MyAccount.aspx.cs" />
+    <Content Include="MyAccount.aspx.designer.cs" />
+    <Content Include="myacc_ProfilePic.aspx" />
+    <Content Include="myacc_ProfilePic.aspx.cs" />
+    <Content Include="myacc_ProfilePic.aspx.designer.cs" />
+    <Content Include="mychat.aspx" />
+    <Content Include="mychat.aspx.cs" />
+    <Content Include="mychat.aspx.designer.cs" />
+    <Content Include="packages\AjaxMin.4.97.4951.28483\lib\net20\AjaxMin.dll" />
+    <Content Include="packages\AjaxMin.4.97.4951.28483\lib\net35\AjaxMin.dll" />
+    <Content Include="packages\AjaxMin.4.97.4951.28483\tools\net35\AjaxMin.dll" />
+    <Content Include="packages\AjaxMin.4.97.4951.28483\tools\net35\AjaxMinTask.dll" />
+    <Content Include="packages\AjaxMin.4.97.4951.28483\tools\net40\AjaxMin.dll" />
+    <Content Include="packages\AjaxMin.4.97.4951.28483\tools\net40\AjaxMinTask.dll" />
+    <Content Include="packages\HtmlAgilityPack.1.4.6\HAPIcon.png" />
+    <Content Include="packages\HtmlAgilityPack.1.4.6\readme.txt" />
+    <Content Include="packages\HtmlToPdfOrImage.1.0.2\lib\HtmlToPdfOrImage.dll" />
+    <Content Include="packages\iTextSharp.5.5.6\AGPL.txt" />
+    <Content Include="packages\iTextSharp.5.5.6\lib\itextsharp.dll" />
+    <Content Include="packages\iTextSharp.5.5.6\lib\iTextSharp.xml" />
+    <Content Include="packages\iTextSharp.5.5.6\notice.txt" />
+    <Content Include="packages\itextsharp.xmlworker.5.5.6\AGPL.txt" />
+    <Content Include="packages\itextsharp.xmlworker.5.5.6\lib\itextsharp.xmlworker.dll" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.JS.1.0.1\content\Scripts\jquery.signalR-1.0.1.js" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.Owin.1.0.1\lib\net40\Microsoft.AspNet.SignalR.Owin.dll" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.Owin.1.0.1\lib\net40\Microsoft.AspNet.SignalR.Owin.xml" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.Owin.1.0.1\lib\net45\Microsoft.AspNet.SignalR.Owin.dll" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.Owin.1.0.1\lib\net45\Microsoft.AspNet.SignalR.Owin.xml" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.SystemWeb.1.0.1\lib\net40\Microsoft.AspNet.SignalR.SystemWeb.dll" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.SystemWeb.1.0.1\lib\net40\Microsoft.AspNet.SignalR.SystemWeb.xml" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\netcore45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\netcore45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\lib\portable-net45+wp80+win8\Newtonsoft.Json.xml" />
+    <Content Include="packages\Owin.1.0\lib\net40\Owin.dll" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\net40\es\System.Spatial.resources.dll" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\net40\it\System.Spatial.resources.dll" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\net40\ja\System.Spatial.resources.dll" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\net40\ru\System.Spatial.resources.dll" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\net40\System.Spatial.xml" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\net40\zh-Hans\System.Spatial.resources.dll" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\net40\zh-Hant\System.Spatial.resources.dll" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\sl4\es\System.Spatial.SL.resources.dll" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\sl4\fr\System.Spatial.SL.resources.dll" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\sl4\ko\System.Spatial.SL.resources.dll" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\sl4\ru\System.Spatial.SL.resources.dll" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\sl4\System.Spatial.SL.dll" />
+    <Content Include="packages\System.Spatial.5.2.0\lib\sl4\zh-Hans\System.Spatial.SL.resources.dll" />
+    <Content Include="packages\WindowsAzure.Storage.2.1.0.4\lib\net40\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="packages\WindowsAzure.Storage.2.1.0.4\lib\net40\Microsoft.WindowsAzure.Storage.xml" />
+    <Content Include="PaymentReview.aspx" />
+    <Content Include="PaymentReview.aspx.cs" />
+    <Content Include="PaymentReview.aspx.designer.cs" />
+    <Content Include="paymentterm.aspx" />
+    <Content Include="paymentterm.aspx.cs" />
+    <Content Include="paymentterm.aspx.designer.cs" />
+    <Content Include="PayrollPlan.aspx" />
+    <Content Include="PayrollPlan.aspx.cs" />
+    <Content Include="PayrollPlan.aspx.designer.cs" />
+    <Content Include="PayrollReport.aspx" />
+    <Content Include="PayrollReport.aspx.cs" />
+    <Content Include="PayrollReport.aspx.designer.cs" />
+    <Content Include="pdf.aspx" />
+    <Content Include="pdf.aspx.cs" />
+    <Content Include="pdf.aspx.designer.cs" />
+    <Content Include="PerformanceReport.aspx" />
+    <Content Include="PerformanceReport.aspx.cs" />
+    <Content Include="PerformanceReport.aspx.designer.cs" />
+    <Content Include="printpdf.aspx" />
+    <Content Include="printpdf.aspx.cs" />
+    <Content Include="printpdf.aspx.designer.cs" />
+    <Content Include="PrintPDFDoc.aspx" />
+    <Content Include="PrintPDFDoc.aspx.cs" />
+    <Content Include="PrintPDFDoc.aspx.designer.cs" />
+    <Content Include="printpdf_factory.aspx" />
+    <Content Include="printpdf_factory.aspx.designer.cs" />
+    <Content Include="progressbar.ascx" />
+    <Content Include="progressbar.ascx.cs" />
+    <Content Include="progressbar.ascx.designer.cs" />
+    <Content Include="project.aspx.cs" />
+    <Content Include="project.aspx.designer.cs" />
+    <Content Include="ProjectAllocation.aspx" />
+    <Content Include="ProjectAllocation.aspx.cs" />
+    <Content Include="ProjectAllocation.aspx.designer.cs" />
+    <Content Include="ProjectAllocationReport.aspx.cs" />
+    <Content Include="ProjectAllocationReport.aspx.designer.cs" />
+    <Content Include="projectAllocation_new.aspx" />
+    <Content Include="projectAllocation_new.aspx.cs" />
+    <Content Include="projectBudget.aspx" />
+    <Content Include="projectBudget.aspx.cs" />
+    <Content Include="projectBudget.aspx.designer.cs" />
+    <Content Include="ProjectForecasting.aspx" />
+    <Content Include="ProjectForecasting.aspx.cs" />
+    <Content Include="ProjectForecasting.aspx.designer.cs" />
+    <Content Include="ProjectGroup.aspx" />
+    <Content Include="ProjectGroup.aspx.cs" />
+    <Content Include="ProjectGroup.aspx.designer.cs" />
+    <Content Include="Project_Forecarting.aspx" />
+    <Content Include="Project_Forecarting.aspx.cs" />
+    <Content Include="Project_Forecarting.aspx.designer.cs" />
+    <Content Include="project_log.aspx" />
+    <Content Include="project_log.aspx.cs" />
+    <Content Include="project_log.aspx.designer.cs" />
+    <Content Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Properties\PublishProfiles\FolderProfile.pubxml.user" />
+    <Content Include="rdlcreport\invoice\invoice_line.jpg" />
+    <Content Include="rpt_agingSummary.aspx" />
+    <Content Include="rpt_agingSummary.aspx.cs" />
+    <Content Include="rpt_agingSummary.aspx.designer.cs" />
+    <Content Include="rpt_Analysis_HoursComparebyEmp.aspx" />
+    <Content Include="rpt_Analysis_HoursComparebyEmp.aspx.cs" />
+    <Content Include="rpt_Analysis_HoursComparebyProject.aspx" />
+    <Content Include="rpt_Analysis_HoursComparebyProject.aspx.cs" />
+    <Content Include="rpt_Analysis_HoursComparebyProject.aspx.designer.cs" />
+    <Content Include="rpt_ARAgingClientAddressReport.aspx" />
+    <Content Include="rpt_ARAgingClientAddressReport.aspx.cs" />
+    <Content Include="rpt_ARAgingClientAddressReport.aspx.designer.cs" />
+    <Content Include="rpt_ARAgingReport.aspx" />
+    <Content Include="rpt_ARAgingReport.aspx.cs" />
+    <Content Include="rpt_ARAgingReport.aspx.designer.cs" />
+    <Content Include="rpt_ARAgingSummarywithCredit.aspx" />
+    <Content Include="rpt_ARAgingSummarywithCredit.aspx.cs" />
+    <Content Include="rpt_ARAgingSummarywithCredit.aspx.designer.cs" />
+    <Content Include="rpt_AssetByCondition.aspx" />
+    <Content Include="rpt_AssetByCondition.aspx.cs" />
+    <Content Include="rpt_AssetByCondition.aspx.designer.cs" />
+    <Content Include="rpt_AssetByDepartment.aspx" />
+    <Content Include="rpt_AssetByDepartment.aspx.cs" />
+    <Content Include="rpt_AssetByDepartment.aspx.designer.cs" />
+    <Content Include="rpt_AssetByEmployee.aspx" />
+    <Content Include="rpt_AssetByEmployee.aspx.designer.cs" />
+    <Content Include="rpt_AssetByLocation.aspx" />
+    <Content Include="rpt_AssetByLocation.aspx.cs" />
+    <Content Include="rpt_AssetByLocation.aspx.designer.cs" />
+    <Content Include="rpt_AssetManagement.aspx" />
+    <Content Include="rpt_AssetManagement.aspx.cs" />
+    <Content Include="rpt_BilledTimeAndExpenses.aspx" />
+    <Content Include="rpt_BilledTimeAndExpenses.aspx.cs" />
+    <Content Include="rpt_BilledTimeAndExpenses.aspx.designer.cs" />
+    <Content Include="rpt_BillingPercentageBilled.aspx" />
+    <Content Include="rpt_BillingPercentageBilled.aspx.cs" />
+    <Content Include="rpt_BillingPercentageBilled.aspx.designer.cs" />
+    <Content Include="rpt_BillingProjecttimeexpDetails.aspx" />
+    <Content Include="rpt_BillingProjecttimeexpDetails.aspx.cs" />
+    <Content Include="rpt_BillingProjecttimeexpDetails.aspx.designer.cs" />
+    <Content Include="rpt_BillingStatementbyClient.aspx" />
+    <Content Include="rpt_BillingStatementbyClient.aspx.cs" />
+    <Content Include="rpt_BillingStatementbyClient.aspx.designer.cs" />
+    <Content Include="rpt_BillingStatementbyProject.aspx" />
+    <Content Include="rpt_BillingStatementbyProject.aspx.cs" />
+    <Content Include="rpt_BillingStatementbyProject.aspx.designer.cs" />
+    <Content Include="rpt_budgetDetail.aspx" />
+    <Content Include="rpt_budgetDetail.aspx.cs" />
+    <Content Include="rpt_budgetDetail.aspx.designer.cs" />
+    <Content Include="rpt_budgetSummary.aspx" />
+    <Content Include="rpt_budgetSummary.aspx.cs" />
+    <Content Include="rpt_budgetSummary.aspx.designer.cs" />
+    <Content Include="rpt_ChartReport.aspx" />
+    <Content Include="rpt_ChartReport.aspx.cs" />
+    <Content Include="rpt_ChartReport.aspx.designer.cs" />
+    <Content Include="rpt_ClientAccountSummary.aspx" />
+    <Content Include="rpt_ClientAccountSummary.aspx.cs" />
+    <Content Include="rpt_ClientAccountSummary.aspx.designer.cs" />
+    <Content Include="rpt_ClientMasterFile.aspx.cs" />
+    <Content Include="rpt_ClientMasterFile.aspx.designer.cs" />
+    <Content Include="rpt_ClientmasterfileDetails.aspx" />
+    <Content Include="rpt_ClientmasterfileDetails.aspx.cs" />
+    <Content Include="rpt_ClientmasterfileDetails.aspx.designer.cs" />
+    <Content Include="rpt_clientReport_sample.aspx" />
+    <Content Include="rpt_clientReport_sample.aspx.cs" />
+    <Content Include="rpt_clientReport_sample.aspx.designer.cs" />
+    <Content Include="rpt_clientTimeandExpbyClientAndEmp.aspx" />
+    <Content Include="rpt_clientTimeandExpbyClientAndEmp.aspx.cs" />
+    <Content Include="rpt_clientTimeandExpbyClientAndEmp.aspx.designer.cs" />
+    <Content Include="rpt_ClientTimeandExpenses.aspx" />
+    <Content Include="rpt_ClientTimeandExpenses.aspx.cs" />
+    <Content Include="rpt_ClientTimeandExpensesreport.aspx.cs" />
+    <Content Include="rpt_ClientTimeandExpensesreport.aspx.designer.cs" />
+    <Content Include="rpt_Client_Employee_Time_Metrix.aspx" />
+    <Content Include="rpt_Client_Employee_Time_Metrix.aspx.cs" />
+    <Content Include="rpt_Client_Employee_Time_Metrix.aspx.designer.cs" />
+    <Content Include="rpt_EmployeeBillRate.aspx" />
+    <Content Include="rpt_EmployeeBillRate.aspx.cs" />
+    <Content Include="rpt_EmployeeBillRate.aspx.designer.cs" />
+    <Content Include="rpt_Employees_Client_Time_Metrix.aspx.cs" />
+    <Content Include="rpt_ExpenseCodeMaster.aspx" />
+    <Content Include="rpt_ExpenseCodeMaster.aspx.cs" />
+    <Content Include="rpt_ExpenseCodeMaster.aspx.designer.cs" />
+    <Content Include="rpt_ExpenseReport.aspx" />
+    <Content Include="rpt_ExpenseReport.aspx.cs" />
+    <Content Include="rpt_ExpenseReport.aspx.designer.cs" />
+    <Content Include="rpt_ExpensesByClient.aspx" />
+    <Content Include="rpt_ExpensesByClient.aspx.cs" />
+    <Content Include="rpt_ExpensesByClient.aspx.designer.cs" />
+    <Content Include="rpt_ExpensesByItem.aspx" />
+    <Content Include="rpt_ExpensesByItem.aspx.cs" />
+    <Content Include="rpt_ExpensesByItem.aspx.designer.cs" />
+    <Content Include="rpt_expensesummaryreport.aspx" />
+    <Content Include="rpt_expensesummaryreport.aspx.cs" />
+    <Content Include="rpt_expensesummaryreport.aspx.designer.cs" />
+    <Content Include="rpt_InvoiceList.aspx" />
+    <Content Include="rpt_InvoiceList.aspx.cs" />
+    <Content Include="rpt_InvoiceList.aspx.designer.cs" />
+    <Content Include="rpt_InvoiceRegister.aspx" />
+    <Content Include="rpt_InvoiceRegister.aspx.cs" />
+    <Content Include="rpt_InvoiceRegister.aspx.designer.cs" />
+    <Content Include="rpt_InvoiceRegisterByClient.aspx" />
+    <Content Include="rpt_InvoiceRegisterByClient.aspx.cs" />
+    <Content Include="rpt_InvoiceRegisterByClient.aspx.designer.cs" />
+    <Content Include="rpt_InvoiceRegisterwithCosts.aspx" />
+    <Content Include="rpt_InvoiceRegisterwithCosts.aspx.cs" />
+    <Content Include="rpt_InvoiceRegisterwithCosts.aspx.designer.cs" />
+    <Content Include="rpt_LeaveRegister.aspx" />
+    <Content Include="rpt_LeaveRegister.aspx.cs" />
+    <Content Include="rpt_LeaveRegister.aspx.designer.cs" />
+    <Content Include="rpt_LeaveSummary.aspx" />
+    <Content Include="rpt_LeaveSummary.aspx.cs" />
+    <Content Include="rpt_LeaveSummary.aspx.designer.cs" />
+    <Content Include="rpt_MonthlyBillingSummaryByClient.aspx" />
+    <Content Include="rpt_MonthlyBillingSummaryByClient.aspx.designer.cs" />
+    <Content Include="rpt_projectAllocation.aspx" />
+    <Content Include="rpt_projectAllocation.aspx.cs" />
+    <Content Include="rpt_projectAllocation.aspx.designer.cs" />
+    <Content Include="rpt_ProjectAnalysisReport.aspx" />
+    <Content Include="rpt_ProjectAnalysisReport.aspx.cs" />
+    <Content Include="rpt_ProjectAnalysisReport.aspx.designer.cs" />
+    <Content Include="rpt_ProjectForcasting.aspx" />
+    <Content Include="rpt_ProjectForcasting.aspx.cs" />
+    <Content Include="rpt_ProjectForcasting.aspx.designer.cs" />
+    <Content Include="rpt_project_Master_by_Client.aspx" />
+    <Content Include="rpt_project_Master_by_Client.aspx.designer.cs" />
+    <Content Include="rpt_TaskCodeListByGroup.aspx" />
+    <Content Include="rpt_TaskCodeListByGroup.aspx.cs" />
+    <Content Include="rpt_TaskCodeListByGroup.aspx.designer.cs" />
+    <Content Include="rpt_TaskMasterReport.aspx" />
+    <Content Include="rpt_TaskMasterReport.aspx.cs" />
+    <Content Include="rpt_TaskMasterReport.aspx.designer.cs" />
+    <Content Include="rpt_TaskReport.aspx" />
+    <Content Include="rpt_TaskReport.aspx.cs" />
+    <Content Include="rpt_TaskReport.aspx.designer.cs" />
+    <Content Include="rpt_TasksReports.aspx" />
+    <Content Include="rpt_TasksReports.aspx.cs" />
+    <Content Include="rpt_TasksReports.aspx.designer.cs" />
+    <Content Include="rpt_taskSummary.aspx" />
+    <Content Include="rpt_taskSummary.aspx.cs" />
+    <Content Include="rpt_taskSummary.aspx.designer.cs" />
+    <Content Include="rpt_timeAndExpDetailByClientAndProject.aspx" />
+    <Content Include="rpt_timeAndExpDetailByClientAndProject.aspx.cs" />
+    <Content Include="rpt_timeAndExpDetailByClientAndProject.aspx.designer.cs" />
+    <Content Include="rpt_timeandExpensesClient.aspx" />
+    <Content Include="rpt_timeandExpensesClient.aspx.cs" />
+    <Content Include="rpt_timeandExpensesClient.aspx.designer.cs" />
+    <Content Include="rpt_TimeandExpReport.aspx" />
+    <Content Include="rpt_TimeandExpReport.aspx.cs" />
+    <Content Include="rpt_TimeandExpReport.aspx.designer.cs" />
+    <Content Include="rpt_timeSummary.aspx" />
+    <Content Include="rpt_timeSummary.aspx.cs" />
+    <Content Include="rpt_timeSummary.aspx.designer.cs" />
+    <Content Include="rpt_timeSummaryReport.aspx" />
+    <Content Include="rpt_timeSummaryReport.aspx.cs" />
+    <Content Include="rpt_timeSummaryReport.aspx.designer.cs" />
+    <Content Include="rpt_UnBilledTimeAndExpenses.aspx" />
+    <Content Include="rpt_UnBilledTimeAndExpenses.aspx.cs" />
+    <Content Include="rpt_UnBilledTimeAndExpenses.aspx.designer.cs" />
+    <Content Include="rp_timesummary_new.aspx" />
+    <Content Include="rp_timesummary_new.aspx.cs" />
+    <Content Include="rp_timesummary_new.aspx.designer.cs" />
+    <Content Include="sample.aspx" />
+    <Content Include="sample.aspx.cs" />
+    <Content Include="sample.aspx.designer.cs" />
+    <Content Include="SavedInvoices.aspx" />
+    <Content Include="SavedInvoices.aspx.cs" />
+    <Content Include="SavedInvoices.aspx.designer.cs" />
+    <Content Include="SCH-29April\AssignedTasks.aspx" />
+    <Content Include="SCH-29April\AssignedTasks.aspx.cs" />
+    <Content Include="SCH-29April\AssignedTasks.aspx.designer.cs" />
+    <Content Include="SCH-29April\css\style.css" />
+    <Content Include="SCH-29April\logout.aspx" />
+    <Content Include="SCH-29April\logout.aspx.cs" />
+    <Content Include="SCH-29April\logout.aspx.designer.cs" />
+    <Content Include="SCH-29April\ViewSchedule.aspx" />
+    <Content Include="SCH-29April\ViewSchedule.aspx.cs" />
+    <Content Include="SCH-29April\ViewSchedule.aspx.designer.cs" />
+    <Content Include="WorkAllocation.aspx" />
+    <Content Include="WorkAllocation.aspx.cs" />
+    <Content Include="WorkAllocation.aspx.designer.cs" />
+    <Content Include="xmlColumn.xml" />
+    <None Include="My Project\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="scheduleCalenderByEmployee.aspx.cs" />
+    <Content Include="scheduleCalenderByEmployee.aspx.designer.cs" />
+    <Content Include="ScheduleReport.aspx" />
+    <Content Include="ScheduleReport.aspx.cs" />
+    <Content Include="ScheduleReport.aspx.designer.cs" />
+    <Content Include="ScheduleReportByClient.aspx" />
+    <Content Include="ScheduleReportByClient.aspx.cs" />
+    <Content Include="ScheduleReportByClient.aspx.designer.cs" />
+    <Content Include="ScheduleReport_Summary.aspx" />
+    <Content Include="ScheduleReport_Summary.aspx.cs" />
+    <Content Include="ScheduleReport_Summary.aspx.designer.cs" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery.signalR-1.0.1.js" />
+    <Content Include="Scripts\jquery.signalR-1.0.1.min.js" />
+    <Content Include="search.html" />
+    <Content Include="ServerBackUpReport.aspx" />
+    <Content Include="ServerBackUpReport.aspx.cs" />
+    <Content Include="ServerBackUpReport.aspx.designer.cs" />
+    <Content Include="ServerLog.aspx" />
+    <Content Include="ServerLog.aspx.cs" />
+    <Content Include="ServerLog.aspx.designer.cs" />
+    <Content Include="ServerLogReport.aspx" />
+    <Content Include="ServerLogReport.aspx.cs" />
+    <Content Include="ServerLogReport.aspx.designer.cs" />
+    <Content Include="Servers.aspx" />
+    <Content Include="Servers.aspx.cs" />
+    <Content Include="Servers.aspx.designer.cs" />
+    <Content Include="sessionExpired.html" />
+    <Content Include="settings.aspx" />
+    <Content Include="settings.aspx.cs" />
+    <Content Include="settings.aspx.designer.cs" />
+    <Content Include="support.aspx" />
+    <Content Include="support.aspx.cs" />
+    <Content Include="support.aspx.designer.cs" />
+    <Content Include="task.aspx" />
+    <Content Include="task.aspx.cs" />
+    <Content Include="task.aspx.designer.cs" />
+    <Content Include="taxClientLog.aspx" />
+    <Content Include="taxClientLog.aspx.cs" />
+    <Content Include="taxClientLog.aspx.designer.cs" />
+    <Content Include="TaxMaster.aspx" />
+    <Content Include="TaxMaster.aspx.cs" />
+    <Content Include="TaxMaster.aspx.designer.cs" />
+    <Content Include="Tax_MasterFile.aspx" />
+    <Content Include="Tax_MasterFile.aspx.cs" />
+    <Content Include="Tax_MasterFile.aspx.designer.cs" />
+    <Content Include="Tax_TaxClient.aspx" />
+    <Content Include="Tax_TaxClient.aspx.cs" />
+    <Content Include="Tax_TaxClient.aspx.designer.cs" />
+    <Content Include="test.aspx" />
+    <Content Include="test.aspx.cs" />
+    <Content Include="test.aspx.designer.cs" />
+    <Content Include="test.html" />
+    <Content Include="TimeExpenseClientReport.aspx" />
+    <Content Include="TimeExpenseClientReport.aspx.cs" />
+    <Content Include="TimeExpenseClientReport.aspx.designer.cs" />
+    <Content Include="TimeExpenseCreditMemo.aspx" />
+    <Content Include="TimeExpenseCreditMemo.aspx.cs" />
+    <Content Include="TimeExpenseCreditMemo.aspx.designer.cs" />
+    <Content Include="TimeExpenseReport.aspx" />
+    <Content Include="TimeExpenseReport.aspx.cs" />
+    <Content Include="TimeExpenseReport.aspx.designer.cs" />
+    <Content Include="Timesheet.aspx" />
+    <Content Include="Timesheet.aspx.cs" />
+    <Content Include="Timesheet.aspx.designer.cs" />
+    <Content Include="timesheetreport.aspx" />
+    <Content Include="timesheetreport.aspx.cs" />
+    <Content Include="timesheetreport.aspx.designer.cs" />
+    <Content Include="TransactionStatements.aspx" />
+    <Content Include="TransactionStatements.aspx.cs" />
+    <Content Include="TransactionStatements.aspx.designer.cs" />
+    <Content Include="UpdatesReport.aspx" />
+    <Content Include="UpdatesReport.aspx.cs" />
+    <Content Include="UpdatesReport.aspx.designer.cs" />
+    <Content Include="uploadfile.aspx" />
+    <Content Include="uploadfile.aspx.cs" />
+    <Content Include="uploadfile.aspx.designer.cs" />
+    <Content Include="uploadimport.aspx" />
+    <Content Include="uploadimport.aspx.cs" />
+    <Content Include="uploadimport.aspx.designer.cs" />
+    <Content Include="UserDashboard.aspx" />
+    <Content Include="UserDashboard.aspx.cs" />
+    <Content Include="UserDashboard.aspx.designer.cs" />
+    <Content Include="UserDefindedFields.aspx" />
+    <Content Include="UserDefindedFields.aspx.cs" />
+    <Content Include="UserDefindedFields.aspx.designer.cs" />
+    <Content Include="userMaster.Master.cs" />
+    <Content Include="userMaster.Master.designer.cs" />
+    <Content Include="viewinvoice.aspx" />
+    <Content Include="viewinvoice.aspx.cs" />
+    <Content Include="viewinvoice.aspx.designer.cs" />
+    <Content Include="ViewSchedule.aspx" />
+    <Content Include="ViewSchedule.aspx.cs" />
+    <Content Include="ViewSchedule.aspx.designer.cs" />
+    <Content Include="Web.config" />
+    <Content Include="webfile\07062015_1241532.png" />
+    <Content Include="webfile\07062015_3082113.png" />
+    <Content Include="webfile\07062015_9011250.png" />
+    <Content Include="webfile\11212017_9084022.jpg" />
+    <Content Include="webfile\12242015_9978750.png" />
+    <Content Include="webfile\12312015_3127710.png" />
+    <Content Include="webfile\1\1_131993539545927133.gif" />
+    <Content Include="webfile\Asset\131039887995473416.jpg" />
+    <Content Include="webfile\Asset\131039888382635560.jpg" />
+    <Content Include="webfile\Asset\131039889691050397.jpg" />
+    <Content Include="webfile\Asset\131039890278954024.jpg" />
+    <Content Include="webfile\Asset\131039890549359490.jpg" />
+    <Content Include="webfile\Asset\131039892324751036.jpg" />
+    <Content Include="webfile\Asset\131039892390094774.jpg" />
+    <Content Include="webfile\Asset\131039892818579282.jpg" />
+    <Content Include="webfile\Asset\131039893129347057.jpg" />
+    <Content Include="webfile\Asset\131039895508623143.jpg" />
+    <Content Include="webfile\Asset\131039895879274344.jpg" />
+    <Content Include="webfile\Asset\131039896197062520.jpg" />
+    <Content Include="webfile\Asset\131039896967856607.jpg" />
+    <Content Include="webfile\Asset\131039897066662258.jpg" />
+    <Content Include="webfile\Asset\131039897396431120.jpg" />
+    <Content Include="webfile\Asset\131039898126722890.jpg" />
+    <Content Include="webfile\Asset\131039898556247458.jpg" />
+    <Content Include="webfile\Asset\131039899273928507.jpg" />
+    <Content Include="webfile\Asset\131039900959564920.jpg" />
+    <Content Include="webfile\Asset\131039901399300071.jpg" />
+    <Content Include="webfile\Asset\131039901616762509.jpg" />
+    <Content Include="webfile\Asset\131039901716198196.jpg" />
+    <Content Include="webfile\Asset\131039902551585978.jpg" />
+    <Content Include="webfile\Asset\131039902805810519.jpg" />
+    <Content Include="webfile\Asset\131039903057554918.png" />
+    <Content Include="webfile\Asset\131039903399654485.jpg" />
+    <Content Include="webfile\Asset\131039903689731076.png" />
+    <Content Include="webfile\Asset\131039906585806722.png" />
+    <Content Include="webfile\Asset\131039906844831538.png" />
+    <Content Include="webfile\Asset\accrued-L.png" />
+    <Content Include="webfile\Asset\Chrysanthemum.jpg" />
+    <Content Include="webfile\Asset\client.jpg" />
+    <Content Include="webfile\Asset\Desert.jpg" />
+    <Content Include="webfile\Asset\index.html" />
+    <Content Include="webfile\Asset\Tulips.jpg" />
+    <Content Include="webfile\emailfile\131378594056203513.png" />
+    <Content Include="webfile\emailfile\131387249675404880.png" />
+    <Content Include="webfile\emailfile\131387249974768420.png" />
+    <Content Include="webfile\HCCLPLogo_icon.png" />
+    <Content Include="webfile\logo.png" />
+    <Content Include="webfile\profile\009.jpg" />
+    <Content Include="webfile\profile\nophoto.jpg" />
+    <Content Include="webfile\profile\nophoto.png" />
+    <Content Include="webfile\profile\profile.png" />
+    <Content Include="webfile\profile\Profile_130625894814732127.jpg" />
+    <Content Include="webfile\profile\Profile_130625895925076680.jpg" />
+    <Content Include="webfile\profile\Profile_130626912409617683.png" />
+    <Content Include="webfile\profile\Profile_130626924554567878.jpg" />
+    <Content Include="webfile\profile\Profile_130626925432649443.jpg" />
+    <Content Include="webfile\profile\Profile_130706072787777306.png" />
+    <Content Include="webfile\profile\Profile_130706103143241250.jpg" />
+    <Content Include="webfile\profile\Profile_130707097162928750.png" />
+    <Content Include="webfile\profile\Profile_130710564159953750.jpg" />
+    <Content Include="webfile\profile\Profile_130713185635015000.png" />
+    <Content Include="webfile\profile\Profile_130713200155483750.jpg" />
+    <Content Include="webfile\profile\Profile_130719021725743750.JPG" />
+    <Content Include="webfile\profile\Profile_130725160521472500.jpg" />
+    <Content Include="webfile\profile\Profile_130731464410386250.jpg" />
+    <Content Include="webfile\profile\Profile_130734684292881250.jpg" />
+    <Content Include="webfile\profile\Profile_130735697267378750.png" />
+    <Content Include="webfile\profile\Profile_130739814698222500.jpg" />
+    <Content Include="webfile\profile\Profile_130746713234463750.jpg" />
+    <Content Include="webfile\profile\Profile_130778907644666308.png" />
+    <Content Include="webfile\profile\Profile_130778913715161420.png" />
+    <Content Include="webfile\profile\Profile_130778923886779057.jpg" />
+    <Content Include="webfile\profile\Profile_130778927651147649.png" />
+    <Content Include="webfile\profile\Profile_131346636115513354.png" />
+    <Content Include="webfile\profile\Profile_131346637527275034.png" />
+    <Content Include="webfile\profile\thumb\009.jpg" />
+    <Content Include="webfile\profile\thumb\profile.png" />
+    <Content Include="webfile\profile\thumb\Profile_130625894814732127.jpg" />
+    <Content Include="webfile\profile\thumb\Profile_130625895925076680.jpg" />
+    <Content Include="webfile\profile\thumb\Profile_130626912409617683.png" />
+    <Content Include="webfile\profile\thumb\Profile_130626924554567878.jpg" />
+    <Content Include="webfile\profile\thumb\Profile_130626925432649443.jpg" />
+    <Content Include="webfile\profile\thumb\Profile_130706072787777306.png" />
+    <Content Include="webfile\profile\thumb\Profile_130706103143241250.jpg" />
+    <Content Include="webfile\profile\thumb\Profile_130707097162928750.png" />
+    <Content Include="webfile\profile\thumb\Profile_130710564159953750.jpg" />
+    <Content Include="webfile\profile\thumb\Profile_130713185635015000.png" />
+    <Content Include="webfile\profile\thumb\Profile_130713200155483750.jpg" />
+    <Content Include="webfile\profile\thumb\Profile_130719021725743750.JPG" />
+    <Content Include="webfile\profile\thumb\Profile_130725160521472500.jpg" />
+    <Content Include="webfile\profile\thumb\Profile_130731464410386250.jpg" />
+    <Content Include="webfile\profile\thumb\Profile_130734684292881250.jpg" />
+    <Content Include="webfile\profile\thumb\Profile_130735697267378750.png" />
+    <Content Include="webfile\profile\thumb\Profile_130739814698222500.jpg" />
+    <Content Include="webfile\profile\thumb\Profile_130746713234463750.jpg" />
+    <Content Include="webfile\profile\thumb\Profile_130778913715161420.png" />
+    <Content Include="webfile\profile\thumb\Profile_130778923886779057.jpg" />
+    <Content Include="webfile\profile\thumb\Profile_130778927651147649.png" />
+    <Content Include="webfile\profile\thumb\Profile_131346636115513354.png" />
+    <Content Include="webfile\profile\thumb\Profile_131346637527275034.png" />
+    <Content Include="webservices\Microsoft.Exchange.WebServices.xml" />
+    <Content Include="webservices\quickstartservice.asmx" />
+    <Content Include="webservices\quickstartservice.asmx.cs" />
+    <Content Include="webservices\ServiceInspector.cs" />
+    <Content Include="webservices\Utils.cs" />
+    <Content Include="webservices\WebService.cs" />
+    <Content Include="Webnew.config" />
+    <Content Include="webxx.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\defaultMaster.Master" />
+    <Content Include="Appointment\AppointmentMaster.Master" />
+    <Content Include="Appointment\MobileMaster.Master" />
+    <Content Include="bin\empTimeSheet.dll.config" />
+    <Content Include="Client\ClientMaster.Master" />
+    <Content Include="Client\css\exo2.0-regular.ttf" />
+    <Content Include="Client\css\exo2.0-regular.woff" />
+    <Content Include="Client\css\exo2.0-regular.woff2" />
+    <Content Include="Client\rpt_ClientAccounSummary.rdlc" />
+    <Content Include="Client\rpt_ClientMasterFile.rdlc" />
+    <Content Include="Client\rpt_ClientMasterFileDetails.rdlc" />
+    <Content Include="Client\rpt_clientTimeandExpSummary.rdlc" />
+    <Content Include="Client\rpt_clientTimeandExp_new.rdlc" />
+    <Content Include="Client\rpt_clientTimeandExp_SummaryByEmp.rdlc" />
+    <Content Include="Client\rpt_clientTimeandExp_withoutcost.rdlc" />
+    <Content Include="Client\rpt_ExpensesByClient.rdlc" />
+    <Content Include="Client\rpt_InvoiceRegistorByClient.rdlc" />
+    <Content Include="Client\rpt_MonthlyBilllingSummaryByClient.rdlc" />
+    <Content Include="css\opensans-regular.eot" />
+    <Content Include="css\opensans-regular.woff" />
+    <Content Include="css\oswald-regular.ttf" />
+    <Content Include="css\oswald-regular.woff" />
+    <Content Include="DataClasses\DAL.zip" />
+    <Content Include="DataClasses\dsAging90Days.xsc">
+      <DependentUpon>dsAging90Days.xsd</DependentUpon>
+    </Content>
+    <None Include="DataClasses\dsAging90Days.xsd" />
+    <Content Include="DataClasses\dsAging90Days.xss">
+      <DependentUpon>dsAging90Days.xsd</DependentUpon>
+    </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont862f.eot" />
+    <Content Include="fonts\fontawesome-webfont862f.ttf" />
+    <Content Include="fonts\fontawesome-webfont862f.woff" />
+    <Content Include="fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\Georgia.eot" />
+    <Content Include="fonts\Georgia.ttf" />
+    <Content Include="fonts\Georgia.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="fonts\lato\Lato-Bla-webfont.eot" />
+    <Content Include="fonts\lato\Lato-Bla-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-Bla-webfont.woff" />
+    <Content Include="fonts\lato\Lato-Bla-webfontd41d.eot" />
+    <Content Include="fonts\lato\Lato-BlaIta-webfont.eot" />
+    <Content Include="fonts\lato\Lato-BlaIta-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-BlaIta-webfont.woff" />
+    <Content Include="fonts\lato\Lato-BlaIta-webfontd41d.eot" />
+    <Content Include="fonts\lato\Lato-Bol-webfont.eot" />
+    <Content Include="fonts\lato\Lato-Bol-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-Bol-webfont.woff" />
+    <Content Include="fonts\lato\Lato-Bol-webfontd41d.eot" />
+    <Content Include="fonts\lato\Lato-BolIta-webfont.eot" />
+    <Content Include="fonts\lato\Lato-BolIta-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-BolIta-webfont.woff" />
+    <Content Include="fonts\lato\Lato-BolIta-webfontd41d.eot" />
+    <Content Include="fonts\lato\Lato-Hai-webfont.eot" />
+    <Content Include="fonts\lato\Lato-Hai-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-Hai-webfont.woff" />
+    <Content Include="fonts\lato\Lato-Hai-webfontd41d.eot" />
+    <Content Include="fonts\lato\Lato-HaiIta-webfont.eot" />
+    <Content Include="fonts\lato\Lato-HaiIta-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-HaiIta-webfont.woff" />
+    <Content Include="fonts\lato\Lato-HaiIta-webfontd41d.eot" />
+    <Content Include="fonts\lato\Lato-Lig-webfont.eot" />
+    <Content Include="fonts\lato\Lato-Lig-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-Lig-webfont.woff" />
+    <Content Include="fonts\lato\Lato-Lig-webfontd41d.eot" />
+    <Content Include="fonts\lato\Lato-LigIta-webfont.eot" />
+    <Content Include="fonts\lato\Lato-LigIta-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-LigIta-webfont.woff" />
+    <Content Include="fonts\lato\Lato-LigIta-webfontd41d.eot" />
+    <Content Include="fonts\lato\Lato-Reg-webfont.eot" />
+    <Content Include="fonts\lato\Lato-Reg-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-Reg-webfont.woff" />
+    <Content Include="fonts\lato\Lato-RegIta-webfont.eot" />
+    <Content Include="fonts\lato\Lato-RegIta-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-RegIta-webfont.woff" />
+    <Content Include="fonts\lato\Lato-RegIta-webfontd41d.eot" />
+    <Content Include="fonts\opensans-regular_1-webfont.eot" />
+    <Content Include="fonts\opensans-regular_1-webfont.ttf" />
+    <Content Include="fonts\opensans-regular_1-webfont.woff" />
+    <Content Include="fonts\opensans-regular_1-webfont.woff2" />
+    <Content Include="fonts\opensans-semibold_1-webfont.eot" />
+    <Content Include="fonts\opensans-semibold_1-webfont.ttf" />
+    <Content Include="fonts\opensans-semibold_1-webfont.woff" />
+    <Content Include="fonts\opensans-semibold_1-webfont.woff2" />
+    <Content Include="fonts\opensans\OpenSans-Bold.eot" />
+    <Content Include="fonts\opensans\OpenSans-Bold.ttf" />
+    <Content Include="fonts\opensans\OpenSans-Bold.woff" />
+    <Content Include="fonts\opensans\OpenSans-Semibold.eot" />
+    <Content Include="fonts\opensans\OpenSans-Semibold.ttf" />
+    <Content Include="fonts\opensans\OpenSans-Semibold.woff" />
+    <Content Include="fonts\raleway-bold-webfont.eot" />
+    <Content Include="fonts\raleway-bold-webfont.ttf" />
+    <Content Include="fonts\raleway-bold-webfont.woff" />
+    <Content Include="fonts\raleway-bold-webfont.woff2" />
+    <Content Include="fonts\raleway-regular-webfont.eot" />
+    <Content Include="fonts\raleway-regular-webfont.woff" />
+    <Content Include="fonts\raleway-regular-webfont.woff2" />
+    <Content Include="fonts\weathericons-regular-webfont.eot" />
+    <Content Include="fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="fonts\weathericons-regular-webfont.woff" />
+    <Content Include="fonts\weathericons-regular-webfontd41d.eot" />
+    <Content Include="Handler.ashx" />
+    <Content Include="HCLLPScheduler.csproj" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="packages\AjaxControlToolkit.7.1213\.signature.p7s" />
+    <Content Include="packages\AjaxControlToolkit.7.1213\AjaxControlToolkit.7.1213.nupkg" />
+    <Content Include="packages\AjaxControlToolkit.7.1213\content\web.config.transform" />
+    <Content Include="packages\AjaxMin.4.97.4951.28483\.signature.p7s" />
+    <Content Include="packages\AjaxMin.4.97.4951.28483\AjaxMin.4.97.4951.28483.nupkg" />
+    <Content Include="packages\AjaxMin.4.97.4951.28483\tools\net35\AjaxMin.targets" />
+    <Content Include="packages\AjaxMin.4.97.4951.28483\tools\net40\AjaxMin.targets" />
+    <Content Include="packages\HtmlAgilityPack.1.4.6\.signature.p7s" />
+    <Content Include="packages\HtmlAgilityPack.1.4.6\HtmlAgilityPack.1.4.6.nupkg" />
+    <Content Include="packages\HtmlToPdfOrImage.1.0.2\HtmlToPdfOrImage.1.0.2.nupkg" />
+    <Content Include="packages\iTextSharp.5.5.6\.signature.p7s" />
+    <Content Include="packages\iTextSharp.5.5.6\iTextSharp.5.5.6.nupkg" />
+    <Content Include="packages\itextsharp.xmlworker.5.5.6\.signature.p7s" />
+    <Content Include="packages\itextsharp.xmlworker.5.5.6\itextsharp.xmlworker.5.5.6.nupkg" />
+    <Content Include="packages\jQuery.1.6.4\.signature.p7s" />
+    <Content Include="packages\jQuery.1.6.4\jQuery.1.6.4.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.Core.1.0.1\.signature.p7s" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.Core.1.0.1\Microsoft.AspNet.SignalR.Core.1.0.1.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.JS.1.0.1\.signature.p7s" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.JS.1.0.1\Microsoft.AspNet.SignalR.JS.1.0.1.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.Owin.1.0.1\.signature.p7s" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.Owin.1.0.1\Microsoft.AspNet.SignalR.Owin.1.0.1.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.SystemWeb.1.0.1\.signature.p7s" />
+    <Content Include="packages\Microsoft.AspNet.SignalR.SystemWeb.1.0.1\Microsoft.AspNet.SignalR.SystemWeb.1.0.1.nupkg" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\Microsoft.Web.Infrastructure.1.0.0.0.nupkg" />
+    <Content Include="packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0.nupkg" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\.signature.p7s" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\Newtonsoft.Json.5.0.8.nupkg" />
+    <Content Include="packages\Newtonsoft.Json.5.0.8\tools\install.ps1" />
+    <Content Include="packages\Owin.1.0\.signature.p7s" />
+    <Content Include="packages\Owin.1.0\Owin.1.0.nupkg" />
+    <Content Include="packages\System.Spatial.5.2.0\.signature.p7s" />
+    <Content Include="packages\System.Spatial.5.2.0\System.Spatial.5.2.0.nupkg" />
+    <Content Include="packages\WindowsAzure.Storage.2.1.0.4\.signature.p7s" />
+    <Content Include="packages\WindowsAzure.Storage.2.1.0.4\WindowsAzure.Storage.2.1.0.4.nupkg" />
+    <Content Include="rdlcreport\analysis\actualBudgetHoursByEmp.rdlc" />
+    <Content Include="rdlcreport\analysis\actualBudgetHoursByProject.rdlc" />
+    <Content Include="rdlcreport\analysis\projectAnalysisReport.rdlc" />
+    <Content Include="rdlcreport\Asset\AssetManagement.rdlc" />
+    <Content Include="rdlcreport\Asset\rpt_AssetByCondition.rdlc" />
+    <Content Include="rdlcreport\Asset\rpt_AssetByDepartment.rdlc" />
+    <Content Include="rdlcreport\Asset\rpt_AssetByEmployee.rdlc" />
+    <Content Include="rdlcreport\Asset\rpt_AssetByLocation.rdlc" />
+    <Content Include="rdlcreport\billing\approvedTimeandExpwithMemo.rdlc" />
+    <Content Include="rdlcreport\billing\billedTimeAndExpwithCost.rdlc" />
+    <Content Include="rdlcreport\billing\invoicebillingstatementbyclientrdlc.rdlc" />
+    <Content Include="rdlcreport\billing\invoicebillingstatementbyprojectrdlc.rdlc" />
+    <Content Include="rdlcreport\billing\invoicelistrdlc.rdlc" />
+    <Content Include="rdlcreport\billing\invoicepercentagebilled.rdlc" />
+    <Content Include="rdlcreport\billing\invoiceregisterwithcost.rdlc" />
+    <Content Include="rdlcreport\billing\rpt_EmployeeDefaultBillRates.rdlc" />
+    <Content Include="rdlcreport\Budget\BudgeDetail.rdlc" />
+    <Content Include="rdlcreport\Budget\BudgetSummary - Copy.rdlc" />
+    <Content Include="rdlcreport\Budget\BudgetSummary.rdlc" />
+    <Content Include="rdlcreport\client\rpt_ClientAccounSummary.rdlc" />
+    <Content Include="rdlcreport\client\rpt_ClientMasterFile.rdlc" />
+    <Content Include="rdlcreport\client\rpt_ClientMasterFileDetails.rdlc" />
+    <Content Include="rdlcreport\client\rpt_clientTimeandExpSummary.rdlc" />
+    <Content Include="rdlcreport\client\rpt_clientTimeandExpSummary_new.rdlc" />
+    <Content Include="rdlcreport\client\rpt_clientTimeandExp_new.rdlc" />
+    <Content Include="rdlcreport\client\rpt_clientTimeandExp_SummaryByEmp.rdlc" />
+    <Content Include="rdlcreport\client\rpt_clientTimeandExp_withoutcost.rdlc" />
+    <Content Include="rdlcreport\client\rpt_ExpensesByClient.rdlc" />
+    <Content Include="rdlcreport\client\rpt_ExpensesByItem.rdlc" />
+    <Content Include="rdlcreport\client\rpt_InvoiceRegistorByClient.rdlc" />
+    <Content Include="rdlcreport\client\rpt_MonthlyBilllingSummaryByClient.rdlc" />
+    <Content Include="rdlcreport\Employee\rpt_EmpExpReport.rdlc" />
+    <Content Include="rdlcreport\invoice\invoice1.rdlc" />
+    <Content Include="rdlcreport\invoice\invoice2.rdlc" />
+    <Content Include="rdlcreport\invoice\invoice3.rdlc" />
+    <Content Include="rdlcreport\invoice\invoice4.rdlc" />
+    <Content Include="rdlcreport\project\rpt_ProjectActivity.rdlc" />
+    <Content Include="rdlcreport\project\rpt_ProjectForecasting.rdlc" />
+    <Content Include="rdlcreport\project\rpt_project_Master_by_Client.rdlc" />
+    <Content Include="rdlcreport\Task\aasummaryprordlc.rdlc" />
+    <Content Include="rdlcreport\Task\activityAnalysisbyEmpandTask.rdlc" />
+    <Content Include="rdlcreport\Task\activityAnalysisbyproject.rdlc" />
+    <Content Include="rdlcreport\Task\ExpenseList.rdlc" />
+    <Content Include="rdlcreport\Task\expensesSummaryrdlc.rdlc" />
+    <Content Include="rdlcreport\Task\taskcodelistbygrouprdlc.rdlc" />
+    <Content Include="rdlcreport\Task\TaskListrdlc.rdlc" />
+    <Content Include="rdlcreport\Task\TaskSummaryrdlc.rdlc" />
+    <Content Include="Reports\TimeExpenseReport.rdlc" />
+    <Content Include="userMaster.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="webfile\01072016_0876413.pdf" />
+    <Content Include="webfile\01072016_0920387.pdf" />
+    <Content Include="webfile\01072016_1047554.pdf" />
+    <Content Include="webfile\01072016_4640965.pdf" />
+    <Content Include="webfile\130808042947590099.pdf" />
+    <Content Include="webfile\130886878209442595.pdf" />
+    <Content Include="webfile\1\1_131993539224880977.json" />
+    <Content Include="webfile\1\1_131994387625629535.docx" />
+    <Content Include="webfile\emailfile\131387249359438658.pdf" />
+    <Content Include="webfile\emailfile\131387249396045454.pdf" />
+    <Content Include="webfile\emailfile\131387251157106446.ini" />
+    <Content Include="webfile\new_01072016_0920387.pdf" />
+    <Content Include="webfile\new_01072016_1047554.pdf" />
+    <Content Include="webfile\new_01072016_4640965.pdf" />
+    <Content Include="webfile\tempinvoice\2000.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Library\Fileshare\" />
+    <Folder Include="packages\System.Spatial.5.2.0\lib\net40\de\" />
+    <Folder Include="packages\System.Spatial.5.2.0\lib\net40\ko\" />
+    <Folder Include="packages\System.Spatial.5.2.0\lib\sl4\de\" />
+    <Folder Include="packages\System.Spatial.5.2.0\lib\sl4\it\" />
+    <Folder Include="rdlcreport\schedule\" />
+    <Folder Include="Service References\" />
+    <Folder Include="webfile\attachfiles\" />
+    <Folder Include="webfile\serverfiles\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50085</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5008/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

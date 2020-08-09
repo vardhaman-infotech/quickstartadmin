@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Kota-Trails</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/fontawesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+  </head>
+  <body>
+<header>  
+  
+   <div class="top-header">
+  <div class="container">
+  <div class="row">
+  <div class="col-sm-4 col-xs-6">
+  					<ul class="nav navbar-nav navbar-left">
+						<li><a href="#">FAQ </a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+  
+  </div>
+  <div class="col-sm-8 col-xs-6">
+                  <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  placeholder="Search" >
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>  
+                    </span>
+                </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+    <nav class="navbar">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img class="img-responsive" src="images/logo.png"></a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Tailor-Made</a></li>
+            <li><a href="#">Connectivity</a></li>
+            <li><a href="#">Know Your Host</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Event</a></li>
+            <li><a href="#">Contact us</a></li>
+           
+          </ul>
+          
+          
+          
+        </div><!-- /.navbar-collapse -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Enquire Now</button>
+         
+      </div><!-- /.container -->
+      
+    </nav><!-- /.navbar -->
+
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <!-- Modal content-->
+        <div class="modal-header">
+            <div class="row">
+                <div class="col-sm-12">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h2>Tailor-made Request Form</h2>
+                    
+                    <p>Please complete the below details so that we can forward you a personalised holiday quotation</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-body">
+            <div class="form-grid">
+
+                <div class="col-sm-12">
+                    Fields marked * are required
+                </div>
+
+
+                <form class="ajax-form" method="post" action="/enquireajax" id="form-enquire">
+
+                    <div class="row">
+                        <div class="col-sm-6">                           
+                            <div class="form-group">
+                                <label for="name" class="control-label required">Name *</label>
+                                <div class="control-input">
+                                    <input type="text" name="name" id="name" value="" maxlength="30" placeholder="Name">
+                                </div>
+                            </div>                           
+                        </div>
+
+                        <div class="col-sm-6">                           
+                            <div class="form-group">
+                                <label for="surname" class="control-label required">Last Name *</label>
+                                <div class="control-input">
+                                    <input type="text" name="surname" id="surname" value="" maxlength="30" placeholder="Last Name">
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    
+                <div class="row">
+
+                    <div class="col-sm-4">
+                               
+                        <div class="form-group">
+                            <label for="tel" class="control-label required">Telephone *</label>
+                            <div class="control-input">
+                                <div class="intl-tel-input">
+                                    <input type="tel" placeholder="123456789">
+                                </div>
+                            </div>
+                        </div>
+                                
+                    </div>
+                </div>
+
+                <div class="row">
+                        <div class="col-sm-6">
+                            <div class="col-inner">
+                                <div class="form-group">
+                                    <label for="callback" class="control-label optional">Request a Callback</label>
+                                    <div class="control-input">
+                                        <select name="callback" id="callback">
+                                            <option value="" selected="selected">Preferred callback time</option>
+                                            <option value="Morning">Morning</option>
+                                            <option value="Lunchtime">Lunchtime</option>
+                                            <option value="Afternoon">Afternoon</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="col-inner">
+                                <div class="form-group">
+                                    <label for="email" class="control-label required">Email Address *</label>
+                                    <div class="control-input">
+                                        <input type="email" name="email" id="email" value="" maxlength="50" placeholder="Email Address">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="col-inner">
+                                <div class="form-group">
+                                    <label for="travel_date" class="control-label required">Preferred Date of Travel (e.g.8/3/2018) *</label>
+                                        <div class="control-input">
+                                            <input type="date" name="travel_date" id="travel_date" value="" class="datepicker" data-date-start-date="+1d" autocomplete="off" data-format="M/D/YYYY">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">                               
+                                <div class="form-group">
+                                    <label for="duration" class="control-label optional">Duration (Nights)</label>
+                                    <div class="control-input">                                       
+                                        <select name="duration" id="duration">
+                                            <option value="" selected="selected">Please Choose</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="row">                           
+                            <div class="col-sm-12">
+                                <div class="destinations"> 
+                                    <div class="form-group">
+                                        <label class="control-label required">Destinations you are interested in</label>
+                                        <div class="control-input checkbox multicheckbox" id="destinations">
+                                            <div class="col-sm-3">
+                                                <div><input name="destinations" value="Botswana" type="checkbox"><label>Jaipur</label></div>
+                                                <div><input name="destinations" value="Kenya" type="checkbox"><label>Ajmer</label></div>
+                                                <div><input name="destinations" value="Madagascar" type="checkbox"><label>Kota</label></div>
+                                                <div><input name="destinations" value="Malawi" type="checkbox"><label>Ajmer</label></div>
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <div><input name="destinations" value="Mauritius" type="checkbox"><label>Jaipur</label></div>
+                                                <div><input name="destinations" value="Mozambique" type="checkbox"><label>Ajmer</label></div>
+                                                <div><input name="destinations" value="Namibia" type="checkbox"><label>Kota</label></div>
+                                                <div><input name="destinations" value="Rwanda" type="checkbox"><label>Ajmer</label></div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div><input name="destinations" value="Seychelles" type="checkbox"><label>Jaipur</label></div>
+                                                <div><input name="destinations" value="South Africa" type="checkbox"><label>Ajmer</label></div>
+                                                <div><input name="destinations" value="Tanzania" type="checkbox"><label>Kota</label></div>
+                                                <div><input name="destinations" value="Uganda" type="checkbox"><label>Ajmer</label></div>
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <div><input name="destinations" value="Zambia" type="checkbox"><label>Jaipur</label></div>
+                                                <div><input name="destinations" value="Zimbabwe" type="checkbox"><label>Ajmer</label></div>
+                                                <div><input name="destinations" value="Other" type="checkbox"><label>Other</label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-sm-12">
+                              
+                                <div class="form-group">
+                                    <label for="adults" class="control-label optional">Number of Adults *</label>
+                                    <div class="control-input">
+                                        <select name="adults" id="adults">
+                                            <option value="" selected="selected">Please Choose</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                        </select>
+                                    </div>
+                                </div>
+                               
+                            </div>
+
+                            <div class="col-sm-12">                                
+                                <div class="form-group">
+                                    <label for="children" class="control-label optional">Number of Children</label>
+                                    <div class="control-input">
+
+                                        <select name="children" id="children">
+                                            <option value="0" selected="selected">0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </div>
+                                </div>                               
+                            </div>
+
+                            <!--<div class="col-sm-12">
+                               
+                                    <div class="form-group">
+                                        <label class="control-label optional ages">Child ages</label>
+                                        <div class="control-input">
+                                            <select name="childage1" id="childage1" style="display: none;">
+                                                <option value="" selected="selected"></option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                            </select>
+
+                                            <select name="childage2" id="childage2" style="display: none;">
+                                                <option value="" selected="selected"></option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                            </select>
+                                            <select name="childage3" id="childage3" style="display: none;">
+                                                <option value="" selected="selected"></option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                            </select>
+                                            <select name="childage4" id="childage4" style="display: none;">
+                                                <option value="" selected="selected"></option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                            </select>
+
+                                        </div>
+                                    </div>                               
+                            </div>-->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                
+                                    <div class="form-group">
+                                        <label for="budget" class="control-label optional">Budget (per person)</label>
+                                        <div class="control-input">
+                                            <select name="budget" id="budget">
+                                                <option value="" selected="selected">Please Choose</option>
+                                                <option value="1500-2499">Rs,500 - Rs,499</option>
+                                                <option value="2500-3499">Rs,500 - Rs,499</option>
+                                                <option value="3500-4499">Rs,500 - Rs,499</option>
+                                                <option value="4500+">Over Rs,500</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                               
+                            </div>
+
+
+                            <div class="col-sm-6">
+                               
+                                    <div class="form-group">
+                                        <label for="source" class="control-label optional">Where did you hear about us?</label>
+                                        <div class="control-input">
+                                            <select name="source" id="source">
+                                                <option value="" selected="selected">Please select</option>
+                                                <option value="WBNG">Bing</option>
+                                                <option value="WCSG">Conde Nast Spa Guide</option>
+                                                <option value="WCNT">Conde Nast Traveller</option>
+                                                <option value="WDMN">Daily Mail</option>
+                                                <option value="WEML">Email/newsletter</option>
+                                                <option value="WLTF">Events</option>
+                                                <option value="WFAF">Friends/family</option>
+                                                <option value="WGOO">Google</option>
+                                                <option value="WHBM">Harpers Bazaar</option>
+                                                <option value="WTAM">Tatler Magazine</option>
+                                                <option value="WTTG">Tatler Travel Guide</option>
+                                                <option value="WTSG">Tatler Spa Guide</option>
+                                                <option value="WTEN">The Telegraph</option>
+                                                <option value="WTIN">Times</option>
+                                                <option value="WTWI">Twitter</option>
+                                                <option value="WREP">Travelled with you before</option>
+                                                <option value="WWEM">Wedding magazine</option>
+                                                <option value="WWHM">Woman &amp; Home</option>
+                                                <option value="WUNK">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                               
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                               
+                                <div class="form-group">
+                                    <label for="additional" class="control-label optional">Is there anything else you can tell us about your travel plans? for example: is your trip to celebrate a special occasion?</label>
+                                    <div class="control-input">
+                                        <textarea name="additional" id="additional" rows="5" cols="80" spellcheck="true" style="z-index: auto; position: relative; line-height: normal; font-size: 16px; transition: none 0s ease 0s; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"></textarea>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">                                    
+                                    <div class="control-input checkbox offers">                                      
+                                        <input name="newsletter" value="1" type="checkbox">
+                                        <label>Keep me updated on the latest news and special offers from  Kota-Trails</label>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                                
+
+                        <div style="text-align: center;">
+                            <div class="g-recaptcha" data-sitekey="6Lcw_loUAAAAADZ0o2f-yPQ-r9IZSA-SUZMJjYRE" data-size="compact"><div style="width: 164px; height: 144px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6Lcw_loUAAAAADZ0o2f-yPQ-r9IZSA-SUZMJjYRE&amp;co=aHR0cHM6Ly93d3cuYWZyaWNhdHJhdmVsLmNvbTo0NDM.&amp;hl=en&amp;v=v1531759913576&amp;size=compact&amp;cb=pzs2n3vfgmxe" width="164" height="144" role="presentation" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div><br>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <div class="form-group">
+                                <div class="form-actions">
+                                    <button name="submit" id="submit" type="submit" class="btn btn-primary" onclick="ga('send', 'event',  'Enquiry', 'Enquiry Sent');">Submit Enquiry</button>
+                                </div>
+                            </div>
+                        </div>
+                              <a id="confirm-hidden-button" href="#confirm-modal" data-lity="" style="display: none;"></a>
+                        <div style="text-align: center;">
+                            <br>
+                            <p>Please note that due to the fluctuating currency at this time, all quotes are subject to change  at time of booking.</p>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+ </div>
+</header>  
+
+  <!-- Header---End -->
+
+
+<div id="myCarousel" class="carousel slide slider" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+	<div class="overlay"></div>
+      <img src="images/slider01.jpg" alt="Name">
+    </div>
+
+    <div class="item">
+	<div class="overlay"></div>
+      <img src="images/slider02.jpg" alt="Name">
+    </div>
+
+    <div class="item">
+	<div class="overlay"></div>
+      <img src="images/slider03.jpg" alt="Name">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+   <i class="fas fa-chevron-left"></i>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <i class="fas fa-chevron-right"></i>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+  <!-- Slider---End -->
+<section class="about">
+<div class="container">
+<div class="row">
+<div class="col-sm-12 text-center"><h2 class="main-heading">Why Kota?</h2></div>
+
+<div class="col-md-6 col-sm-6 col-xs-12">
+<p>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including.
+<br><br>
+but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including.
+<br><br>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including.
+
+
+</p>
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12">
+<img class="img-responsive" src="images/about-sukh.jpg">
+</div>
+</div>
+</div>
+</section>  
+   
+   <!-- About---End --> 
+   
+   
+<section class="trails">
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-12 text-center"><h2 class="main-heading">trails</h2></div>
+<div id="fh5co-page">
+
+		<div id="fh5co-portfolio-section">
+
+				<div id="portfoliolist">
+					
+					<div class="portfolio all logo animate-box" data-cat="logo">
+						<div class="portfolio-wrapper">				
+							<img src="images/khoti.jpg" alt="" />
+							<div class="label">
+								<div class="label-text">
+									<a class="text-title">Sukhdham Khoti</a>
+									
+								</div>
+								<div class="label-bg"></div>
+							</div>
+						</div>
+					</div>				
+
+					<div class="portfolio all card web animate-box" data-cat="card">
+						<div class="portfolio-wrapper">			
+							<img src="images/picnic.jpg" alt="" />
+							<div class="label">
+								<div class="label-text">
+									<a class="text-title">Picnic & Excursion</a>
+								
+								</div>
+								<div class="label-bg"></div>
+							</div>
+						</div>
+					</div>		
+					
+					<div class="portfolio all web animate-box" data-cat="web">
+						<div class="portfolio-wrapper">						
+							<img src="images/birding.jpg" alt="" />
+							<div class="label">
+								<div class="label-text">
+									<a class="text-title">Birding & Wildlife</a>
+								</div>
+								<div class="label-bg"></div>
+							</div>
+						</div>
+					</div>				
+					
+					<div class="portfolio all card animate-box" data-cat="card">
+						<div class="portfolio-wrapper">			
+							<img src="images/boat.jpg" alt="" />
+							<div class="label">
+								<div class="label-text">
+									<a class="text-title">Boat Safaris</a>
+								</div>
+								<div class="label-bg"></div>
+							</div>
+						</div>
+					</div>	
+								
+					<div class="portfolio all app animate-box" data-cat="app">
+						<div class="portfolio-wrapper">
+							<img src="images/tample.jpg" alt="" />
+							<div class="label">
+								<div class="label-text">
+									<a class="text-title">Heritage & Culture</a>
+								</div>
+								<div class="label-bg"></div>
+							</div>
+						</div>
+					</div>			
+					
+					<div class="portfolio all card animate-box" data-cat="card">
+						<div class="portfolio-wrapper">			
+							<img src="images/farm-stay.jpg" alt="" />
+							<div class="label">
+								<div class="label-text">
+									<a class="text-title">Farm Stays</a>
+								</div>
+								<div class="label-bg"></div>
+							</div>
+						</div>
+					</div>	
+					
+					<div class="portfolio all card animate-box" data-cat="card">
+						<div class="portfolio-wrapper">			
+							<img src="images/palace.jpg" alt="" />
+							<div class="label">
+								<div class="label-text">
+									<a class="text-title">City Palace</a>
+								</div>
+								<div class="label-bg"></div>
+							</div>
+						</div>
+					</div>	
+					
+					<div class="portfolio all logo animate-box" data-cat="logo">
+						<div class="portfolio-wrapper">			
+							<img src="images/raniji-ki-baodi.jpg" alt="" />
+							<div class="label">
+								<div class="label-text">
+									<a class="text-title">Raniji Ki Baodi</a>
+								</div>
+								<div class="label-bg"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="portfolio all icon animate-box" data-cat="icon">
+						<div class="portfolio-wrapper">			
+							<img src="images/pool-party.jpg" alt="" />
+							<div class="label">
+								<div class="label-text">
+									<a class="text-title">Pool Party</a>
+								</div>
+								<div class="label-bg"></div>
+							</div>
+						</div>
+					</div>																											
+				</div>
+			</div>
+		</div>
+</div>
+</div>
+</section>
+  
+   <!--Trails---End--> 
+   
+  <section class="holidays"> 
+   <div class="container">
+    <div class="row text-center">
+    <div class="col-sm-12 text-center">
+   <h2 class="main-heading">Holidays <span>Starting From 5K INR</span></h2>
+   
+    </div>
+   
+   <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+   <a class="weekend" href="#"></a><br>
+   <a class="link-text" href="#">Weekend<br> Getaways</a>
+   
+   </div>
+    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+   <a class="long-weekend" href="#"></a><br>
+   <a class="link-text"  href="#">Long Weekend Planer</a>
+   
+   </div>  
+   <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+   <a class="religious" href="#"> </a><br>
+   <a class="link-text"  href="#">Religious<br> Trails</a>
+  
+   </div>
+  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+   <a class="adventures" href="#"> </a><br>
+   <a class="link-text"  href="#">Wildlife Birding & Adventures</a>  
+   </div>
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+   <a class="wanderlust" href="#"> </a><br>
+   <a class="link-text"  href="#">Ladies on Wanderlust</a>  
+  </div> 
+       <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+   <a class="romantic" href="#"> </a><br>
+   <a class="link-text"  href="#">Romantic <br>Escape</a> 
+  </div>   
+ 
+   </div>
+   </div>
+   </div>
+   </section>
+   
+   
+  <!--Holidays---End-->    
+
+
+<section class="testimonials">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-sm-6 col-xs-12">
+
+
+<ul>
+<li><img src="images/insta01.jpg" class="img-responsive"></li>
+<li><img src="images/insta02.jpg" class="img-responsive"></li>
+<li><img src="images/insta03.jpg" class="img-responsive"></li>
+<li><img src="images/insta04.jpg" class="img-responsive"></li>
+<li><img src="images/insta05.jpg" class="img-responsive"></li>
+<li><img src="images/insta06.jpg" class="img-responsive"></li>
+<li><img src="images/insta07.jpg" class="img-responsive"></li>
+<li><img src="images/insta08.jpg" class="img-responsive"></li>
+<li><img src="images/insta09.jpg" class="img-responsive"></li>
+</ul>
+</div>
+<div class="col-lg-6 col-sm-6 col-xs-12">
+<h2 class="main-heading text-center">Testimonials</h2>
+<div class="carousel slide" data-ride="carousel" id="client">
+<div class="carousel-inner">
+
+<div class="item active">
+<div class="client"><img src="images/client.jpg" class="img-responsive"/></div>
+<p>"Majority have suffered alteration in aome from, by injected believable.There varation words able s, but also the leap
+into electronic typesetting, 1960s with the release of Letraset sheetpassage."</p>
+<h5>- Joseph deboungawer</h5>
+</div>
+
+<div class="item">
+<div class="client"><img src="images/client.jpg" class="img-responsive"/></div>
+<p>"Majority have suffered alteration in aome from, by injected believable.There varation words able s, but also the leap
+into electronic typesetting, 1960s with the release of Letraset sheetpassage."</p>
+<h5>- Joseph deboungawer</h5>
+</div>
+
+<div class="item">
+<div class="client"><img src="images/client.jpg" class="img-responsive"/></div>
+<p>"Majority have suffered alteration in aome from, by injected believable.There varation words able s, but also the leap
+into electronic typesetting, 1960s with the release of Letraset sheetpassage."</p>
+<h5>- Joseph deboungawer</h5>
+</div>
+
+
+<a href="#client" class="left carousel-control" data-slide="prev"><i class="fas fa-caret-left"></i></a>
+<a href="#client" class="right carousel-control" data-slide="next"><i class="fas fa-caret-right"></i></a>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+</section>  
+  
+  <!--Testimonials---End-->   
+<footer>  
+<div class="container">  
+  <div class="row">
+    <div class="col-lg-4 col-sm-4">
+    <h3>Latest  Blog</h3>
+    <ul>
+    <li>MARCH 16, 2018</li>
+    <li><img src="images/footer-img.jpg" class="img-responsive"></li>
+    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500</li>
+    </ul>
+  </div>
+  
+   <div class="col-lg-4 col-sm-4">
+      <h3>Latest  News</h3>
+    <div class="row">
+    <ul>
+    <li>
+    <div class="col-lg-2">
+    <img src="images/footer-news-img.jpg" class="img-responsive">
+    </div>
+      <div class="col-lg-10">
+      <p>Lorem ipsum is simpaly dummy</p>
+      <span>October 1, 2018 - 3:31 pm</span>
+      
+    </div>
+    </li>
+    <br/><br/>
+    <li>
+      <div class="col-lg-2">
+    <img src="images/footer-news-img.jpg" class="img-responsive">
+    </div>
+      <div class="col-lg-10">
+      <p>Lorem ipsum is simpaly dummy</p>
+      <span>October 1, 2018 - 3:31 pm</span>
+      
+    </div>
+    </li>
+    </ul>
+  </div>
+   </div>
+  
+  
+    <div class="col-lg-4 col-sm-4">
+    <h3>Contact us</h3>
+    <ul>
+    <li>Lorem ipsum is simpaly dummy text of the printing and industry</li>
+    <li><span>E-mail:</span> <a href="#">Info@kotatrails.com</a></li>
+    <li><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-google-plus-g"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+    </ul>
+  </div>
+  </div>  
+</div>  
+  
+  
+</footer>  
+<div class="footer-bottom">
+<div class="container">  
+  <div class="row">
+  <div class="col-lg-12 text-center">
+<ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Tailor-Made</a></li>
+        <li><a href="#">Connectivity</a></li>
+		<li><a href="#">Know Your Host</a></li>
+		<li><a href="#">Gallery</a></li>
+		<li><a href="#">Event</a></li>
+		<li><a href="#">Contact us</a></li>
+      </ul>
+  <p>© Copyright Kota Trails All Right Reserved.</p>
+  </div>
+  </div>
+</div>
+</div>
+
+  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	 <script src="js/jquery.mixitup.min.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixItUp({
+  				selectors: {
+    			  target: '.portfolio',
+    			  filter: '.filter'	
+    		  },
+    		  load: {
+      		  filter: '.all'  
+      		}     
+				});								
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+
+		
+		
+	});	
+	</script>
+	
+  </body>
+</html>

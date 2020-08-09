@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MobileMaster.master.cs" Inherits="empTimeSheet.Appointment.MobileMaster" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Harshwal & Company LLP</title>
+
+    <link href="css/mobStyleSheet.css" rel="stylesheet" type="text/css" />
+      <link href="css/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/validate2.3.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+        </ajaxToolkit:ToolkitScriptManager>
+        <div class="container">
+            <div class="logo">
+                <a href="Default.aspx"><img src="images/logonew.png" alt="" id="imglogo" runat="server" /></a>
+            </div>
+
+
+
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+          
+        </div>
+    </form>
+</body>
+</html>

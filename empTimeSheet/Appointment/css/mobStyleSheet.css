@@ -1,0 +1,303 @@
+body{margin: 0px; padding: 0px;  font-family: 'OpenSans';}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('fonts/OpenSans.eot');
+	src: url('fonts/OpenSansd41d.eot?#iefix') format('embedded-opentype'),
+		url('fonts/OpenSans.html') format('woff'),
+		url('fonts/OpenSans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans-Bold';
+	src: url('fonts/OpenSans-Bold.eot');
+	src: url('fonts/OpenSans-Boldd41d.eot?#iefix') format('embedded-opentype'),
+		url('fonts/OpenSans-Bold.html') format('woff'),
+		url('fonts/OpenSans-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans-Semibold';
+	src: url('fonts/OpenSans-Semibold.eot');
+	src: url('fonts/OpenSans-Semiboldd41d.eot?#iefix') format('embedded-opentype'),
+		url('fonts/OpenSans-Semibold.html') format('woff'),
+		url('fonts/OpenSans-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+*{
+    box-sizing:border-box;
+}
+
+a{
+    cursor:pointer;
+    text-decoration:none;
+}
+ul,li{
+    list-style-type:none;
+}
+img{
+    border:0px;
+
+}
+.alertbox{
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index:999;
+    position:fixed;
+    width:100%;
+    height:100%;
+    display:none;
+    top:0;
+    left:0;
+}
+
+.alertbox-inner{
+   margin:15% auto;
+  width:305px;
+ max-width:100%;
+   background:#ffffff;
+}
+.alertbox-inner-message{
+   width:100%;
+   min-height:80px;
+   border:solid 1px #e0e0e0;
+   padding:15px 8px;
+   padding-top:20px;
+   text-align:center;
+   box-sizing:border-box;
+   font-size:13px;
+   border-bottom-color:#b6b6b6;
+   font-family: verdana;
+   
+  
+}
+.alertbox-inner-buttonbox{
+   width:100%;
+   height:45px;
+   background:#e0e0e0;
+   text-align:right;
+  
+}
+.alertbox-inner-button{
+    border:solid 1px #b6b6b6;
+    background:#cccccc;
+    font-size:12px;
+    padding:4px;
+    min-width:80px;
+    margin:5px;
+    margin-top:10px;
+    cursor:pointer;
+   font-family:'OpenSans-Semibold';
+}
+.alertbox-inner-button:hover {
+    background:#f7fefe;
+}
+.progressdiv {
+    background: #ffffff;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1004;
+}
+
+.otherdiv {
+    background:#000000;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.container{width: 1170px; margin: auto; max-width:100%;}
+.logo{text-align: center; margin: 20px 0;display:none;}
+.mainfrom{
+    clear:both;
+    width:1100px;
+    max-width:98%;
+    margin:10px auto;
+    min-height:400px;
+   
+    padding:10px;
+}
+.graybox{ margin:10px auto; width:100%;}
+.graybox2{}
+.graybox3{}
+
+.com-hding{font-family: 'OpenSans-Semibold'; font-size: 36px; color: #173967; text-align: center;}
+.com-hding span{font-family: 'OpenSans-Semibold'; font-size: 22px; color: #000000; text-align: center;}
+.msg-hding{font-family: 'OpenSans-Semibold'; font-size: 22px; color: #173967; text-align: center; padding-bottom:25px; padding-top:10%;}
+.msg-hding span {
+    font-size:15px;
+    color:#000000;
+}
+#divtable{max-width:100%;}
+.fielbox{margin:40px 0 20px; text-align: center;}
+.graybox .fielbox{
+  
+    margin:40px auto 20px auto;
+}
+.fielbox label{font-family: 'OpenSans-Semibold'; font-size: 15px; color: #000000; text-align:left;}
+.fielbox select{width: 310px; height: 32px; border: solid 1px #b9b9b9; font-size: 14px; color: #404040; font-family: 'OpenSans-Semibold'; padding-left: 5px; margin-left: 10px;}
+.button {margin: auto;}
+.button1 a {color: #fff; font-size: 14px; text-align: center; text-transform: uppercase; padding: 4px 12px; text-decoration: none; 
+background: -webkit-linear-gradient(#00609d, #007cca);
+background: -o-linear-gradient(#00609d, #007cca);
+background: -moz-linear-gradient(#00609d, #007cca);	
+background: linear-gradient(#00609d, #007cca); border: solid 1px #00588f;}
+.button a {display: inline-block; margin: 0px 0;}
+.button a {color: #fff; font-size: 14px; text-align: center; text-transform: uppercase; padding: 7px 12px; text-decoration: none; 
+background: -webkit-linear-gradient(#00609d, #007cca);
+background: -o-linear-gradient(#00609d, #007cca);
+background: -moz-linear-gradient(#00609d, #007cca);	
+background: linear-gradient(#00609d, #007cca); border: solid 1px #00588f;}
+.button a:hover{background: #1e4983;}
+.graybox2 .hding{display:block ;text-align: center; font-family: 'OpenSans-Semibold'; font-size: 23px; color: #173967; margin:10px; }
+.graybox2 .lft-right-arow{display: inline-block; float:right;}
+.lft-arow {display: inline-block;}
+.rht-arow {display: inline-block;}
+.graybox2 .lft-right-arow .lft-arow a{display: inline-block; padding: 4px 18px; background: #d7d7d7; border: solid 1px #b9b9b9;}
+.graybox2 .lft-right-arow .rht-arow a{display: inline-block; padding: 4px 18px; background: #d7d7d7; border: solid 1px #b9b9b9; }
+.graybox2 .lft-right-arow a:hover{
+    background:#173967 ;
+}
+
+
+.bookHeading {
+     color: #173967;
+    font-family: "OpenSans-Semibold";
+    font-size: 25px;
+    text-align: center;
+}
+.bookHeading span {
+    color: #000000;
+    font-family: "OpenSans-Semibold";
+    font-size: 20px;
+    text-align: center;
+    display:none;
+}
+.table{ margin: 15px auto; width: 100%; margin-top:5px;}
+.table table {font-family: 'OpenSans-Semibold'; border-collapse: collapse; width: 100%; background: #fff none repeat scroll 0 0;}
+.table th{background-color:#ededed; font-size: 20px;}
+
+    
+.table  .isdata td:hover{
+     background:#173967;
+}
+.table  .isdata td:hover a{
+     color:#ffffff;
+}
+.table td a {clear:both;
+              
+                font-size:18px;
+                color:#173967;
+                font-family:"OpenSans-Semibold";
+
+    }
+    .table td a:hover{
+                      text-decoration:underline;
+
+    }
+    .trselected{
+        background:#173967;
+    }
+    .trselected td a{
+        color:#ffffff;
+    }
+    .switchtodate{
+        color:blue;
+           font-size: 16px;
+    margin-right: 10px;
+    text-decoration: underline;
+    }
+.switchtodate:hover {
+    background:none !important;
+    color:blue;
+}
+.table td, th {border: 1px solid #e0e0e0; text-align: center; padding: 5px; height:37px;}
+.table td{padding: 0px; height:33px; vertical-align:middle;}
+
+
+.clear{clear: both;}
+.fldbox{margin-bottom: 10px;}
+.inputbox{ margin:20px auto; width:460px;max-width:100%;}
+.inputbox label{font-family: 'OpenSans-Semibold'; font-size: 14px; color: #000000; width:155px;float:left;clear:both; margin-top:10px; margin-right:10px;}
+.lbltime{
+    font-family: 'OpenSans-Semibold'; font-size: 16px; color: #000000; margin-top:10px; display:block;
+    
+    color:#173967;
+}
+.inputbox input{border: 1px solid #dadada;margin-top:5px;  height: 40px;  font-size: 13px; padding: 8px; width: 100%; border-radius: 0px; font-family: 'OpenSans-Semibold';  }
+.inputbox select{width:100%;margin-top:5px; height: 40px; border: solid 1px #b9b9b9; font-size: 14px; color: #404040; font-family: 'OpenSans-Semibold'; 
+       }                
+.inputbox .txttime{
+    width:130px;
+    cursor:pointer;
+    max-width:99%;
+}
+.inputbox .timetext{
+    float:left;
+    display:block;
+    margin-top:10px;
+    padding:0px;
+    width:40px;
+    text-align:center;
+} 
+footer{background: #173967;  color: #fff;
+    font-size: 13px;
+    line-height: 35px;
+    margin: 0 auto;
+    max-width: 98%;
+    text-align: center;
+    width: 1100px;}
+
+.rightback{
+    float:right;
+     margin-top: 10px;
+
+}
+.rightfrom{
+    clear:both;
+   
+  
+    min-height: 435px;
+    margin-top: 3px;
+  
+    width: 100%;
+    box-sizing:border-box;
+}
+
+
+
+
+@media (max-width:543px){
+    .lbltime{
+        width:100%;
+    }
+    .fielbox{
+        text-align:left;
+    }
+    .inputbox label{width:100%;}
+    .inputbox .txttime{width:45%;}
+    .inputbox .timetext{width:10%;}
+	.button a{width:99%; text-align:center;}
+	.graybox .fielbox {margin: 20px auto;}
+	.mainfrom{min-height: auto;}
+	.com-hding span{font-size: 15px;}
+	.com-hding{font-size: 20px;}
+	.fielbox select{margin-left:0px; width: 99%; margin-top:10px;}
+	footer{font-size: 10px;}
+	.fielbox label{display: block; width:100%;}
+		}	
+
+
+
+

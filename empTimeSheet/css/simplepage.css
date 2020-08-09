@@ -1,0 +1,72 @@
+﻿body{margin: 0px; padding: 0px; font-family: "open_sansregular",Arial,Helvetica,sans-serif;
+    font-size: 13px;}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('opensans-regular.eot');
+    src: url('opensans-regular.eot?#iefix') format('embedded-opentype'), url('opensans-regular.woff') format('woff'), url('opensans-regular.ttf') format('truetype'), url('opensans-regular.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'open_sans_semibold';
+    src: url('../fonts/opensans/OpenSans-Semibold.eot');
+    src: url('../fonts/opensans/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/OpenSans-Semibold.woff') format('woff'), url('../fonts/opensans/OpenSans-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'open_sans_bold';
+    src: url('../fonts/opensans/OpenSans-Bold.eot');
+    src: url('../fonts/opensans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/OpenSans-Bold.woff') format('woff'), url('../fonts/opensans/OpenSans-Bold.ttf') format('truetype'), url('../fonts/opensans/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+.clear{
+    clear:both;
+}
+.preview{
+    width:100px;
+    height:100px;
+    margin:0px auto;
+    background-repeat:no-repeat;
+    background-size:100%;
+    margin-bottom:10px;
+    background-image:url(../images/pic-img.jpg);
+    border:solid 1px #cccccc;
+}
+.w1{
+    width:200px;
+}
+.fleft{
+    float:left;
+}
+.fright{
+    float:right;
+}
+.fileupload{
+    display:none;
+}
+.filename{
+    font-size:12px;
+}
+.btnbrowse{
+    text-align: center; padding: 4px 12px; text-decoration: none;
+}
+.subbtn {display: inline-block; margin: 20px 0;}
+.subbtn {color: #fff; font-size: 13px; text-align: center; padding: 5px 12px; text-decoration: none; margin:0px 10px;
+background: -webkit-linear-gradient(#00609d, #007cca);
+background: -o-linear-gradient(#00609d, #007cca);
+background: -moz-linear-gradient(#00609d, #007cca);	
+background: linear-gradient(#00609d, #007cca); border: solid 1px #00588f;}
+
+.subbtn:hover{
+background: -webkit-linear-gradient(#007cca, #00609d);
+background: -o-linear-gradient(#007cca, #00609d);
+background: -moz-linear-gradient(#007cca, #00609d);	
+background: linear-gradient(#007cca, #00609d); border: solid 1px #00588f;}

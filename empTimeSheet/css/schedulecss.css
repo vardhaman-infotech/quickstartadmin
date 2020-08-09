@@ -1,0 +1,83 @@
+﻿.divalert {
+    width: 400px;
+    position: fixed;
+    z-index: 99999;
+    background: #ffffff;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.divalert-close {
+    float: right;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.divalert-text {
+    clear: both;
+    padding: 10px;
+    font-size: 14px;
+    color: #000000;
+    min-height: 100px;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.divalert-bottom {
+    clear: both;
+    padding: 10px;
+    text-align: right;
+    min-height: 30px;
+    background: #e0e0e0;
+    padding: 10px;
+}
+
+.divalert-btnclose {
+     min-width: 60px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    background: #808080;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+     padding:0px 10px;
+}
+
+.divalert-ok {
+    min-width: 60px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    background: #127bbe;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    padding:0px 10px;
+}
+
+
+ .style1 {
+            width: 132px;
+        }
+
+        .checkboxinputwithoutmar input {
+            margin-top: 0px !important;
+        }
+
+        .tabContaier {
+            padding: 10px;
+        }
+
+
+        .tabContents {
+            min-height: 125px;
+        }
+
+        .tabDetails {
+            height: auto;
+        }

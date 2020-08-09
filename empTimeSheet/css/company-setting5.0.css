@@ -1,0 +1,277 @@
+﻿.left-company-box {
+    width: 20%;
+   
+    background: #43aa9b;
+    margin: 15px;
+    height: 670px;
+    max-width:212px;
+     display:block;
+     float:left;
+}
+
+.right-company-box {
+    width: 76%;
+  
+    background: #fff;
+    margin: 15px 0px;
+    vertical-align: top;
+     display:block;
+     float:left;
+}
+
+.company-nmbr-hding {
+    border-bottom: 1px dashed #ccc;
+    float: left;
+    font-size: 18px;
+    font-family: 'open_sans_semibold', Arial, Helvetica, sans-serif;
+    margin: 10px 0 15px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.comp-dtl-box {
+    height: 670px;
+    border: solid 20px #f7f7f7;
+    padding: 15px;
+    display: none;
+}
+
+.left-company-box ul li {
+    border-bottom: 1px solid #22bea8;
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+    .left-company-box ul li a {
+        font-family: 'open_sans_semibold', Arial, Helvetica, sans-serif;
+        color: #fff;
+        display: block;
+        float: left;
+        font-size: 14px;
+        line-height: 40px;
+        padding: 0 0 0 15px;
+        position: relative;
+        text-decoration: none;
+        width: 100%;
+    }
+
+        .left-company-box ul li a div {
+            background-image: url("../images/com-right-arrow.png");
+            background-repeat: no-repeat;
+            cursor: pointer;
+            height: 16px;
+            left: 92%;
+            position: absolute;
+            top: 17px;
+            width: 16px;
+            z-index: 2;
+        }
+
+        .left-company-box ul li a:hover {
+            background-color: #14a38f;
+            outline: none;
+        }
+
+        .left-company-box ul li a:active {
+            background-color: #14a38f;
+            outline: none;
+        }
+
+        .left-company-box ul li a:focus {
+            background-color: #14a38f;
+            outline: none;
+        }
+
+        .left-company-box ul li a.active {
+            background-color: #14a38f;
+            outline: none;
+        }
+
+.savbuton {
+    margin-top: 20px;
+    text-align: right;
+    width: 450px;
+}
+
+    .savbuton a {
+        background-color: #43aa9b;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+        .savbuton a:hover {
+            color: #fff;
+        }
+
+.ctrlGroup .lbl_nr {
+    color: #333333;
+    float: left;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+    padding: 0 5px 0 0;
+    width: 160px;
+}
+
+.logotxt {
+    font-size: 13px;
+    font-family: 'open_sans_semibold', Arial, Helvetica, sans-serif;
+}
+
+.com-logo-big {
+    border: 2px solid #dedede;
+    display: block;
+    margin-top: 10px;
+    padding: 5px;
+    width: 250px;
+    height: 100px;
+    float:left;
+}
+.com-logo-big img{
+    max-width:100%;
+     max-height:100%;
+}
+
+.com-logo-small {
+    border: 2px solid #dedede;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+}
+
+.edit-btn a {
+    color: #fff;
+    font-size: 12px;
+    background-color: #43aa9b;
+    padding: 5px 13px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+    .edit-btn a:hover {
+        color: #fff;
+    }
+
+.iframe {
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    border: none;
+}
+
+
+@media (min-width:1200px) {
+    .left-invoice-box {
+        width: 24.4%;
+    }
+
+    .right-invoice-box {
+        width: 72%;
+    }
+
+    .invc-lft-txt {
+        width: 54%;
+    }
+
+    .invc-rht-txt {
+        width: 45%;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .left-invoice-box {
+        width: 25%;
+    }
+
+    .right-invoice-box {
+        width: 70%;
+    }
+
+    .invc-lft-txt {
+        width: 54%;
+    }
+
+    .invc-rht-txt {
+        width: 45%;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .left-invoice-box {
+        width: 25%;
+    }
+
+    .right-invoice-box {
+        width: 70%;
+    }
+
+    .invc-lft-txt {
+        width: 54%;
+    }
+
+    .invc-rht-txt {
+        width: 45%;
+    }
+
+    .invc-tab-top li {
+        margin-right: 11px;
+    }
+
+    .iframe {
+        width: 99%;
+        height: 90%;
+        padding: 10px;
+    }
+
+   
+}
+
+@media (max-width:767px) {
+    .left-invoice-box {
+        width: 95%;
+    }
+
+    .right-invoice-box {
+        width: 100%;
+    }
+
+    .blue-btn {
+        margin-left: 10px;
+    }
+
+    .green-btn {
+        margin-right: 10px;
+    }
+
+    .invc-tab-top > ul {
+        height: auto;
+    }
+
+    .left-invoice-box {
+        height: auto;
+        margin: 7px;
+    }
+
+    .invc-lft-txt {
+        width: 54%;
+    }
+
+    .invc-rht-txt {
+        width: 45%;
+    }
+
+    .iframe {
+        width: 99%;
+        height: 95%;
+        padding: 10px;
+    }
+
+    .maindiv {
+        padding: 10px;
+    }
+}

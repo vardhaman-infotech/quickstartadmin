@@ -1,0 +1,837 @@
+﻿/******General ***************/
+
+h1, h2, h3, h4, h5, h6, address, blockquote, dl, fieldset, ol, p, table, ul
+{
+    margin: 15px 0;
+}
+#content h1
+{
+    font-size: 18px;
+}
+#content h2
+{
+    font-size: 150%;
+}
+#content h3
+{
+    font-size: 140%;
+}
+#content h4
+{
+    font-size: 120%;
+}
+#content h5, h6
+{
+    font-size: 100%;
+}
+#content table
+{
+    margin: 0;
+    border-collapse: collapse;
+}
+#content table.width100
+{
+    width: 100%;
+}
+#content table th, #content table td
+{
+    padding:2px;
+}
+#content table th
+{
+    vertical-align: middle;
+    font-weight: bold;
+}
+#content ul
+{
+    margin: 15px 0;
+    list-style: none;
+}
+
+#content ul ul
+{
+    margin: 0 0 0 10px;
+}
+
+#content ol
+{
+    margin: 15px 0 15px 30px;
+    list-style-type: decimal;
+}
+#content ol ol
+{
+    margin: 0 0 0 20px;
+}
+#content ol ol li
+{
+    list-style-type: lower-alpha;
+}
+#content dl
+{
+    clear: both;
+}
+#content dl dt
+{
+    font-weight: bold;
+}
+#content dl dd
+{
+    margin: 0 0 5px 0;
+}
+#content fieldset
+{
+    position: relative;
+    margin: 10px 0;
+    padding: 10px;
+}
+#content legend
+{
+    font-size: 105%;
+    font-weight: bold;
+}
+#content code
+{
+    font-family: "" ,monospace;
+}
+#content .help
+{
+    cursor: help;
+}
+
+.date
+{
+    background: url("../images/scw.gif") no-repeat scroll right center transparent;
+    padding-right: 15px;
+}
+.unreadmsg
+{
+    color: #617180;
+}
+.txtBoxsmall
+{
+    border-right: #76a0c7 1px solid;
+    border-top: #76a0c7 1px solid;
+    font-size: 11px;
+    border-left: #76a0c7 1px solid;
+    border-bottom: #76a0c7 1px solid;
+    font-family: Verdana;
+    height: 18px;
+    width: 120px;
+}
+.textarea
+{
+    border-right: #76a0c7 1px solid;
+    border-top: #76a0c7 1px solid;
+    font-size: 11px;
+    border-left: #76a0c7 1px solid;
+    border-bottom: #76a0c7 1px solid;
+    font-family: Verdana;
+    width: 200px;
+}
+.txtBoxBig
+{
+    border-right: #76a0c7 1px solid;
+    border-top: #76a0c7 1px solid;
+    font-size: 11px;
+    border-left: #76a0c7 1px solid;
+    border-bottom: #76a0c7 1px solid;
+    font-family: Verdana;
+    height: 18px;
+    width: 100%;
+}
+.txtBoxdate
+{
+    border-right: #76a0c7 1px solid;
+    border-top: #76a0c7 1px solid;
+    font-size: 11px;
+    border-left: #76a0c7 1px solid;
+    border-bottom: #76a0c7 1px solid;
+    font-family: Verdana;
+    height: 18px;
+    width: 185px;
+}
+.btnold
+{
+	border-right: #76a0c7 1px solid;
+	border-top: #76a0c7 1px solid;
+	font-size: 11px;
+	border-left: #76a0c7 1px solid;
+	border-bottom: #76a0c7 1px solid;
+	font-family: Verdana;
+	background-color: #e2ded6;
+}
+.btn
+{
+    font-size: 11px;
+    font-family: Verdana;
+    border: 0;
+    background: #006699; /* for non-css3 browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#87BEE8', endColorstr='#006699'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#87BEE8), to(#006699)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #87BEE8, #006699); /* for firefox 3.6+ */
+    color: #ffffff;
+    padding: 2px 4px 2px 4px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.btn:hover
+{
+    /*color:#0085CC;*/
+    color: #fff;
+}
+/*.datediv
+{
+    display:inline;
+}
+.datediv input[type=text] { display:inline;}*/
+
+.t-right label
+{
+    display: inline;
+}
+input[type="checkbox"]
+{
+    border-right: 1px solid #000;
+    margin-right: 4px;
+    float: left;
+}
+
+input[type="radio"]
+{
+    margin-right: 3px;
+}
+
+/*****ENd General ************/
+
+
+/*-------Grid--------------- **/
+
+.divgrid table tr td
+{
+    border: solid 1px #666666;
+    vertical-align: top;
+}
+.divgrid .bordernone table tr td
+{
+    border: 0px none;
+}
+
+.divgrid2 table tr td
+{
+    border-width: 0px;
+}
+.gridheader
+{
+    background-color: #639ECB;
+    font-weight: bold;
+    color: White;
+    font-size: 12px;
+    text-align:left;
+}
+.gridheader1
+{
+    font-weight: bold;
+    color: #000000;
+    font-size: 12px;
+}
+.gridfooter
+{
+    background-color: #639ECB;
+    font-weight: bold;
+    color: White;
+}
+.gridedititem
+{
+    background: #2461BF;
+    text-align:left;
+}
+.gridselected
+{
+    background-color: #D1DDF1;
+    font-weight: bold;
+    color: #333333;
+}
+.gridpager
+{
+    background-color: #639ECB;
+    color: White;
+}
+.gridpager a
+{
+    color: White;
+}
+.gridpager a:link
+{
+    text-decoration: underline;
+}
+.gridshowmore
+{
+    background-color: #639ECB;
+    color: White;
+    width: 96%;
+    height: 30px;
+}
+.gridshowmore a
+{
+    color: White;
+    text-decoration: none;
+}
+.gridshowmore a:hover
+{
+    color: White;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.gridcellhover:hover
+{ background-color: #639ECB; /* font-family: Verdana;*/
+  color:#ffffff;
+  cursor:pointer;
+    
+    
+    }
+.gridalternate1
+{
+    background-color: #E8F6FF; /* font-family: Verdana;*/
+    font-size: 12px;
+}
+.gridalternate
+{
+    background-color: #E8F6FF; /* font-family: Verdana;*/
+    font-size: 12px;
+}
+.gridalternate:hover
+{
+    background-color: #639ECB; /* font-family: Verdana;*/
+  color:#ffffff;
+}
+.gridalternateright
+{
+    text-align: right;
+}
+.griditem1
+{
+    background-color: #FFFFFF;
+    font-size: 12px;
+}
+.griditem
+{
+    background-color: #FFFFFF;
+    font-size: 12px;
+}
+.width150 td
+{
+    min-width:150px;
+    }
+.griditem:hover
+{
+    background-color: #639ECB;  color:#ffffff;
+  
+}
+.griditem32
+{
+    width: 32px;
+}
+.gridstyle
+{
+    border:2px solid #639ECB;
+    color: #333333;
+    width: 100%; /* font-family: Verdana;*/
+    font-size: 12px;
+}
+.gridstylenew
+{
+    border:1px solid #639ECB;
+    color: #333333;
+    width: 100%; /* font-family: Verdana;*/
+    font-size: 12px;
+}
+.gridstylenew td
+{
+    border:1px solid #639ECB;
+   
+}
+/***** END GRID ********************/
+
+/*------------------------ Links -------------*/
+.addnew1
+{
+    color: #000000;
+    text-align: right;
+    font-family:Verdana;
+}
+.addnew1 span
+{
+    background-repeat: no-repeat;
+    height: 32px;
+    padding-left: 33px;
+    padding-top: 7px;
+    padding-bottom: 15px;
+    color: #0F9DE9;
+    font-weight: bold;
+}
+.addnew-icon-addnew
+{
+    background-image: url("../images/addd.png");
+    background-repeat: no-repeat;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 37px;
+}
+.addnew-icon-save
+{
+    background-image: url("../images/save.png");
+    background-repeat: no-repeat;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 37px;
+}
+.addnew-icon-reset
+{
+    background-image: url("../images/reset32.png");
+    background-repeat: no-repeat;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 37px;
+}
+.addnew-icon-export
+{
+    background-image: url("../images/export32.png");
+    background-repeat: no-repeat;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 37px;
+}
+.addnew-icon-back32
+{
+    background-image: url(../images/back32.png);
+    background-repeat: no-repeat;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 37px;
+}
+.addnew-icon-add
+{
+    background-image: url("../images/addself.png");
+}
+.addnew-icon-view
+{
+    background-image: url("../images/viewlist.png");
+}
+.addnew-icon-back
+{
+    background-image: url("../images/go-back.png");
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+.addnew-icon-excel
+{
+    background-image: url(../images/excel.png);
+}
+.addnew-icon-pdf
+{
+    background-image: url(../images/pdf.png);
+    background-repeat: no-repeat;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 37px;
+}
+/**------------End Links --------------------**/
+
+/*------Calendar----------*/
+
+.calcellback
+{
+    border: solid 1px #ffffff;
+    background: #C9C8CE; /* for non-css3 browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C9C8CE', endColorstr='#E3E2E5'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#C9C8CE), to(#E3E2E5)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #C9C8CE,  #E3E2E5); /* for firefox 3.6+ */
+    border-radius: 2px;
+}
+.calcellback a
+{
+    position: relative;
+    text-align: right;
+    top: -29%;
+    left: 40%;
+}
+
+.caleventback
+{
+    background: #C9C8CE; /* for non-css3 browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C9C8CE', endColorstr='#E3E2E5'); /* for IE */
+    background: -webkit-gradient(linear, 66% 30%, left bottom, from(#C9C8CE), to(#E3E2E5)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #C9C8CE,  #E3E2E5); /* for firefox 3.6+ */
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background: url("../images/calevent.png") no-repeat scroll right 3px #D9D8DC;
+    border: solid 1px #ffffff;
+    border-radius: 2px; /* background-color:Gray;*/ /*color: #89909A;*/
+}
+.caleventback a:hover
+{
+    pointer-events: none;
+    text-decoration: none;
+}
+.caltodayeventback
+{
+    background: #0E6497; /* for non-css3 browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#0E6497'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#0E6497)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #000000,  #0E6497); /* for firefox 3.6+ */
+    border-radius: 2px;
+    color: #ffffff;
+    border: solid 1px #ffffff;
+}
+
+.caltodayeventback a
+{
+    position: relative;
+    text-align: right;
+    top: -29%;
+    left: 40%;
+}
+.calpreview
+{
+    background: #C9C8CE; /* for non-css3 browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#C9C8CE'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#C9C8CE)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #ffffff,#C9C8CE); /* for firefox 3.6+ */
+    position: absolute;
+    border: solid 2px #fff;
+    display: none;
+    color: #000000;
+    padding-right: 15px;
+    height: 200px;
+    width: 300px;
+    font-size: 12px;
+    overflow: auto;
+    padding-top: 10px;
+    border-radius: 7px;
+}
+.calpreview .topdate
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 12px;
+    font-family: Verdana;
+    font-weight: bold;
+}
+.calpreview ul
+{
+    padding: 0px;
+    margin: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    list-style-type: none;
+}
+.calpreview ul li
+{
+    padding: 0px;
+    margin: 0px;
+    line-height: 15px;
+    background-image: url(../images/tab_right.png);
+    background-position: left;
+    padding-left: 15px;
+    background-repeat: no-repeat;
+    margin-top:2px;
+}
+
+.divshowcalevent
+{
+    background-color: White;
+    border: 1px solid Black;
+    border-radius: 4px;
+    height: 14px;
+    left: 2px;
+    overflow: hidden;
+    right: 2px;
+    width: 100%;
+    background-color: #990607;
+    margin-top: 2px;
+}
+.divshowcalevent div
+{
+    border-radius: 5px 5px 5px 5px;
+    color: #ffffff;
+    float: left;
+    font-family: Tahoma;
+    font-size: 8pt;
+}
+
+.calanderheader
+{
+    border: 0;
+    background: #0E6497; /* for non-css3 browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#0E6497'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#0E6497)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #A1B0C2,  #6D84A2); /* for firefox 3.6+ */
+    color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 2px;
+    height: 20pt;
+}
+
+/**-----------table and textbox **---*/
+.tdsearchcol
+{
+    float:left;
+    margin-right:5px;
+    
+    }
+    .tdsearchval
+{
+    float:left;
+    margin-right:10px;
+    
+    }
+.tdcol
+{
+    /*font-family: Verdana;     color: #444444;     font-size: 12px;*/
+    width: 150px;
+    text-align: left;
+}
+.tdcol1
+{
+    text-align: left;
+    color: #333333;
+}
+.tdcolerror
+{
+    color: red;
+    text-align: left;
+}
+.txtBox
+{
+    border-right: #76a0c7 1px solid;
+    border-top: #76a0c7 1px solid;
+    font-size: 11px;
+    border-left: #76a0c7 1px solid;
+    border-bottom: #76a0c7 1px solid;
+    font-family: Verdana;
+    height: 20px;
+    width: 200px;
+}
+.txtsearch1
+{
+    padding:2px;
+    width:110px;
+    
+    }
+.txtsearch
+{
+    background: url(../images/search.png) center left no-repeat;
+    border-right: #76a0c7 1px solid;
+    border-top: #76a0c7 1px solid;
+    font-size: 11px;
+    border-left: #76a0c7 1px solid;
+    border-bottom: #76a0c7 1px solid;
+    font-family: Verdana;
+    height: 22px;
+    width: 200px;
+    padding-right: 32px;
+}
+.highlight
+{
+    text-decoration: none;
+    color: black;
+    background: yellow;
+}
+div.fileinputs
+{
+    position: relative;
+}
+div.fakefile
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    padding-left: 160px;
+}
+
+input.file
+{
+    position: relative;
+    text-align: right;
+    -moz-opacity: 0;
+    filter: alpha(opacity: 0);
+    opacity: 0;
+    z-index: 2;
+}
+
+.modalBackground
+{
+    background-color: Transparent;
+}
+.modalBackgroundcss
+{
+    background-color: #707070;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+.modalPopupcss
+{
+    background-color: #ffffff;
+    border-width: 3px;
+    border-style: solid;
+    border-color: Gray;
+    padding: 3px;
+    height: 558px;
+    position: absolute;
+    width: 947px;
+}
+.popupControl
+{
+    background-color: #00477F;
+    position: absolute;
+    visibility: hidden;
+    border-style: solid;
+    border-color: Black;
+    border-width: 2px;
+    font: Arial;
+    height: auto;
+}
+.modalpopupclosetd
+{
+    margin-left: 97%;
+    margin-top: -57px;
+    position: absolute;
+    text-align: right;
+}
+
+#otherdiv
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    filter: alpha(opacity=4);
+    opacity: 0.4;
+}
+
+#popupdiv
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    filter: alpha(opacity=4);
+    opacity: 0.4;
+}
+
+.newpopupdiv
+{
+    display: none;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0px;
+    font-size: 12px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 3px;
+    border: solid 1px #514836;
+    border-top: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.newpopupdiv .popheader
+{
+    background: #514836; /* for non-css3 browsers */
+    color: #ffffff;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#514836', endColorstr='#000000'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#514836), to(#000000)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,#514836,#000000); /* for firefox 3.6+ */
+    height: 20px;
+    padding: 5px 0px 0px 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    width: 99.4%;
+    color: #ffffff;
+}
+.newpopupdiv .popheader .headername
+{
+    font-family: Verdana;
+    background-position: left center;
+    font-size: 10pt;
+    color: #ffffff;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 19px;
+    float: left;
+}
+.newpopupdiv-inner
+{
+    width: 99%;
+    margin: 0px auto;
+    padding: 5px;
+    padding-top: 15px;
+}
+.tdlabel
+{
+    background-color: #639ECB;
+    font-weight: bold;
+}
+.MyTabStyle .ajax__tab_header
+{
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+}
+.MyTabStyle .ajax__tab_header .ajax__tab_outer
+{
+    border-color: #222;
+    color: #fff;
+    padding-left: 10px;
+    margin-right: 1px;
+    border: solid 1px #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    background-color: #397FB0;
+}
+.MyTabStyle .ajax__tab_header .ajax__tab_inner
+{
+    border-color: #666;
+    color: #fff;
+    padding: 3px 10px 2px 0px;
+}
+.MyTabStyle .ajax__tab_hover .ajax__tab_outer
+{
+    background-color: #fff;
+    color: #222;
+}
+.MyTabStyle .ajax__tab_hover .ajax__tab_inner
+{
+    color: #222;
+}
+.MyTabStyle .ajax__tab_active .ajax__tab_outer
+{
+    border-bottom-width: 0px;
+    background-color: #fff;
+}
+.MyTabStyle .ajax__tab_active .ajax__tab_inner
+{
+    color: #222;
+    border-color: #333;
+}
+.MyTabStyle .ajax__tab_body
+{
+    font-size: 10pt;
+    background-color: #fff;
+    border-top: solid 1px #d7d7d7;
+}
+
+

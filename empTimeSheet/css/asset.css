@@ -1,0 +1,27 @@
+﻿.popuphead {
+font-weight:bold;
+color:#1caf9a;
+padding:15px 0px 10px 0px;
+
+}
+.popuphead::after {
+    content: ":";
+} 
+.poppad {
+padding:10px ;
+}
+.tbldetail {
+width:100%;
+text-align:left;
+border-left:solid 1px #1caf9a;
+border-top:solid 1px #1caf9a;
+
+}
+.tbldetail td,th{
+text-align:left;
+padding:4px;
+border:solid 1px #1caf9a;
+border-left:none;
+border-top:none;
+
+}

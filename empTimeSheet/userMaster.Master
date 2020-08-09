@@ -1,0 +1,815 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="userMaster.master.cs"
+    Inherits="empTimeSheet.userMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>:: QuickStart Admin ::</title>
+    <link rel="icon" type="image/ico" href="images/notification.png" />
+    <%-- <meta http-equiv="refresh" content="120"/>--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no" />
+    <link href="js/timesheetcss_5.1.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/timesheetjs5.1.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.1.0.css" />
+    <script src="js/jquery-ui.min.js"></script>
+    <link href="css/todolist_1.0.css" rel="stylesheet" />
+
+    <style type="text/css">
+        input {
+            color: #000;
+        }
+
+
+        body:nth-of-type(1) img[src*="Blank.gif"] {
+            display: none;
+        }
+
+        #VisibleReportContentctl00_ContentPlaceHolder1_ReportViewer1_ctl09 {
+            margin: 10px auto;
+            display: table;
+            border: solid 1px #e0e0e0;
+            width: auto !important;
+            background: #ffffff;
+        }
+
+            #VisibleReportContentctl00_ContentPlaceHolder1_ReportViewer1_ctl09 > div {
+                margin: 10px 5px;
+            }
+
+        #ctl00_ContentPlaceHolder1_ReportViewer1_ctl09 {
+            background: #e4e7ea;
+        }
+
+        #ctl00_ContentPlaceHolder1_ReportViewer1_ctl05 {
+            background: #1caf9a !important;
+            color: #ffffff;
+        }
+
+        #divdangernotification {
+            width: 340px;
+            background: #f55753;
+            position: fixed;
+            top: 2px;
+            display: none;
+            border-radius: 5px;
+            z-index: 999999999999;
+        }
+
+            #divdangernotification .notiinner {
+                float: left;
+                width: 320px;
+                padding: 10px 5px;
+                font-family: 'open_sans_semibold';
+                color: #ffe1dd;
+            }
+
+            #divdangernotification .notclose {
+                float: right;
+                padding: 5px;
+            }
+
+                #divdangernotification .notclose img {
+                    cursor: pointer;
+                }
+
+        a[disabled] {
+            cursor: default;
+        }
+
+        .todo-icon {
+            display: none !important;
+        }
+    </style>
+    <script type="text/javascript">
+
+
+
+        $(window).alert = function (message) {
+            $(document.createElement('div'))
+        .attr({
+            title: 'Alert',
+            'class': 'alert'
+        })
+        .html(message)
+        .dialog({
+            buttons: {
+                OK: function () {
+                    $(this).dialog('close');
+                }
+            },
+            close: function () {
+                $(this).remove();
+            },
+            modal: true,
+            resizable: false,
+
+            width: 'auto'
+        });
+        };
+
+
+
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+    <form id="form1" runat="server">
+        <div id="divdangernotification">
+            <div class="notiinner">Modifications not allowed while in demo mode.</div>
+            <div class="notclose">
+                <img src="images/extra.png" onclick="closedangernoti();" />
+            </div>
+        </div>
+        <div class="se-pre-con" id="divpageloader"></div>
+        <audio id="audio" src="images/chatAlert.mp3" autostart="false"></audio>
+
+        <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" AsyncPostBackTimeout="0">
+        </ajaxToolkit:ToolkitScriptManager>
+        <div id="divpreview" class="calpreview" style="z-index: 100004;">
+        </div>
+        <div id="newchatwindow" style="margin: 0px auto; width: 1000px;">
+        </div>
+        <input type="hidden" id="hidposition" value="" />
+        <input type="hidden" id="hidopened" value="" />
+        <input type="hidden" id="hidchatgroupid" runat="server" clientidmode="Static" />
+        <input type="hidden" id="hidchatphoto" runat="server" clientidmode="Static" />
+        <input type="hidden" id="hidchatstatus" runat="server" clientidmode="Static" />
+        <input type="hidden" id="hidchatDesignation" runat="server" clientidmode="Static" />
+        <input type="hidden" id="hidchatloginid" runat="server" clientidmode="Static" />
+        <input type="hidden" id="hidchatname" runat="server" clientidmode="Static" />
+        <div id="divtimenotification" runat="server" visible="false" style="width: 100%; height: 30px; background: rgb(253, 253, 211) none repeat scroll 0% 0%; border-bottom: 1px solid rgb(199, 199, 157); text-align: center; padding-top: 6px; display: none;"></div>
+        <!--Add New announcment's div-->
+        <div id="Masterotherdiv" onclick="closeAnnouncement();" class="otherdiv">
+        </div>
+        <div style="display: none; width: 650px;" id="masterAnnouncement" class="itempopup">
+            <div class="popup_heading">
+                <span id="legendaction" runat="server">Announcement </span>
+                <div class="f_right">
+                    <img src="images/cross.png" onclick="closeAnnouncement();" alt="X" title="Close Window" />
+                </div>
+            </div>
+            <div class="tabContents">
+                <div class="col-xs-12 clear mar">
+                    <div id="tradded" runat="server">
+                        <div style="float: right; font-weight: bold; font-family: 'open_sans_semibold', Arial, Helvetica, sans-serif;" class="f-right">
+
+                            <span style="color: #0da08b;">@</span>
+                            <asp:Label ID="lbladdedon" runat="server" ForeColor="#0da08b"></asp:Label>&nbsp;
+                             <img src="images/announce-pic.png" />
+                            <asp:Label ID="lbladdedby" runat="server"></asp:Label>
+
+                        </div>
+                        <div class="clear">
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+
+                    <div id="dvTitle" class="col-xs-12 col-sm-12 form-group f_left pad">
+
+
+                        <div id="annImg" style="float: left; height: 70px; width: 70px; margin-top: -5px;">
+                            <asp:Image ID="Image1" runat="server" ImageUrl="~/images/Announcement/calendar.png" />
+                        </div>
+                        <div id="popupbody" style="margin-left: 70px;">
+                            <b>
+                                <asp:Label ID="lblTitle" runat="server" ForeColor="#0da08b" Font-Size="Large" Font-Names="'open_sans_semibold', Arial, Helvetica, sans-serif;"></asp:Label></b>&nbsp; 
+                            <br />
+                            <asp:Label ID="lbldesc" runat="server"></asp:Label>
+                            <div class="clear">
+                            </div>
+
+
+                        </div>
+                        <%--     <div class="col-xs-12 col-sm-12 form-group f_left pad" style="overflow: auto; min-height: 10px; max-height: 250px;">
+                               
+                            </div>--%>
+                    </div>
+
+                    <%-- <div class="col-xs-12  form-group f_left pad">
+                        <label class="col-sm-2 control-label">
+                            &nbsp;
+                        </label>
+                        <div class="col-xs-10">
+                        </div>
+                    </div>--%>
+                </div>
+            </div>
+        </div>
+        <!--announcment's div-->
+
+        <div class="todo-icon">
+            <img src="images/todo-icon1.png" alt="" /></div>
+        <div id="divtodobox" class="todo-box">
+            <div class="todo-header">
+                <div class="todo-heding">To Do List</div>
+                <div class="todo-close">
+                    <a id="todoclose">
+                        <img src="images/todo-close.png" alt="" /></a>
+
+                </div>
+                <div class="clear"></div>
+
+            </div>
+            <div class="clear"></div>
+            <div class="todobox-iner">
+                <div class="todoinput">
+                    <input id="txtnewtask" placeholder="Enter your task" />
+
+
+                    <ul>
+                        <li>
+                            <input type="hidden" id="hidToDodate" />
+                            <img id="todoicoCal" src="images/todo-calendar.png" alt="" class="todatebox" />
+
+                        </li>
+
+                        <li>
+                            <div id="todo_divnewstatus" class="status-box todo-Default"></div>
+                            <input type="hidden" id="hidToDoNewStatus" />
+                            <div class="todo_statusDrop">
+                                <ul>
+                                    <li>
+                                        <a data-status="Default">
+                                            <div class="status-box todo-Default"></div>
+                                            Default</a>
+
+                                    </li>
+                                    <li>
+                                        <a data-status="Pending">
+                                            <div class="status-box todo-Pending"></div>
+                                            Pending</a>
+
+                                    </li>
+                                    <li>
+                                        <a data-status="Complete">
+                                            <div class="status-box todo-Complete"></div>
+                                            Complete</a>
+
+                                    </li>
+                                    <li>
+                                        <a data-status="Cancelled">
+                                            <div class="status-box todo-Cancelled"></div>
+                                            Cancelled</a>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <input type="button" class="sv-btn" value="Save" id="todo_btnsave" />
+                <div id="todo_divsaveloader" class="todo_loader">
+                    <img src="images/pleasewait.gif" />&nbsp;Saving
+                </div>
+
+                <div class="clear"></div>
+
+            </div>
+            <div class="todotasklist">
+                <div class="todo_loader_list" id="todo_divloader">
+                    <img src="images/loading.gif" />
+                </div>
+                <div id="divtotoTaskList">
+                </div>
+
+            </div>
+        </div>
+        <div class="leftpart" id="leftpart">
+            <h1 class="logoback" id="logoback">
+                <img src="images/logo.png" alt="" />
+            </h1>
+            <div class="clearfix"></div>
+            <ul id="accordion" class="menu1">
+                <li style="border-top: none;"><a id="lnkdashboard" runat="server" href="UserDashboard.aspx">
+                    <span><i class="fa fa-fw fa-dashboard"></i></span><em>Dashboard</em> </a></li>
+
+                <li id="liappointments" runat="server"><a><span><i class="fa fa fa-fw fa-table" aria-hidden="true"></i></span>
+                    <em>Appointments</em>
+                    <div>
+                    </div>
+                </a>
+
+                    <ul class="liappointments">
+                        <li id="Li3" runat="server"><a href="Appoint_ViewAppointments.aspx" class="last">
+                            <i>View Appointments</i></a> </li>
+                        <li id="Li2" runat="server"><a href="Appoint_Availability.aspx"><i>Schedule Availability</i></a> </li>
+
+                    </ul>
+                </li>
+                <li id="liasset" runat="server"><a><span><i class="fa fa-fw fa-folder-o"></i></span><em>Asset Management</em>
+                    <div>
+                    </div>
+                </a>
+
+                    <ul>
+                        <li id="lnkAssetCategory" runat="server"><a href="Asset_ItemCategory.aspx"><i>Asset Category</i></a>
+                        </li>
+                        <li id="lnkAssetMaster" runat="server"><a href="asset_AssetMaster.aspx"><i>Asset Master</i></a>
+                        </li>
+
+                        <li id="lnkAssetTransfer" runat="server"><a href="assetTransferMaster.aspx"><i>Transfer Asset</i></a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li id="liBilling" runat="server"><a id="lnkBilling" runat="server"><span><i class="fa fa-fw fa-usd"></i></span><em>Billing</em>
+                    <div>
+                    </div>
+                </a>
+
+                    <ul>
+                        <li id="liinvoice" runat="server"><a href="ManualInvoice.aspx"><i>Create Invoice</i></a>
+                        </li>
+                        <li id="lisavedinvoice" runat="server" style="display: none;"><a href="SavedInvoices.aspx"><i>Saved Invoices</i></a>
+                        </li>
+                        <li id="liinvoicereview" runat="server"><a href="InvoiceReview.aspx"><i>Invoice Review</i></a>
+                        </li>
+                        <li id="liPayment" runat="server"><a href="InvoicePayment.aspx"><i>Payment Receive</i></a> </li>
+                        <li id="liPaymentReview" runat="server"><a href="PaymentReview.aspx"><i>Payment Review</i></a> </li>
+                        <li id="litransstatement" runat="server"><a href="transactionStatements.aspx"><i>Transaction Statements</i></a> </li>
+                    </ul>
+                </li>
+
+                <li id="ligroups" runat="server"><a id="lnkgroups" runat="server"><span><i class="fa fa-fw fa-group"></i></span><em>Groups</em>
+                    <div>
+                    </div>
+                </a>
+
+                    <ul>
+                        <li id="lnkempgroup" runat="server"><a href="EmployeeGroup.aspx"><i>Employee Groups</i></a>
+                        </li>
+                        <li id="lnkclientgroup" runat="server"><a href="ClientGroup.aspx"><i>Client Groups</i></a>
+                        </li>
+                        <li id="lnkProjectGroup" runat="server"><a href="ProjectGroup.aspx"><i>Project Groups</i></a>
+                        </li>
+                        <li id="lnkexpensegroup" runat="server"><a href="ExpenseGroup.aspx"><i>Expense Groups</i></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li id="lipayroll" runat="server"><a id="lnkpayroll" runat="server"><span><i class="fa fa-fw fa-turkish-lira"></i></span><em>Leave Management</em>
+                    <div>
+                    </div>
+                </a>
+
+                    <ul>
+                        <li id="lnkleaverquest" runat="server"><a href="LeaveRequest.aspx"><i>Leave Request</i></a>
+                        </li>
+                        <li id="lnkissueleave" runat="server"><a href="IssueLeave.aspx"><i>Issue Leave</i></a>
+                        </li>
+                        <li id="lnkholidaycal" runat="server"><a href="Holiday.aspx"><i>Holiday Calendar</i></a>
+                        </li>
+                        <li id="lnkGenerateSalary" runat="server" visible="false"><a href="GenSalary.aspx"
+                            class="last"><i>Generate Salary</i></a> </li>
+                    </ul>
+                </li>
+
+                <li id="liprojectmanagement" runat="server"><a><span><i class="fa fa-fw  fa-tasks"></i>
+                </span><em>Project Management</em>
+                    <div>
+                    </div>
+                </a>
+
+                    <ul>
+                        <li id="lnkprojectlog" runat="server"><a href="project_log.aspx">
+                            <i>Project Logs</i></a> </li>
+                        <li id="lnkprojectforecasting" runat="server"><a href="Project_Forecarting.aspx"><i>Project
+                        Forecasting</i></a> </li>
+                        <li id="lnkprojectallocation" runat="server"><a href="ProjectAllocation.aspx">
+                            <i>Project Allocation</i></a> </li>
+                        <li id="lnkprojectbudgeting" runat="server"><a href="projectBudget.aspx">
+                            <i>Project Budgeting</i></a> </li>
+                        <li id="Li1" runat="server"><a href="Tax_TaxClient.aspx">
+                            <i>Tax Client Setup</i></a> </li>
+                        <li id="Li4" runat="server"><a href="taxClientLog.aspx" class="last">
+                            <i>Tax Client Log</i></a> </li>
+                        <li id="Li5" runat="server"><a href="Tax_MasterFile.aspx" class="last">
+                            <i>Tax Master File</i></a> </li>
+                    </ul>
+                </li>
+                <li id="lischedule" runat="server"><a id="lnkschedule" runat="server" href="ClientSchedule.aspx">
+                    <span><i class="fa fa-fw fa-table"></i></span><em>Schedule</em> </a></li>
+                <li id="litimehseet" runat="server"><a id="lnktimesheet" runat="server"><span><i
+                    class="fa fa-fw"></i> </span><em>Timesheet</em>
+                    <div>
+                    </div>
+                </a>
+
+                    <ul>
+                        <li id="lnksheetview" runat="server"><a href="Timesheet.aspx"><i>Employee Time Entry</i></a>
+                        </li>
+                        <li id="lnkassign" runat="server"><a href="AssignedTasks.aspx"><i>Employee Task Assignment</i></a>
+                        </li>
+
+                        <li id="lnkexpenselog" runat="server"><a href="expenseslog.aspx"><i>Employee Expense Entry</i></a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li id="liAttendance" runat="server"><a href="AttendenceReader.aspx"><span><i class="fa fa-hand-o-up fa-fw" aria-hidden="true"></i></span><em>Time  Clock</em> </a>
+
+                </li>
+
+
+
+                <li id="lireport" runat="server"><a id="lnkreport" runat="server"><span><i class="fa fa-fw fa-file-text"></i></span><em>Reports</em>
+                    <div>
+                    </div>
+                </a>
+
+                    <ul>
+
+                        <asp:Literal ID="litlinks" runat="server"></asp:Literal>
+
+
+
+
+
+
+
+
+                        <%-- <li id="lnkbudgtedtaskreport" runat="server"><a href="BudgetedReport.aspx"
+                            class="last"><i>Budgeted Task Report</i></a> </li>--%>
+                    </ul>
+                </li>
+                <li id="liview" runat="server"><a id="lnkview" runat="server"><span><i class="fa fa-fw fa-windows"></i></span><em>Manage</em>
+                    <div>
+                    </div>
+                </a>
+
+                    <ul>
+                        <li id="lnkemp" runat="server"><a href="ManageEmployee.aspx"><i>Employees</i></a> </li>
+                        <li id="lnkproject" runat="server"><a href="project.aspx"><i>Projects</i></a> </li>
+                        <li id="lnkclient" runat="server"><a href="client.aspx"><i>Clients</i></a> </li>
+                        <li id="lnkclientaddress" runat="server"><a href="clientmap.aspx"><i>Client Address Map</i></a> </li>
+                        <li id="lnktaksmanage" runat="server"><a href="task.aspx"><i>Task Codes</i></a>
+                        </li>
+                        <li id="lnkexpensemanage" runat="server"><a href="ExpenseMaster.aspx"><i>Expense Codes</i></a>
+                        </li>
+                        <li id="lnkdept" runat="server"><a href="department.aspx"><i>Departments</i></a>
+                        </li>
+                        <li id="lnkdesig" runat="server"><a href="designation.aspx"><i>Designations</i></a>
+                        </li>
+                        <li id="lnktax" runat="server"><a href="taxmaster.aspx"><i>Tax Master</i></a>
+
+                        </li>
+
+                        <li id="Li7" runat="server"><a href="FileManager.aspx"><i>File
+                        Manager</i></a> </li>
+                        <%-- <li id="lnkServerMaster" runat="server"><a href="Servers.aspx"><i>Servers</i></a>
+                        </li>--%>
+                        <li id="lnkfilecategory" runat="server"><a href="FileCategoryMaster.aspx"><i>File Categories
+                        </i></a></li>
+                        <li id="lnkvendor" runat="server"><a href="asset_VendorMaster.aspx"><i>Organization</i></a>
+                        </li>
+                        <li id="lnkannouncement" runat="server"><a href="Annoncements.aspx" class="last"><i>Announcements</i></a> </li>
+                        <li id="Li6" runat="server"><a href="WorkAllocation.aspx" class="last"><i>Work Allocation</i></a> </li>
+                    </ul>
+                </li>
+                <li id="licompany" runat="server"><a id="lnkcompany" runat="server"><span><i class="fa fa-fw fa-cog"></i></span><em>Set Up</em>
+                    <div>
+                    </div>
+                </a>
+
+                    <ul>
+                        <li id="liadminsetting" runat="server"><a href="CompanySettings.aspx" id="lnkadminsetting" runat="server"><i>Company Settings</i></a> </li>
+                        <li id="liinformationtype" runat="server"><a href="informationType.aspx"><i>Information Type</i></a> </li>
+                        <li id="liemailfilesharing" runat="server"><a href="fileshare.aspx" id="lnkemailfileshare" runat="server"><i>File Sharing</i></a> </li>
+                        <li id="lnkfilemanager" runat="server"><a href="FileManager.aspx"><i>File
+                        Manager</i></a> </li>
+
+                        <li id="lnkadminholiday" runat="server"><a class="last" href="Holiday.aspx"><i>Holidays</i></a> </li>
+
+
+
+                    </ul>
+                </li>
+
+
+            </ul>
+            <div class="clear quickstartsummary">
+                <h5 class="dashboardtitle">Tasks Summary</h5>
+                <ul>
+                    <li>
+                        <div class="datainfo">
+                            <span class="text-muted dashboardsummary">Total</span>
+                            <h4>
+                                <asp:Literal ID="ltrtotalassignedtasks" runat="server">0</asp:Literal>
+                            </h4>
+                        </div>
+                        <div class="chart" id="sidebar-chart1">
+                            <img src="images/yellow.jpg" alt="" />
+                            <%-- <canvas style="display: inline-block; width: 59px; height: 30px; vertical-align: top;"
+                            width="59" height="30"></canvas>--%>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="datainfo">
+                            <span class="text-muted dashboardsummary">In Process</span>
+                            <h4>
+                                <asp:Literal ID="ltrInProcessTasks" runat="server"> 0</asp:Literal></h4>
+                        </div>
+                        <div class="chart" id="sidebar-chart3">
+                            <img src="images/green.jpg" alt="" />
+                            <%--  <canvas style="display: inline-block; width: 59px; height: 30px; vertical-align: top;"
+                            width="59" height="30"></canvas>--%>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="datainfo">
+                            <span class="text-muted dashboardsummary">Completed </span>
+                            <h4>
+                                <asp:Literal ID="ltrCompletedTasks" runat="server"> 0</asp:Literal></h4>
+                        </div>
+                        <div class="chart" id="sidebar-chart4">
+                            <img src="images/blue.jpg" alt="" />
+                            <%--<canvas style="display: inline-block; width: 59px; height: 30px; vertical-align: top;"
+                            width="59" height="30"></canvas>--%>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rightpart" id="rightpart">
+            <div class="headerbar" id="headerbar">
+                <a id="menu" class="menu menutoggle menutoggle_mobile "><i class=" glyphicon left"></i>
+                </a>
+                <div class="search">
+                    <input type="text" placeholder="Search here..." name="keyword" class="form-control" onkeypress="healpsearch(this.value,event);" />
+                </div>
+                <div class="header-right">
+                    <ul class="rightlinks">
+                        <li>
+                            <div id="google_translate_element"></div>
+                            <script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                    new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                                }
+                            </script>
+                            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                        </li>
+                        <li id="liFavReport"><a class="icon" id="lnkFavReport" title="Favorite Reports"><i class="fa fa-star" style="font-size: 18px;"
+                            id="iFavReport"></i></a>
+
+                            <ul class="dropdown-menu dropdown-menu-usermenu pull-right favtask" id="dropfavtask"
+                                style="min-width: 275px; min-height: 300px;">
+
+                                <asp:Literal ID="litfavtask" runat="server"></asp:Literal>
+                            </ul>
+
+                        </li>
+                        <li id="litasknoti"><a class="icon" id="lnktasknoti" title="Task Assignment"><i class="fa fa-clock-o" style="font-size: 18px;"
+                            id="itasknoti"></i><span class="badge" id="spantasknoti" runat="server"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-usermenu pull-right" id="droptasknoti" style="min-width: 275px;">
+                            </ul>
+                        </li>
+                        <li><a href="chatmessage.aspx" class="icon" title="User's Chat"><i class="glyphicon glyphicon-envelope"></i>
+                            <%--<span class="badge">
+                        2</span>--%></a></li>
+                        <li id="liannouncenoti"><a class="icon" id="lnkannouncenoti" title="Announcements"><i class="glyphicon glyphicon-volume-up"
+                            id="iannouncenoti"></i>
+
+                            <span class="badge" id="spanannouncenoti" runat="server"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-usermenu pull-right" id="dropannouncenoti"
+                                style="min-width: 275px;">
+                            </ul>
+                            <div class="dropdown-menu dropdown-menu-usermenu pull-right" id="divloader" style="min-width: 275px; text-align: center; background: none;">
+                                <img src="images/loading.gif" />
+                            </div>
+                        </li>
+                        <li id="liprofile"><a id="userprofileimage" class=" icon  profile">
+                            <img id="imgphoto" runat="server" alt="" src="webfile/profile/nophoto.png">
+                            <asp:Literal ID="lnkmainusername" runat="server" Text="user name"></asp:Literal>
+                            <span class="caret pad2"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-usermenu pull-right" id="dropprofile">
+                                <li><span style="display: block; text-align: center;">
+                                    <img src="images/arrow_top.png" alt="" />
+                                </span></li>
+                                <%--  <li><a href="settings.aspx"><i class="glyphicon glyphicon-user padright5"></i>My Profile</a></li>--%>
+                                <li><a href="MyAccount.aspx"><i class="glyphicon glyphicon-cog padright5"></i>Account
+                                Settings</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-question-sign padright5"></i>Help</a></li>
+                                <li><a href="logout.aspx"><i class="glyphicon glyphicon-log-out padright5"></i>Log Out</a></li>
+                            </ul>
+                        </li>
+                        <li><a class=" icon tp-icon chat-icon"><i class="glyphicon glyphicon-comment"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- header-right -->
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <!-- contentpanel -->
+            <div class="clear">
+            </div>
+        </div>
+        <input type="hidden" id="hidloginid" runat="server" clientidmode="Static" />
+        <input type="hidden" id="hidcompanyid" runat="server" clientidmode="Static" />
+        <input type="hidden" id="hidannouncenoti" runat="server" clientidmode="Static" />
+        <input type="hidden" id="hidtasknoti" runat="server" clientidmode="Static" />
+        <input type="hidden" id="hidisdemo" runat="server" clientidmode="Static" />
+        <input type="hidden" id="hidchat_selectedtype" value="online" runat="server" clientidmode="Static" />
+
+        <div class="rightpanel" id="rightpanel" style="margin-left: -240px;">
+            <a style="display: none;" id="btnStartChat">Start Chat</a>
+            <div class="chat_box">
+                <input type="text" placeholder="Search User..." class="chatsearch_btn mar3 right_search" />
+                <div class="Connections">
+                    <span id="chat_spanstatus" title="Change status" class="userstatus" style="background-image: url(images/user_online.png);">
+                        <asp:Literal runat="server" ID="litusername"></asp:Literal></span>
+                    <div class="chatstatus">
+                        <div class="chatstatus_inner">
+                            <ul id="ulchangestatus">
+                                <li id="online"><span class="span_online"></span>
+                                    <div>
+                                        Online
+                                    </div>
+                                </li>
+                                <li id="away"><span class="span_away"></span>
+                                    <div>
+                                        Away
+                                    </div>
+                                </li>
+                                <li id="busy"><span class="span_busy"></span>
+                                    <div>
+                                        Busy
+                                    </div>
+                                </li>
+                                <li id="offline"><span class="span_offline"></span>
+                                    <div>
+                                        Offline
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+                <div class="f_left">
+                    <a id="linkonline" onclick="setonlineusers('online',this.id);" style="text-decoration: underline; color: #999999;">
+                        <h5 class="sidebartitle" style="padding-right: 10px;">Online Users</h5>
+                    </a>
+                </div>
+                <div class="f_left">
+                    <a id="linkoffline" onclick="setonlineusers('all',this.id);" style="color: #999999;">
+                        <h5 class="sidebartitle">All Users</h5>
+                    </a>
+                </div>
+                <div class="clear">
+                </div>
+                <ul class="chat_boxlist" id="chatuserlist">
+                    <%--  <li >
+                        <div class="media">
+                            <a class="pull-left media-thumb" href="#">
+                                <img class="media-object" src="images/loggeduser.png" alt="">
+                            </a>
+                            <div class="media-body">
+                                <span>Eileen Sideways</span> <small>Los Angeles, CA</small>
+                            </div>
+                        </div>
+                        <!-- media -->
+                    </li>
+                    <li>
+                        <div class="media">
+                            <a class="pull-left media-thumb " href="#">
+                                <img class="media-object" src="images/loggeduser.png" alt="">
+                            </a>
+                            <div class="media-body">
+                                <span class="pull-right online_icon"></span><span>Eileen Sideways</span> <small>San
+                                Francisco, CA</small>
+                            </div>
+                        </div>
+                      
+                    </li>
+                    <li class="online">
+                        <div class="media">
+                            <a class="pull-left media-thumb " href="#">
+                                <img class="media-object" src="images/loggeduser.png" alt="">
+                            </a>
+                            <div class="media-body">
+                                <span>Eileen Sideways</span> <small>Bangkok, Thailand</small>
+                            </div>
+                        </div>
+                        <!-- media -->
+                    </li>
+                    <li class="online">
+                        <div class="media">
+                            <a class="pull-left media-thumb" href="#">
+                                <img class="media-object" src="images/loggeduser.png" alt="">
+                            </a>
+                            <div class="media-body">
+                                <span>Eileen Sideways</span> <small>Cebu City, Philippines</small>
+                            </div>
+                        </div>
+                        <!-- media -->
+                    </li>
+                    <li class="online">
+                        <div class="media">
+                            <a class="pull-left media-thumb" href="#">
+                                <img class="media-object" src="images/loggeduser.png" alt="">
+                            </a>
+                            <div class="media-body">
+                                <span>Eileen Sideways</span> <small>Tokyo, Japan</small>
+                            </div>
+                        </div>
+                        <!-- media -->
+                    </li>--%>
+                </ul>
+            </div>
+            <!-- tab-pane -->
+        </div>
+
+        <script type="text/javascript">
+
+
+            $(document).ready(function () {
+
+
+
+
+
+                $("#accordion > li > a").click(function () {
+
+                    if (false == $(this).next().is(':visible')) {
+
+                        $('#accordion ul').slideUp(400);
+                        $("#accordion  li div").removeClass("expend");
+                        $("#accordion  li  a").removeClass("expedlink");
+                    }
+                    $(this).next().slideToggle(400);
+                    $(this).find("div").toggleClass("expend");
+                    $(this).toggleClass("expedlink");
+                });
+
+
+
+
+                $("#accordion > li >   ul > li > a").click(function () {
+
+                    if (false == $(this).next().is(':visible')) {
+
+                        $('#accordion ul li ul').slideUp(400);
+                        $("#accordion > li >   ul > li > a> div").removeClass("expend");
+                    }
+                    $(this).find("div").toggleClass("expend");
+                    $(this).next().slideToggle(400);
+                });
+
+
+
+
+                $(".clickmenu a").click(function (event) {
+
+                    var id = $(this).attr('href');
+                    if ($(id).is(":hidden")) {
+                        $(id).show();
+                        $(id + '-button').hide();
+
+                    } else if ($(id).is(":visible")) {
+                        $(id).hide();
+                        $(id + '-button').show();
+                    }
+
+
+                });
+
+                if (document.getElementById("hidisdemo").value == "1") {
+
+
+                    setallbuttons();
+
+                    function InitialiseSettings() {
+
+
+                        setallbuttons();
+                    }
+                    setposition("divdangernotification");
+                    document.getElementById("divdangernotification").style.top = "2px";
+                    Sys.WebForms.PageRequestManager.getInstance().add_endRequest(InitialiseSettings);
+                }
+            });
+
+            $(window).load(function () {
+                $('#divpageloader').fadeOut(300);
+
+            });
+
+        </script>
+
+    </form>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script src="js/PageJs/todolist_1.0.js"></script>
+    <iframe src="mychat.aspx" style="display: none;"></iframe>
+</body>
+</html>

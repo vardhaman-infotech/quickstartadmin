@@ -1,0 +1,214 @@
+.announcetopdetail span {
+    float:left;
+    margin-right:5px;
+    padding-top:1px;
+}
+.announcetopdetail img {
+    float:left;
+    margin-right:5px;
+}
+.announce-even .arrow-left
+{
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #ebeced;
+    float: left;
+    margin-top:50px;
+}
+
+
+.announce-odd .arrow-left
+{
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #ebf5ff;
+    float: right; margin-top:50px;
+}
+
+.announce-even
+{
+   
+   
+}
+.announce-even .announce
+{
+    background: #f2f2f2;
+    border-radius: 10px;
+    width: 90%;
+    margin: 10px 0 10px 0px;
+    padding: 10px;
+    float:left;
+}
+
+.announce-odd .announce
+{
+    background: #e4ebf4;
+    border-radius: 10px;
+    width: 90%;
+    margin: 10px 0 10px 0px;
+    padding: 10px;  float:right;
+  
+}
+.announce h1
+{
+   
+    font-size: 20px; 
+    color: #404040;  
+    line-height:25px;
+	letter-spacing:1px;
+}
+.announce p
+{
+    font-size: 12px;
+    text-align: left;
+    color: #393939;
+    padding-left: 10px;
+}
+
+.annonce-footer_link
+{
+    border: 1px solid #c7ced7;
+    float: left;
+    margin: 10px 0;
+    padding: 7px 5px;
+    width: 100%;
+}
+.annonce-footer_link a
+{
+    border-right: #e0e0e0 solid 1px;
+    font-size: 12px;
+    text-align: left;
+    color: #393939;
+    float: left;
+    padding: 0 10px;
+}
+
+.announce-odd
+{
+   
+}
+.announce-odd h1
+{
+    padding-left: 10px;
+}
+
+
+.imgboxes {
+    width: 24px;
+    height: 24px; 
+    border: #000000 solid 1px;
+    float: left;
+    text-align: center;
+}
+.imgrow {
+    width: 33.3%;
+    height: 33%;    
+    float: left;
+}
+.announceIcons-main {
+
+width:200px;
+height:auto;
+background:#ffffff;
+border:solid 1px #a6a6a6;
+padding:10px;
+
+
+}
+.announceIcons {
+
+}
+
+.announceIcons ul{
+}
+.announceIcons ul li{
+    float:left;
+    
+    padding:10px;
+    border:solid 1px #e0e0e0;
+    text-align:center;
+}
+.announceIcons ul li:hover{
+  
+    border:solid 1px #cccccc;
+    cursor:pointer;
+   
+}
+.announceIcons ul li img{
+    width:16px;
+ 
+}
+
+
+
+
+.AnnounceTable {
+    float: left;
+   
+    width: 700px;
+}
+
+    .AnnounceTable:hover {
+        cursor: pointer;
+    }
+
+    
+.AnnounceImage {
+    float: left;
+    width: 62px;
+}
+             
+.AnnounceTitle {
+    float: left;
+    width: 600px;
+    height: 35px;
+    text-align: start;
+    padding-top: 4px;
+}
+
+h3.title {
+    font-size: 18px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-family:'open_sans_semibold', Arial, Helvetica, sans-serif;
+}
+
+
+.AnnounceDesc {
+    float: left;
+    width: 600px;
+}
+    
+.child {
+    margin: 6px auto auto; /* Magic! */
+    width:52px;
+}
+
+.title {
+    color: #606060;
+     font-family:'open_sans_semibold', Arial, Helvetica, sans-serif;
+}
+        
+.title1 {
+    font-size: small;
+    color: #606060;
+}
+        
+
+.AnnounceDetails {
+    float: right;
+    width: 60px;
+    border-color: #cccccc;
+    
+
+    
+}
+
+.AnnounceUser {
+    width: 50px;
+   
+}

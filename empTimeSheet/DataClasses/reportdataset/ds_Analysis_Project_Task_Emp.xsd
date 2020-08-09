@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_Analysis_Project_Task_Emp" targetNamespace="http://tempuri.org/ds_Analysis_Project_Task_Emp.xsd" xmlns:mstns="http://tempuri.org/ds_Analysis_Project_Task_Emp.xsd" xmlns="http://tempuri.org/ds_Analysis_Project_Task_Emp.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_Analysis_Project_Task_Emp" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_Analysis_Project_Task_Emp" msprop:Generator_UserDSName="ds_Analysis_Project_Task_Emp">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_Analysis_HoursComparebyEmp" msprop:Generator_TableClassName="tbl_Analysis_HoursComparebyEmpDataTable" msprop:Generator_TableVarName="tabletbl_Analysis_HoursComparebyEmp" msprop:Generator_RowChangedName="tbl_Analysis_HoursComparebyEmpRowChanged" msprop:Generator_TablePropName="tbl_Analysis_HoursComparebyEmp" msprop:Generator_RowDeletingName="tbl_Analysis_HoursComparebyEmpRowDeleting" msprop:Generator_RowChangingName="tbl_Analysis_HoursComparebyEmpRowChanging" msprop:Generator_RowEvHandlerName="tbl_Analysis_HoursComparebyEmpRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Analysis_HoursComparebyEmpRowDeleted" msprop:Generator_RowClassName="tbl_Analysis_HoursComparebyEmpRow" msprop:Generator_UserTableName="tbl_Analysis_HoursComparebyEmp" msprop:Generator_RowEvArgName="tbl_Analysis_HoursComparebyEmpRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="empid" msprop:Generator_ColumnVarNameInTable="columnempid" msprop:Generator_ColumnPropNameInRow="empid" msprop:Generator_ColumnPropNameInTable="empidColumn" msprop:Generator_UserColumnName="empid" type="xs:string" minOccurs="0" />
+              <xs:element name="loginid" msprop:Generator_ColumnVarNameInTable="columnloginid" msprop:Generator_ColumnPropNameInRow="loginid" msprop:Generator_ColumnPropNameInTable="loginidColumn" msprop:Generator_UserColumnName="loginid" type="xs:string" minOccurs="0" />
+              <xs:element name="empname" msprop:Generator_ColumnVarNameInTable="columnempname" msprop:Generator_ColumnPropNameInRow="empname" msprop:Generator_ColumnPropNameInTable="empnameColumn" msprop:Generator_UserColumnName="empname" type="xs:string" minOccurs="0" />
+              <xs:element name="hours" msprop:Generator_ColumnVarNameInTable="columnhours" msprop:Generator_ColumnPropNameInRow="hours" msprop:Generator_ColumnPropNameInTable="hoursColumn" msprop:Generator_UserColumnName="hours" type="xs:string" minOccurs="0" />
+              <xs:element name="tbujhrs" msprop:Generator_ColumnVarNameInTable="columntbujhrs" msprop:Generator_ColumnPropNameInRow="tbujhrs" msprop:Generator_ColumnPropNameInTable="tbujhrsColumn" msprop:Generator_UserColumnName="tbujhrs" type="xs:string" minOccurs="0" />
+              <xs:element name="aamount" msprop:Generator_ColumnVarNameInTable="columnaamount" msprop:Generator_ColumnPropNameInRow="aamount" msprop:Generator_ColumnPropNameInTable="aamountColumn" msprop:Generator_UserColumnName="aamount" type="xs:string" minOccurs="0" />
+              <xs:element name="bamount" msprop:Generator_ColumnVarNameInTable="columnbamount" msprop:Generator_ColumnPropNameInRow="bamount" msprop:Generator_ColumnPropNameInTable="bamountColumn" msprop:Generator_UserColumnName="bamount" type="xs:string" minOccurs="0" />
+              <xs:element name="projectid" msprop:Generator_ColumnVarNameInTable="columnprojectid" msprop:Generator_ColumnPropNameInRow="projectid" msprop:Generator_ColumnPropNameInTable="projectidColumn" msprop:Generator_UserColumnName="projectid" type="xs:string" minOccurs="0" />
+              <xs:element name="projectcode" msprop:Generator_ColumnVarNameInTable="columnprojectcode" msprop:Generator_ColumnPropNameInRow="projectcode" msprop:Generator_ColumnPropNameInTable="projectcodeColumn" msprop:Generator_UserColumnName="projectcode" type="xs:string" minOccurs="0" />
+              <xs:element name="projectname" msprop:Generator_ColumnVarNameInTable="columnprojectname" msprop:Generator_ColumnPropNameInRow="projectname" msprop:Generator_ColumnPropNameInTable="projectnameColumn" msprop:Generator_UserColumnName="projectname" type="xs:string" minOccurs="0" />
+              <xs:element name="taskid" msprop:Generator_ColumnVarNameInTable="columntaskid" msprop:Generator_ColumnPropNameInRow="taskid" msprop:Generator_ColumnPropNameInTable="taskidColumn" msprop:Generator_UserColumnName="taskid" type="xs:string" minOccurs="0" />
+              <xs:element name="taskcode" msprop:Generator_ColumnVarNameInTable="columntaskcode" msprop:Generator_ColumnPropNameInRow="taskcode" msprop:Generator_ColumnPropNameInTable="taskcodeColumn" msprop:Generator_UserColumnName="taskcode" type="xs:string" minOccurs="0" />
+              <xs:element name="taskdesc" msprop:Generator_ColumnVarNameInTable="columntaskdesc" msprop:Generator_ColumnPropNameInRow="taskdesc" msprop:Generator_ColumnPropNameInTable="taskdescColumn" msprop:Generator_UserColumnName="taskdesc" type="xs:string" minOccurs="0" />
+              <xs:element name="pbujhrs" msprop:Generator_ColumnVarNameInTable="columnpbujhrs" msprop:Generator_ColumnPropNameInRow="pbujhrs" msprop:Generator_ColumnPropNameInTable="pbujhrsColumn" msprop:Generator_UserColumnName="pbujhrs" type="xs:string" minOccurs="0" />
+              <xs:element name="pbujamt" msprop:Generator_ColumnVarNameInTable="columnpbujamt" msprop:Generator_ColumnPropNameInRow="pbujamt" msprop:Generator_ColumnPropNameInTable="pbujamtColumn" msprop:Generator_UserColumnName="pbujamt" type="xs:string" minOccurs="0" />
+              <xs:element name="ebujamt" msprop:Generator_ColumnVarNameInTable="columnebujamt" msprop:Generator_ColumnPropNameInRow="ebujamt" msprop:Generator_ColumnPropNameInTable="ebujamtColumn" msprop:Generator_UserColumnName="ebujamt" type="xs:string" minOccurs="0" />
+              <xs:element name="ebujhrs" msprop:Generator_ColumnVarNameInTable="columnebujhrs" msprop:Generator_ColumnPropNameInRow="ebujhrs" msprop:Generator_ColumnPropNameInTable="ebujhrsColumn" msprop:Generator_UserColumnName="ebujhrs" type="xs:string" minOccurs="0" />
+              <xs:element name="tebujhrs" msprop:Generator_ColumnVarNameInTable="columntebujhrs" msprop:Generator_ColumnPropNameInRow="tebujhrs" msprop:Generator_ColumnPropNameInTable="tebujhrsColumn" msprop:Generator_UserColumnName="tebujhrs" type="xs:string" minOccurs="0" />
+              <xs:element name="tebujamt" msprop:Generator_ColumnVarNameInTable="columntebujamt" msprop:Generator_ColumnPropNameInRow="tebujamt" msprop:Generator_ColumnPropNameInTable="tebujamtColumn" msprop:Generator_UserColumnName="tebujamt" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

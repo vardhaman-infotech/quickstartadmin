@@ -1,0 +1,237 @@
+ .toggleMenu {
+     display:  none;
+    background: #161616;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.nav_bg{ margin-top: 27px; background:#304354; float: left; width: 100%;  }
+
+.nav_fr{ float:right; }
+.nav {
+    list-style: none;
+	font-size:14px;
+	 
+	float:left;
+     
+}
+.nav:before,
+.nav:after {
+    content: " "; 
+    display: table; 
+}
+.nav:after {
+    clear: both;
+}
+.nav ul {
+    list-style: none;
+    width:234px;
+}
+.nav a {
+	color: #f2f2f2;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav a img{ position:relative; top:36%;} 
+
+.nav li a:hover { background:#e67407;
+  color:#f2f2f2; display:block; -moz-transition:  all 0.5s ease-in-out; -webkit-transition:.25s ease-in-out; -ms-transition:.25s ease-in-out;  
+}
+
+.active{ background:#e67407;
+  color:#f2f2f2; display:block; -moz-transition:  all 0.5s ease-in-out; -webkit-transition:.25s ease-in-out; -ms-transition:.25s ease-in-out;  
+}
+ 
+ 
+.nav li {
+    position: relative;  
+}
+.nav > li {
+   
+    float: left;
+    padding-right: 12px;
+     
+}
+ 
+ 
+.nav > li > a {
+    display: block;
+}
+.nav li  ul {
+    position: absolute;
+    left: -9999px;
+}
+.nav > li.hover > ul {
+    left: 0;
+}
+.nav li li.hover ul {
+    left: 100%;
+    top: 0;
+}
+.nav li li a {
+    display: block;
+    background: #ffffff;
+    position: relative;
+    z-index:100;
+    border-top: 1px solid #1a1a1a;
+	padding: 10px 10px;
+    color:#333333;
+	line-height:normal;
+	height:auto;
+	font-size:14px;
+}
+
+.nav li li a:hover {
+   
+   background: none repeat scroll 0 0 #304354;
+    color: #f2f2f2;
+	
+}
+.nav li li li a {
+    background:#000 ;
+    z-index:200;
+    border-top: 1px solid #1a1a1a;
+}
+
+@media screen and (min-width: 1000px) and (max-width:2000px) {
+
+	.nav li a.active {
+	 
+  display:block; -moz-transition:  all 0.5s ease-in-out; -webkit-transition:.25s ease-in-out; -ms-transition:.25s ease-in-out;  
+}
+
+.nav li a.hit:hover {
+	background:url(../images/nav_hover.png) repeat-x;	
+   color:#333333; display:block; -moz-transition:  all 0.5s ease-in-out; -webkit-transition:.25s ease-in-out; -ms-transition:.25s ease-in-out;  
+}
+	
+}
+
+@media screen and (max-width:1025px) {
+	.nav > li{ padding-right:0;}
+	 
+    .active {
+        display: block;
+    }
+    .nav > li {
+        float: none; background:#333;
+		 border-top: 1px solid #232323;
+    }
+     
+	 .nav > li > .parent {
+        background-position: 95% 50%;
+    }
+	
+	
+  /*  .nav li .parent {
+        background-image:url(../images/downArrow.png);
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
+    
+    .nav li li .parent {
+        background-image:url(../images/downArrow.png);
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }*/
+    
+    .nav  li  div
+{
+    background-image: url("../images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position:center;
+  	height:24px;
+  	float:right;
+  	margin-right:5px;
+    position: relative;
+  	top:-30px;
+    width: 38px;
+    z-index: 2;
+   
+}
+.nav  li  div:hover
+{
+    background-color:#272727;
+    border-radius:50px;
+}
+.nav  li li  div
+{
+    background-image: url("../images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position:center;
+  	height:24px;
+  	float:right;
+  	margin-right:5px;
+    position: relative;
+  	margin-top:3px;
+    width: 38px;
+    z-index: 101;
+    top:-72px;
+   
+}
+.nav  li li  div:hover
+{
+    background-color:#292929;
+    border-radius:50px;
+}
+    .nav ul {
+        display: block;
+        width: 100%;
+    }
+   .nav > li.hover > ul , .nav li li.hover ul {
+        position: static;
+    }
+.nav {
+    list-style: none;
+     *zoom: 1;}
+	 
+	 .nav a {
+    padding: 10px 15px;
+    color:#fff;
+}
+
+.nav_fr{ float:none; margin-top:0;}
+
+.toggleMenu { padding: 10px 0;
+    text-indent: 10px;
+    width: 100%; }
+.nav {  list-style: none outside none; padding-top:0; }
+
+.nav a {
+	padding: 10px 15px;
+    color:#f2f2f2;
+	height:auto;
+	line-height:normal;
+}
+ 
+.nav li li a:hover {
+	 
+    background: none repeat scroll 0 0 #2f4354;
+    color: #f2f2f2;
+	
+}
+
+ a {
+    color: inherit;
+    outline: medium none;
+    text-decoration: none;
+    transition: none !important;
+}
+
+.background{ background:none !important;}
+
+.nav li li li a {
+    background:#575757 ;
+    z-index:200;
+    border-top: 1px solid #1a1a1a;
+}
+
+.nav li li li a:hover {
+    background: url("../images/nav_hover.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);  
+    border-top: 1px solid #1a1a1a;
+}
+ 
+  
+ 
+}

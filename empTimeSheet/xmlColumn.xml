@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DetailsList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <table ID="tasklist">
+    <LeftPanel>
+      <Button Name="Task ID" value="taskCode" />
+      <Button Name="Name" value="taskname" />
+      <Button Name="Description" value="description" />
+      <!--<Button Name="Available For" value="deptID" />-->
+      <!--<Button Name="Active Status" value="bstatus" />-->
+      <Button Name="Cost Rate ($)" value="costrate" />
+      <Button Name="Bill Rate ($)" value="billrate" />
+      <Button Name="Bidgeted Hrs" value="bhours" />
+      <Button Name="Billable" value="isbillable" />
+      <Button Name="Tax" value="tax" />
+    </LeftPanel>
+
+  </table>
+  <table ID="ExpensesList">
+    <LeftPanel>
+      <Button Name="Expense ID" value="taskCode" />
+      <Button Name="Name" value="taskname" />
+      <Button Name="Description" value="description" />
+      <!--<Button Name="Available For" value="deptID" />
+      <Button Name="Active Status" value="bstatus" />-->
+      <Button Name="Cost Rate ($)" value="costrate" />
+      <!--<Button Name="Bill Rate ($)" value="billrate" />-->
+      <!--<Button Name="Bidgeted Hrs" value="bhours" />-->
+      <Button Name="Billable" value="isbillable" />
+      <Button Name="Remimb" value="isReimb" />
+      <Button Name="mu" value="MuRate" />
+      <Button Name="Tax" value="tax" />
+    </LeftPanel>
+
+  </table>
+
+
+
+
+  <!--<table >
+
+    <tableName>TaskList</tableName>
+    <Name>Name</Name>
+    <Value>taskname</Value>
+  </table>
+  <table >
+
+    <tableName>TaskList</tableName>
+    <Name>Description</Name>
+    <Value>description</Value>
+  </table>
+  <table >
+
+    <tableName>TaskList</tableName>
+    <Name>Available For</Name>
+    <Value>deptID</Value>
+  </table>
+  <table >
+
+    <tableName>TaskList</tableName>
+    <Name>Active Status</Name>
+    <Value>bstatus</Value>
+  </table>
+  <table >
+
+    <tableName>TaskList</tableName>
+    <Name>Cost Rate ($)</Name>
+    <Value>CostRate</Value>
+
+  </table>
+  <table >
+
+    <tableName>TaskList</tableName>
+    <Name>Bill Rate ($)</Name>
+    <Value>BillRate</Value>
+  </table>
+  <table >
+
+    <tableName>TaskList</tableName>
+    <Name>Bidgeted Hrs</Name>
+    <Value>BHours</Value>
+  </table>
+  <table >
+
+    <tableName>TaskList</tableName>
+    <Name>Billable</Name>
+    <Value>isbillable</Value>
+
+
+  </table>-->
+</DetailsList>
